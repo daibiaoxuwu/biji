@@ -1,0 +1,16 @@
+elapsed         算时间的小玩意
+tensereader     正式识别时读取用,是读取纯文本
+trainreader     训练读取用,从resp2文件读取
+verbset2lemma   没用到verbset..? 想全过一遍并且写一遍ldict5和cldict5.可能还没写全.
+verbset2lemma2  类似
+attnmodel       最早的版本,无用(删去)
+tensernnmodel   (唯一,和train共享)的rnn模型
+train2          很早以前的版本,无用(删去)
+bigrnnmodel     和tensernnmodel只差了几个参数
+listclemma      辅助用,写dict(写的是什么?)
+tense           发布主函数
+train           训练主函数
+
+
+
+
