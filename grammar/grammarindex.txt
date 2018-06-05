@@ -1,6 +1,6 @@
 elapsed         算时间的小玩意
 tensereader     正式识别时读取用,是读取纯文本
-trainreader     训练读取用,从resp2文件读取
+trainreader     训练读取用,从resp2文件读取.
 verbset2lemma   没用到verbset..? 想全过一遍并且写一遍ldict5和cldict5.可能还没写全.
 verbset2lemma2  类似
 attnmodel       最早的版本,无用(删去)
@@ -11,6 +11,27 @@ listclemma      辅助用,写dict(写的是什么?)
 tense           发布主函数
 train           训练主函数
 
+todo:
+(注意:grammar从服务器克隆到了本地的workspace,而且source的sh也是指向那里.elements里没有同名文件夹.)
+第一步:先输入裸数据.
+用separator0.py将所有话(combine100.txt)按"谓语"分割成6组.
+分别叫cbmain0.txt~cbmain5.txt
+然后依次读进去.
 
+
+tensecnnmodel:用cnn处理同样的问题
+trainreader2:把输入精简化
+
+
+
+关于白盒化:
+http://www.chicagomanualofstyle.org/book/ed17/part2/ch05/toc.html
+(或者,登录后搜索verb可以进入:)
+http://www.scientificstyleandformat.org/book/ed8/pt2/ch07/asec11.html#c0711010400
+后者有几个常见问题:
+
+1 动词位置,引起的整句结构的变化 这一点不在我的范围内但是是值得注意的.
+It was found by Smith (1974) important activity against some dimorphic fungi.
+改为Smith (1974) found important activity against some dimorphic fungi.
 
 
