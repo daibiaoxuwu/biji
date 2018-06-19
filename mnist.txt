@@ -1,0 +1,4 @@
+fully_connected_feed.py 原文件
+fully_connected_feed2.py 正常的全连接文件 刚刚把"间隔输出"调低,适应自己电脑的cpu环境.并且把keepprob从0.5改为1,这种条件下能很快训练出结果.
+mnist_deep.py 原文件
+mnist_deep2.py 
