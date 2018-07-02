@@ -1,0 +1,24 @@
+
+2018年 07月 03日 星期二 01:21:48 CST
+title:  vim小技巧
+    下面我们都按这种格式来记笔记啦
+    上面这句话是在vim输入:read !date产生的.会产生新的一行.
+quote:  https://blog.csdn.net/zimmermanlin/article/details/8922067
+    这里也有更好的解决方法. read命令和这里提到的vim中的ab缩写都很有趣.
+
+
+2018年 07月 03日 星期二 01:25:01 CST
+title:  gitignore中不是"忽略什么什么"而是"保留什么什么"的解决办法:
+    */*
+    !*/*.vhd
+    就可以忽略所有下面的目录并且提取所有的下面目录的vhd文件啦 见quartus工作区
+    顺带一提,这个.gitignore是glob模式的正则表达式.所以一个*就可以完成别人.*的结果啦
+    gitignore的规则还是没有搞懂,过段时间再看
+
+
+2018年 07月 03日 星期二 01:29:16 CST
+title:  linux 下 eclipse安装
+    只要在命令行输入eclipse,它就会说 你没有安装eclipse,在apt里有.
+    codeblocks安装也是这样的.
+
+
