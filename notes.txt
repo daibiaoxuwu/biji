@@ -21,4 +21,8 @@ title:  linux 下 eclipse安装
     只要在命令行输入eclipse,它就会说 你没有安装eclipse,在apt里有.
     codeblocks安装也是这样的.
 
+2018年 07月 03日 星期二 09:38:07 CST
+title:  命令行后台运行eclipse
+    nohup eclipse &
+    命令行窗口便可以关闭.
 
