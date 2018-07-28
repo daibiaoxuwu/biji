@@ -26,3 +26,25 @@ title:  命令行后台运行eclipse
     nohup eclipse &
     命令行窗口便可以关闭.
 
+title: 配置新的windows系统：vim部分
+    vim如果从官网上安装windows版本并且勾选了vim.bat安装（要手动勾上）就可以在命令行输入vim运行了。
+    
+    github则是要配一个环境变量。安装github
+    desktop后不能直接使用命令行git，但是在C:\Users\d\AppData\Local\GitHubDesktop\app-1.2.6\resources\app\git\cmd里有git.exe.添加环境变量即可。
+    
+    github无法拉起vim的解决办法：git config --global core.editor
+    "vim.bat"即可。
+
+    vim粘贴代码时临时关闭自动换行：
+    ：set paste
+    ：set nopaste即可。
+
+    vim开启read !data还是有问题。待解决。
+    vim生成的un~文件是为了下次打开时候还可以撤销上次的内容。所以...留着吧。忍一忍就好了。
+
+    vim关闭长行换行：set textwidth=10000 关闭长行标红：不知道
+
+
+
+
+
