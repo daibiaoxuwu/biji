@@ -1,0 +1,20 @@
+newline: .int LF, NULL header: .ascii “\nFile Write Example.\n\n\0” filename: .ascii “url.txt\0” url: .ascii “http://www.google.com\n\0”
+len = .–url - 1
+writeDone: .ascii “Write Completed.\n\0” fileDescrip: .quad   0 errMsgOpen: .ascii “Error opening file.\n\0” errMsgWrite: .ascii “Error writing to file.\n\0” 
+.section .text .globl _start _start: movq $header,%rdi call printString openInputFile: movq $SYS_creat, %rax movq $filename, %rdi movq $S_IRUSR|S_IWUSR, %rsi syscall
+cmp $0, %rax jl errorOnOpen
+movq %rax, fileDescrip
+.globl printString printString: pushq %rbx movq %rdi, %rbx movq $0, %rdx
+strCountLoop: cmpb $NULL,(%rbx) je strCountDone incq %rdx incq %rbx jmp strCountLoop
+strCountDone: cmpq $0, %rdx je prtDone
+movq $SYS_write, %rax movq %rdi,%rsi movq $STDOUT,%rdi syscall
+prtDone: popq %rbx ret
+
+movq $SYS_write, %rax movq fileDescriptor, %rdi movq $url, %rsi movq $len, %rdx syscall cmpq $0, %rax jl errorOnWrite
+movq $writeDone, %rdi call printString
+movq $SYS_close, %rax movq fileDescriptor, %rdi syscall jmp exampleDone
+
+errorOnOpen: movq $errMsgOpen,  %rdi call printString jmp exampleDone
+errorOnWrite: movq $errMsgWrite, %rdi call printString jmp exampleDone
+exampleDone: movq $SYS_exit, %rax movq $EXIT_SUCCESS, %rdi syscall
+
