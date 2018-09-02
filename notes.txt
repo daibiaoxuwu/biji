@@ -42,9 +42,137 @@ title: 配置新的windows系统：vim部分
     vim开启read !data还是有问题。待解决。
     vim生成的un~文件是为了下次打开时候还可以撤销上次的内容。所以...留着吧。忍一忍就好了。
 
-    vim关闭长行换行：set textwidth=10000 关闭长行标红：不知道
+    vim关闭长行换行：set textwidth=10000 关闭长行标红：
+    :match OverLength '\%1000001v.*'
+    :highlight Overlength ctermbg=red ctermfg=white guibg=red guifg=white
 
 
+title: 判断两线段是否相交
+    http://www.cnblogs.com/wuwangchuxin0924/p/6218499.html
+
+title: git stash问题
+大概是stash会保存未stage的所有更改(叫做 dirty working
+        tree)然后把他们撤销到上一个commit.
+stash save "__"
+stash apply复原
+stash list查看
+stash apply stash@{1}来使用别的(没试过)
+原文：http://gitbook.liuhui998.com/4_5.html
+一、基本操作
+当你正在做一项复杂的工作时, 发现了一个和当前工作不相关但是又很讨厌的bug. 你这时想先修复bug再做手头的工作, 那么就可以用 git stash 来保存当前的工作状态, 等你修复完bug后,执行'反储藏'(unstash)操作就可以回到之前的工作里.
+$ git stash save "work in progress for foo feature"
+上面这条命令会保存你的本地修改到储藏(stash)中, 然后将你的工作目录和索引里的内容全部重置, 回到你当前所在分支的上次提交时的状态.
+好了, 你现在就可以开始你的修复工作了.
+... edit and test ...
+$ git commit -a -m "blorpl: typofix"
+当你修复完bug后, 你可以用git stash apply来回复到以前的工作状态.
+$ git stash apply
+二、储藏队列
+你也可多次使用'git stash'命令,　每执行一次就会把针对当前修改的‘储藏’(stash)添加到储藏队列中. 
+用'git stash list'命令可以查看你保存的'储藏'(stashes):
+$>git stash list
+stash@{0}: WIP on book: 51bea1d... fixed images
+stash@{1}: WIP on master: 9705ae6... changed the browse code to the official repo
+可以用类似'git stash apply stash@{1}'的命令来使用在队列中的任意一个'储藏'(stashes).
+ 'git stash clear‘则是用来清空这个队列.
+    
+ title: android 解决模拟器权限问题
+    在nexus5s里“关于”里最后一项点击7次进入开发者选项。
+        android 解决listview里按vertical的linear
+        layout上下排列一个图片一个文字然后图片占有特别大一个白边的：
+        android:adjustViewBounds="true" 
+
+title:android materialview中(第一步设置toolbar)style中加默认配色时说minsdk到15,这个到21
+    在build.gradle里把minsdk从15变成21,依然报错:
+    Manifest merger failed : uses-sdk:minSdkVersion 15 cannot be smaller than version 21 declared in library [:feature] D:\workspace\android\Test\feature\build\intermediates\manifests\full\debug\AndroidManifest.xml as the library might be using APIs not available in 15
+	Suggestion: use a compatible library with a minSdk of at most 15,
+		or increase this project's minSdk version to at least 21,
+		or use tools:overrideLibrary="com.example.d.test.feature" to force usage (may lead to runtime failures)
+    这时在dependencies闭包的最后加入
+        compile 'com.android.support:support-v4:28.+'
+    compile 'com.android.support:appcompat-v7:28.+'
+    并且要右键工程总目录找到open module settings(f4),左边点app,右边点flavors
+    调minsdk为21,再在里边点开feature,同样调成21(不知道后面的有没有必要)
+    即可.
+
+title:android报错类似cannot resolve android.widget.Toolbar to android.support.v7.widget.Toolbar
+    可能是自动import的错了.import android.support.v7.widget.Toolbar即可.
+
+title:不小心把工程放在新的feature module下了不是app,怎么解决
+    把东西拷过去之后在app的build.gradle第一行改 apply
+    plugin:'com.android.application'
+    别的操作:删掉旧的feature,用安卓里边的东西删.以及到时候会报错,按提示链接一个文件,
+    里边有一行什么什么feature一行什么什么app,把feature去掉就行.
+    以及右键工程 remove module去掉了那些
+
+titie:好像加入navigationview都会这样,报错
+Program type already present: android.support.design.widget.CoordinatorLayout$Behavior Message{kind=ERROR, text=Program type already present: android.support.design.widget.CoordinatorLayout$Behavior, sources=[Unknown source file], tool name=Optional.of(D8)}
+解决办法:google到的 在dependencies闭包后面加入
+implementation 'com.android.support:design:27.1.0'
+即可
 
 
+title:imageview 图片的cropping 比例不一样时希望填满并且crop多余的
+    设置scaleType为centerCrop即可.
 
+title:java爆栈
+    java跑一个很简单的DFS搜索,第5678层(五千多层)的地方爆栈了.栈还是很小的.
+
+title:java protected类
+    TODO
+
+title:git merge
+    git merge 80bcbeb可以将当前和80bcbeb版本之间merge
+
+title:输出了一段时间出现read: unexpected EOF
+    https://stackoverflow.com/questions/48689930/logcat-crashes-with-error-unexpected-eof
+    回答3(没尝试别的)
+     
+    Fuller answer
+
+    The accepted answer didn't work for me. Rather than turning the logger buffer off, I increased it to the max size.
+
+        Enable developer options in your emulator or device (not Android Studio) if it hasn't been enabled already: In your emulator or device go to Settings > System > About (emulated device) and click on Build number 7 times.
+        Go to Settings > System > Developer options > Logger buffer sizes and choose a higher value.
+
+    enter image description here
+
+        I also had to restart the emulator.
+
+    So the original problem apparently happens because the devices log buffer gets filled up for lengthy logging. Increasing the buffer size allows you to log more in a single logging session.
+    shareimprove this answer
+
+    不是代码的问题,是虚拟机自己log太多了.
+
+title:android读取rss加recyclerview,下拉刷新的应用
+    https://www.androidauthority.com/simple-rss-reader-full-tutorial-733245/
+
+title:android studio自带虚拟机无法联网
+    https://stackoverflow.com/questions/42736038/android-emulator-not-able-to-access-the-internet
+ 56
+down vote
+
+I found a temporary solution on an old Stack Overflow thread at Upgraded to SDK 2.3 - now no emulators have connectivity. Note that this thread talks about Android SDK 2.3, not Android Studio 2.3. The problem seems to be that the emulator can't find the DNS my computer is currently using, and the temporary workaround is to start the emulator from the command line and specify the DNS server. Whatever problem occurred back then must have reappeared in the latest version of Android Studio.
+
+The temporary solution outlined below fixes the problem with the emulator accessing the internet. However, it does not fix the problem that occurs when trying to run Android Device Monitor. Doing so will still make the emulator go offline as described above.
+
+Note that there are two files named "emulator.exe" in the sdk -- one under sdk\tools and another under sdk\emulator. Either might work below, but I use the one under sdk\emulator.
+
+The first step is to find where the SDK is located. Assuming a user name of "jdoe" and a default installation of Android Studio on Windows, the SDK is most likely in
+C:\Users\jdoe\AppData\Local\Android\sdk.
+
+The second step is to determine the name of the AVD (emulator) that you want to run. The command
+C:\Users\jdoe\AppData\Local\Android\sdk\emulator\emulator.exe -list-avds
+will show the names of your AVDs. On my computer it shows only one, Nexus_5X_API_25.
+
+To start the emulator from the command line with a specified DNS server, use something like the following:
+C:\Users\jdoe\AppData\Local\Android\sdk\emulator\emulator.exe -avd Nexus_5X_API_25 -dns-server 8.8.8.8
+
+In this case, 8.8.8.8 is a Google public domain name server.
+
+The above commands can be shortened if you create appropriate environment variables and edit your PATH environment variable, but I recommend caution when doing so.
+
+D:\Sdk\emulator>emulator.exe -avd Nexus_5X_API_24 -dns-server 8.8.8.8
+
+title:汇编问题
+    01 .equ 0_RDONLY 为什么是000000而不是0

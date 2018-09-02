@@ -1,0 +1,64 @@
+http://blog.csdn.net/u014595019/article/details/52759104
+多层lstm
+
+
+tf.train.match_filenames_once如何验证文件是否正确读取？
+原创 2017年07月14日 12:12:26
+
+    标签：
+    python
+
+用到了tf.train.match_filenames_once这个函数去读取tfrecords文件，却不知道文件是否已经读取到，用以下这段代码可以轻松测试。
+
+
+[python] view plain copy
+
+    import tensorflow as tf  
+      
+    directory = "*.*"  
+    file_names = tf.train.match_filenames_once(directory)  
+      
+    init = (tf.global_variables_initializer(), tf.local_variables_initializer())  
+      
+    with tf.Session() as sess:  
+        sess.run(init)  
+        print(sess.run(file_names))  
+
+
+输出不是  [ ]  即代表文件已经读取到
+
+
+斯坦福nlp可以添加: -threads 4参数 以及别忘了-outputFormat json参数
+ nohup java -cp "*" -Xmx6g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators tokenize,ssplit,pos,lemma,parse -file /home/d/Downloads/p2r -ouutFormat json -threads 4 &
+[1] 12383
+d@d-ThinkPad-E460:~/workspace/java/eclipse/work/lib$ nohup: 忽略输入并把输出追加到'nohup.out'
+防止挂起:https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/
+
+
+1. 查看 vim 是否支持 clipboard 功能$ vim --version | grep clipboard
+2. 如果有 +clipboard 则跳过这一步; 如果显示的是 -clipboard 说明不支持, 需要Ubuntu$ sudo apt install vim-gtk
+因为默认安装的 vim 有些功能不支持, 安装 vim-gtk 包可以get the extra featuresMac# 查看选项
+$ brew options vim
+$ brew install/reinstall vim --with-client-server
+3. 使用 + 寄存器与系统粘贴板互通数据,  "+yy 等操作
+
+作者：cnlzxin
+链接：https://www.zhihu.com/question/19863631/answer/182346296
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+
+http://blog.csdn.net/u014595019/article/details/52759104
+lstm+dropout
+
+有时间整一下虚拟机,它们占了8个G
+保存了一张'内存情况'
+
+
+
+{u'docId': u'journals_dcc_Howgrave-GrahamS01.txt', u'sentences': [{u'tokens': [{u'index': 1, u'word': u'Introduction', u'lemma': u'introduction', u'after': u' ', u'pos': u'NN', u'characterOffsetEnd': 12, u'characterOffsetBegin': 0, u'originalText': u'Introduction', u'before': u''}, {u'index': 2, u'word': u'Lattice', u'lemma': u'lattice', u'after': u' ', u'pos': u'NN', u'characterOffsetEnd': 20, u'characterOffsetBegin': 13, u'originalText': u'Lattice', u'before': u' '}, {u'index': 3, u'word': u'attacks', u'lemma': u'attack', u'after': u' ', u'pos': u'NNS', u'characterOffsetEnd': 28, u'characterOffsetBegin': 21, u'originalText': u'attacks', u'before': u' '}, {u'index': 4, u'word': u'have', u'lemma': u'have', u'after': u' ', u'pos': u'VBP', u'characterOffsetEnd': 33, u'characterOffsetBegin': 29, u'originalText': u'have', u'before': u' '}, {u'index': 5, u'word': u'recently', u'lemma': u'recently', u'after': u' ', u'pos': u'RB', u'characterOffsetEnd': 42, u'characterOffsetBegin': 34, u'originalText': u'recently', u'before': u' '}, {u'index': 6, u'word': u'been', u'lemma': u'be', u'after': u' ', u'pos': u'VBN', u'characterOffsetEnd': 47, u'characterOffsetBegin': 43, u'originalText': u'been', u'before': u' '}, {u'index': 7, u'word': u'used', u'lemma': u'use', u'after': u' ', u'pos': u'VBN', u'characterOffsetEnd': 52, u'characterOffsetBegin': 48, u'originalText': u'used', u'before': u' '}, {u'index': 8, u'word': u'to', u'lemma': u'to', u'after': u' ', u'pos': u'TO', u'characterOffsetEnd': 55, u'characterOffsetBegin': 53, u'originalText': u'to', u'before': u' '}, {u'index': 9, u'word': u'attack', u'lemma': u'attack', u'after': u' ', u'pos': u'VB', u'characterOffsetEnd': 62, u'characterOffsetBegin': 56, u'originalText': u'attack', u'before': u' '}, {u'index': 10, u'word': u'RSA', u'lemma': u'rsa', u'after': u' ', u'pos': u'NN', u'characterOffsetEnd': 66, u'characterOffsetBegin': 63, u'originalText': u'RSA', u'before': u' '}, {u'index': 11, u'word': u'schemes', u'lemma': u'scheme', u'after': u' ', u'pos': u'NNS', u'characterOffsetEnd': 74, u'characterOffsetBegin': 67, u'originalText': u'schemes', u'before': u' '}, {u'index': 12, u'word': u'under', u'lemma': u'under', u'after': u' ', u'pos': u'IN', u'characterOffsetEnd': 80, u'characterOffsetBegin': 75, u'originalText': u'under', u'before': u' '}, {u'index': 13, u'word': u'various', u'lemma': u'various', u'after': u' ', u'pos': u'JJ', u'characterOffsetEnd': 88, u'characterOffsetBegin': 81, u'originalText': u'various', u'before': u' '}, {u'index': 14, u'word': u'additional', u'lemma': u'additional', u'after': u' ', u'pos': u'JJ', u'characterOffsetEnd': 99, u'characterOffsetBegin': 89, u'originalText': u'additional', u'before': u' '}, {u'index': 15, u'word': u'assumptions', u'lemma': u'assumption', u'after': u'', u'pos': u'NNS', u'characterOffsetEnd': 111, u'characterOffsetBegin': 100, u'originalText': u'assumptions', u'before': u' '}, {u'index': 16, u'word': u',', u'lemma': u',', u'after': u' ', u'pos': u',', u'characterOffsetEnd': 112, u'characterOffsetBegin': 111, u'originalText': u',', u'before': u''}, {u'index': 17, u'word': u'such', u'lemma': u'such', u'after': u' ', u'pos': u'JJ', u'characterOffsetEnd': 117, u'characterOffsetBegin': 113, u'originalText': u'such', u'b
+
+
+
+nohup java -cp "*" -Xmx4g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators tokenize,ssplit,pos,lemma,parse -file /home/d/Downloads/p2r -outputFormat json -threads 4 -parse.model /home/d/Downloads/stanford/stanford-srparser-2014-10-23-models.jar 
+快100倍
