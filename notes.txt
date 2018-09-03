@@ -176,3 +176,9 @@ D:\Sdk\emulator>emulator.exe -avd Nexus_5X_API_24 -dns-server 8.8.8.8
 
 title:汇编问题
     01 .equ 0_RDONLY 为什么是000000而不是0
+
+    01 header:
+        xxxxx
+    $header:地址 header:访存值
+    记住!汇编$0才是数字0 0就访存去了!
+
