@@ -1944,3 +1944,30 @@ verilog和计组:
     在附录A中翻到1167页,说第四章和第五章的 optional sections 有网上的代码实现?
     并且第五章是system verilog的.
     verilog等一会回去拿了书再看吧.先看结构.
+
+win10下git记住用户名和密码
+git config --global credential.helper store 一句就好.会明文存储密码.
+
+intellij有自己的代码恢复功能 可能是每次编译时保存一下
+右键文件->local history
+https://blog.csdn.net/qq_35246620/article/details/70185685
+
+verilog 关于case避免锁存器:
+case或者if(只能在always块里)如果不把所有情况写全,或者让某个东西在某条件保持原值在别的时候改变
+就会生成锁存器.并且要把所有输入写全.
+case+always写得好还是会综合成非常简单的组合电路的.
+并且 always敏感表如果没写全 没包含所有赋值语句右边的量
+那个量变的时候always就不会触发 为了实现这点也会生成锁存器
+几个例子:
+https://www.cnblogs.com/youngforever/archive/2013/06/14/3135874.html
+生成锁存器的危害不知道有多大...一会再google一下
+以及为什么不是生成一个寄存器register
+ise会对锁存器产生警告. 电路图上写的是ld.
+大概就是组合逻辑里出现这种东西会把事情闹得很复杂,毛刺敏感,
+    而且编译器做了一些你看不懂的东西
+
+git:
+    gitkraken的git flow提供了一种更易用的git分支模式.包括feature, release
+    和hotfix模式.
+    拖动tag之后,会有merge和rebase reset等选项.rebase是一种将分支删除的merge.
+
