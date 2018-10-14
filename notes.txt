@@ -1965,9 +1965,31 @@ https://www.cnblogs.com/youngforever/archive/2013/06/14/3135874.html
 ise会对锁存器产生警告. 电路图上写的是ld.
 大概就是组合逻辑里出现这种东西会把事情闹得很复杂,毛刺敏感,
     而且编译器做了一些你看不懂的东西
-
+verilog =和<=:
+    组和逻辑:always @(*) =
+    时序逻辑:always @(posedge clock) <=
+    每个always块尽量只有一种.
+    https://www.nandland.com/articles/blocking-nonblocking-verilog.html
+    如果在clocked always中使用了=, 
+ 
 git:
     gitkraken的git flow提供了一种更易用的git分支模式.包括feature, release
     和hotfix模式.
     拖动tag之后,会有merge和rebase reset等选项.rebase是一种将分支删除的merge.
 
+git帮别的账号push: 似乎只有当时以该账号commit才可以.
+
+beyondcompare 默认是只比较meta信息, 修改日期新旧什么的. 
+(似乎刚更改了默认) 改成"比较内容": file - session settigs - compare选项卡
+- 下面有 比较内容还是比较meta信息. 比较时stop按钮会闪, 比较完毕才会变成灰色.
+
+节省空间: treesize free软件可以查看每个文件夹的大小和百分比.
+        vmware可以导入导出ova文件, 只需要一分钟左右.平时不用可以保存在ova里.
+
+卸载了githubdesktop, 并因为之前一直用的它的git,现在选择重装git.
+
+git push 设置关联
+ git push --set-upstream https://github.com/daibiaoxuwu/modelsim.git master
+
+gitignore 忽略全部除去...以及子目录的教程
+ https://jasonstitt.com/gitignore-whitelisting-patterns
