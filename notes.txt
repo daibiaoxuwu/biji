@@ -1993,3 +1993,67 @@ git push 设置关联
 
 gitignore 忽略全部除去...以及子目录的教程
  https://jasonstitt.com/gitignore-whitelisting-patterns
+
+vim-git: gitgutter
+以后就是正常用vscode, 小东西和内存不够的东西用comemu好了.
+
+xilinx x7:将G盘下的virtualbox\x7文件夹拷到C:\Users\d\VirtualBox VMs即可.
+
+软工
+1 vue里用session信息:
+https://www.npmjs.com/package/vue-session 可能能存全局变量
+
+2 我们的项目叫Single file components结构.要用vue-loader装载.
+https://vuejsdevelopers.com/2017/06/18/vue-js-boost-your-app-with-webpack/
+不过这个不是boost它的build过程, 而是它的运行速度.
+
+3 v-for只支持一些bootstrap控件和div什么的. 用在<p>上会有很奇怪的问题.
+
+4 express render可以传递local variables的.
+
+q:home.vue里
+                  <tbody>
+                  <tr v-for="(item, index) in list" @click="onClick(item)" :key="item.text">
+                    <td>{{index}}</td>
+                    <td>{{item.text}}</td>
+                    <!-- <td @click="onClick(item)" style="color:#12bbad">{{item.status}}</td> -->
+                    <!-- <td><button @click="onClick(item)">项目1</button></td> -->
+
+                    <td>{{item.status}}</td>
+                  </tr>
+点击即闪退回主页,
+                <tbody>
+                  <tr v-for="(item, index) in list" :key="item.text">
+                    <td>{{index}}</td>
+                    <td>{{item.text}}</td>
+                    <!-- <td @click="onClick(item)" style="color:#12bbad">{{item.status}}</td> -->
+                    <!-- <td><button @click="onClick(item)">项目1</button></td> -->
+
+                    <td @click="onClick(item)">{{item.status}}</td>
+                  </tr>
+就没有这个问题...为什么呢?
+
+软工第二个双周
+第一周 配环境
+换了个测试框架 jest 因为mocha如果支持vue麻烦
+支持前端后端测试 测过bs_fake 70%-80%
+bs_1 还没部署到平台上 遇到了乱码 但是本质是一样的
+
+前端写了两个页面的测试 home和app
+
+7 demo 解释数据库
+1 分工 test
+2 流水线
+3 bs_fake
+4 看gitlab graph issue 贡献率 #issue以及泽海的工作commit颗粒度比较大
+5 下阶段 基础做完 邮件 test 80 前端测试先放一放因为逻辑少\
+6 code smell主要是bs_fake的hardcode问题
+
+计算机组成原理 11.2交
+单周期CPU: 每个指令串行 走五段走完 再走下一个指令 最慢的方法
+一条指令的时间是指令周期
+一个CPU时钟是CPU周期
+多周期CPU: 指令依然串行, 变长, 不需要访存之类的就可以省去一些环节不一定5节
+流水线CPU: 指令定长5节, 但是是并行流水
+
+verilog: 多条<=时, 最后一条在always block结束的时候执行.
