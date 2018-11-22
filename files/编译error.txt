@@ -1,0 +1,67 @@
+Constant        :  LITERAL
+               {
+                  $$.expr = new Tree.Literal($1.typeTag, $1.literal, $1.loc);
+               }
+                |   '[' ConstantList ']'
+                    {
+                        $$.expr = new Tree.ArrayConstant($2.elist, $1.loc);
+                    }
+                |   '[' ']'
+                    {
+                        $$.expr = new Tree.ArrayConstant(new ArrayList<Tree.Expr>(), $1.loc);
+                    }
+                |  NULL
+                   {
+                  $$.expr = new Null($1.loc);
+               }
+                ;
+
+ConstantList    :   ConstantList ',' Constant
+                    {
+                        $$.elist.add($3.expr);
+                    }
+                |   Constant
+                    {
+                        $$.elist = new ArrayList<Tree.Expr>();
+                        $$.elist.add($1.expr);
+                    }
+                ;
+
+
+				
+Constant        :	LITERAL
+					{
+						$$.expr = new Tree.Literal($1.typeTag, $1.literal, $1.loc);
+					}
+				|   ArrayConstant
+				    {
+				        $$.expr = new Tree.ArrayConstant($1.elist, $1.loc);
+				    }
+                |	NULL
+                	{
+						$$.expr = new Null($1.loc);
+					}
+                ;
+
+ArrayConstant   :   '[' ConstantList Constant ']'
+                    {
+                        $$.elist = $2.elist;
+                        $$.elist.add($3.expr);
+                    }
+                |   '[' ']'
+                    {
+                        $$ = new SemValue();
+                        $$.elist = new ArrayList<Expr>();
+                    }
+                ;
+
+ConstantList    :   ConstantList Constant ','
+                    {
+                        $$.elist.add($2.expr);
+                    }
+                |   /* empty */
+                    {
+                        $$ = new SemValue();
+                        $$.elist = new ArrayList<Expr>();
+                    }
+                ;

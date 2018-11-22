@@ -171,12 +171,284 @@ titie:  第一条日记
             其实不要双时序就好 这种就fsm正常拉高拉低alu核心的使能,
             甚至根本没有alu的使能, 只是fsm的输出给外界的多路选择器
         信原 10.30 截止
-2018.11.1
+
+2018.10.31 周三
+    7:30 刚通了个宵.意识模糊.发烧.
+
+    决定给国雨晴一个"单文件"版本, 我用多文件的. 因为我的多文件里复用了我的cpu.
+
+
+
+2018.11.1 周四
         编译书面作业 截止
-2018.11.2
+2018.11.2 周五
+        17:00 紫荆公寓20 10层学习室 见dovlet
         计原附加 截止
-2018.11.4
+2018.11.3 周六
+        SRT论文
+
+        guarded 文法完全一致 内容自己有两个类 她有一个 代码不一样
+        ocstmt和sealed是自己的.
+        var是全抄的, 只是把iden名字换成了varexpr. 里边的一个变量名换成name.
+        本来也是抄别人?不知道
+        catarray和initarray全抄的. 换了个名字, 她叫concat和repeat.
+        本来也是抄别人?不知道
+        cat右结合 自己写的
+
+        [:] 国雨晴抄了最优雅的方法,我要一会把rangedIndex改掉
+        不必了...她换了点东西.
+        
+
+
+
+2018.11.4 周日
         编译PA1-B 截止
-2018.11.5
+2018.11.5 周一
+        20:00 紫荆20号楼8层 Mekhri
         网原书面作业 截止
         网原实验 截止
+2018.11.6 周二        
+2018.11.7 周三
+每周三晚上5:30 FIT3-402开会 GAN
+今天下午17:30，FIT楼 4-511
+VAEpre
+复现三个模型中的一个
+
+2018.11.8 周四
+        早上和周青去拍照
+        20:00 紫荆20号楼8层 Mekhri(取消)
+2018.11.9 周五
+        下午1:30 体育课1000
+        以及体侧 完成
+2018.11.10 周六
+        上午10点办公室
+
+任务:
+问牛神VAE 准备pre
+srt差一个系数采样
+cyvasse雏形
+srt模糊处理
+
+搜索 选学生 订阅前端
+
+学术新兴账号(不允许做大作业)
+Your account has been created. 
+
+Username:
+xueshuxinxing
+
+Password:
+password
+To connect :
+
+Juncluster (cpu cluster)
+---------------------------------
+node1:   ssh -p 4511 [your_username]@ml.cs.tsinghua.edu.cn
+node2:   ssh -p 4512 [your_username]@ml.cs.tsinghua.edu.cn
+node3:   ssh -p 4513 [your_username]@ml.cs.tsinghua.edu.cn
+node4:   ssh -p 4514 [your_username]@ml.cs.tsinghua.edu.cn
+
+
+Jungpu (gpu cluster)
+--------------------------
+node1:   ssh -p 4701 [your_username]@ml.cs.tsinghua.edu.cn
+node2:   ssh -p 4702 [your_username]@ml.cs.tsinghua.edu.cn
+node3:   ssh -p 4703 [your_username]@ml.cs.tsinghua.edu.cn
+​​node4:   ssh -p 4704 [your_username]@ml.cs.tsinghua.edu.cn
+​​node​5:   ssh -p 470​5 [your_username]@ml.cs.tsinghua.edu.cn
+​​node​6:   ssh -p 470​6 [your_username]@ml.cs.tsinghua.edu.cn​​
+
+
+Technical specifications:
+* There are 8 nodes in total, all nodes have ubuntu linux 14.04
+Juncluster 1-4: each one has 12 cores, (or 24 cores if you
+include hyper-threading), and 24GB ram
+Jungpu 1-2: each one has 24 cores, (or 48 cores if you
+include hyper-threading), 64GB ram, and 2 Nvidia GTX Titan X
+Jungpu 3-4: each one has 16 cores, (or 32 cores if you
+include hyper-threading), 128GB ram, and 4 Nvidia GTX Titan X
+
+Operations:
+* Juncluster 1, 2, 4 reboot at 3am / 4am 1st every month
+
+Password:
+* You can use 'passwd' to change your password, on every node
+* Please use a secure password, since we are exposed to the internet
+    - one way to get a secure password is to use the xkcd password generator:
+      http://preshing.com/20110811/xkcd-password-generator
+
+How to install software:
+* two methods:
+    - using a standard package: mail me or Jianfei the name of the package, and we will
+      install it; or tell us what it is you want, and we will have a look at
+      what is possible
+    - from source: install into your homedirectory, by doing './configure
+      --prefix=~/.local', then setting up LD_LIBRARY_PATH and PATH in ~/.bashrc to point into
+      appropriate subdirectories of ~/.local. Come to me or Jianfei if you don't understand this.
+
+Website:
+* You can create your own website by creating a folder called
+'public_html' in your homedirectory on node3, which will be published at
+http://ml.cs.tsinghua.edu.cn/~[your_username]
+
+Backups:
+* There are NO backups, so you should make sure all data on the nodes
+is copied to somewhere else, otherwise sooner or later it will be lost
+    - note that failures can correlate across nodes, so 'backing up' by copying
+      from one node to another is not sufficient
+    - I take no responsibility for data loss in case of accident, hardware
+      failure and so on.  it is your responsibilty to make sure your data is
+      backed up.
+
+Load balancing:
+* When you plan to run heavy (CPU, RAM or I/O intensive) jobs on the
+cluster, keep in mind to span workloads over nodes.
+    - running excessive jobs on a machine may cause resource contention and
+      result in bad performance. It may also slow down our www.ml-thu.net
+      websites, which is hosted on juncluster3.
+
+Please do not run heavy jobs on juncluster3, especially avoiding memory or I/O intensive jobs.
+
+* What to do?
+    1) before running programs, login to different nodes and type 'htop' to
+    check system load.
+    2) choose the most idle one. Avoid running too many processes on a machine.
+    3) copy source/binaries/libraries to the destination and run them.
+    (methods: windows=>WinSCP, linux/mac=>rsync)
+
+For shared file system (MooseFS)
+    * you can access it by ~/mfs or /mfs/<your user name>
+    * ~/mfs is shared across the 8 nodes
+    * Performance is worse than local file system
+    * Every file have 2 replicas, so the actual free space is 36TB
+    * Overall system bandwidth is about 100M w / 200M r.
+    * Every user can store at maximum 100, 000 files. 
+    * Please avoid using many small files, that will slow the FS down.
+
+For CUDA
+See this
+http://54.255.165.59:4567/system/cuda
+
+For Python
+There are generally 2 options
+
+1. Use virtualenv, you can create a virtual environment for yourself, then use pip to install packages.
+
+http://54.255.165.59:4567/system/virtualenv
+
+2. You may try the scientific python distribution, Anaconda, it does not requires root, and covers most recent used packages in a single distribution. 
+
+http://docs.continuum.io/anaconda/pkg-docs.html
+
+It is true there are some python packages that requires external C/C++ packages, e.g. libz, openssl, etc. These cases should be rare but if you really encounter, mail me or Jianfei so we can install the external dependencies by apt-get.
+
+Any other notes:
+Let me or Jiaxin or Jianfei know if you have any issues about the cluster.
+
+
+Best,
+Zhijie
+
+软工
+注册bug
+3.上传和下载文件。
+
+报名
+2.报名页面注册页面，已经填过的基本信息不应该可以再次修改。“变灰”
+3.很多页面起始出现位置。
+e.g. 报名成功之后，页面出现时初始位置是页面中间。
+4.报名成功页面没有返回主页的按钮。
+很多界面没有返回按钮。
+
+选择学生界面
+2.右边栏我的项目无法跳转。
+3.到学生主页之后同意学生报名没有跳转。缺逻辑。
+
+未知bug：点击我的项目里的项目之后会直接添加两个什么都没有的学生报名到那个项目。
+
+交互体验问题
+1.什么点击应该回到顶部，什么点击应该维持不变。
+2.左上角navbar，dashboard,  assignments只有英文。
+3.拒绝学生报名显示的英文是accepted gyq
+4.鼠标移到可以点击的模块应该变换鼠标形状。
+
+立项
+新立项保存的信息下次立项不见了。lzr
+Launch出现了mysql error。Lzr
+已拒绝。
+
+登录界面
+Sign out 之后验证码没有刷新。
+只要登录失败，不管什么原因，验证码都应该要刷新。Djl
+忘记密码没有做。Yzh
+
+未知bug：新动态点进去，所有东西都点不了。
+
+已通过未启动的页面 出现 “你们的项目已启动”
+
+新立项界面
+按钮文字应该改为开始报名。
+
+评价页面
+满意度 djl
+已启动项目出现在了订阅项目中。Lzr
+老师查看满意度是硬编码。
+
+首页：
+1.没有关键词的老师和学生不应该空着一栏。
+2.如何修改个人信息？？？？？增加个人主页，和个人主页按钮。
+3.任何方法进入自己的项目页面应该访问enrollstatus
+4.新动态中，同一个项目多个学生报名，老师的新动态出现同一个项目多次。
+解决：status改为xxx学生报名。
+
+enroll界面
+硬编码“学生1”。
+学生那里显示状态"已拒绝"之类
+
+assignmentView
+1.加搜索框，修改显示的项目。
+
+wiki
+1.展示时需要填满有效内容。
+2.增加展示流程
+
+----------------------
+注册bug
+上传和下载文件。Yzh
+wiki         gyq
+
+报名
+2.报名页面注册页面，已经填过的基本信息不应该可以再次修改。“变灰”yzh
+
+选择学生界面
+2.右边栏我的项目无法跳转。djl fixed.
+
+交互体验问题
+4.鼠标移到可以点击的模块应该变换鼠标形状。djl
+
+登录界面
+只要登录失败，不管什么原因，验证码都应该要刷新。Djl fixed
+忘记密码没有做。Yzh
+
+新立项界面
+按钮文字应该改为开始报名。gyq
+
+评价页面
+满意度 yzh
+老师查看满意度是硬编码。zyh
+
+首页：
+2.如何修改个人信息？？？？？增加个人主页，和个人主页按钮。djl
+4.新动态中，同一个项目多个学生报名，老师的新动态出现同一个项目多次。Lzr
+解决：status改为xxx学生报名。
+
+enroll界面
+
+assignmentView
+1.加搜索框，修改显示的项目。fix
+
+wiki
+1.展示时需要填满有效内容。gyq
+2.增加展示流程
+
+应该写一句"只有学生才能结题"

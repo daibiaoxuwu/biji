@@ -2076,3 +2076,30 @@ x7 未验证
 singleTime编译时候要加上use new parser:
 use_new_parser.png
 
+软工 git checkout bugfix/multiple_tutorials回到最早的页面
+
+异常检测论文 
+https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.2423&rep=rep1&type=pdf
+https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Bendale_Towards_Open_Set_CVPR_2016_paper.pdf
+
+产生式模型
+https://arxiv.org/pdf/1312.6114.pdf
+https://arxiv.org/pdf/1511.06434.pdf%C3%AF%C2%BC%E2%80%B0
+https://arxiv.org/pdf/1701.05517.pdf
+http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf
+
+注意 textdetection的补偿向量方向?
+
+2块内存怎么安排 分开一个指令一个数据的话跑通监控程序就可以
+
+python遇到需要装vs14的vc++编译器的时候:
+https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat
+直接pip install --upgrade setuptools 升到36.2.7以上(现在应该有40了)
+当时电脑里有vs2017(不清楚需要不需要).
+https://dimitri.janczak.net/2017/05/20/python-3-6-visual-studio-2017/
+这里说并不需要装vs2015.
+pip install --upgrade setuptools如果失败, Cannot remove entries from nonexistent file d:\anaconda32\envs\tst\lib\site-pack
+ages\easy-install.pth, 加入 --ignore-installed参数即可.
+https://github.com/ContinuumIO/anaconda-issues/issues/542
+
