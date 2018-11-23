@@ -22,7 +22,7 @@ title:  linux 下 eclipse安装
     只要在命令行输入eclipse,它就会说 你没有安装eclipse,在apt里有.
     codeblocks安装也是这样的.
 
-
+G
 
 "函数传递引用: #include<iostream>  #include<cstdio>  using namespace std;
 void pp(int &x)  {      x=4;  }    int main()  {      int x=2;        pp(x);
@@ -2103,3 +2103,54 @@ pip install --upgrade setuptools如果失败, Cannot remove entries from nonexis
 ages\easy-install.pth, 加入 --ignore-installed参数即可.
 https://github.com/ContinuumIO/anaconda-issues/issues/542
 
+intellij界面：安装Material Theme UI插件，选择material deep ocean，设置的appearance下material theme下icons下monochrome icons勾选可以改成暗色icon。
+
+vscode写c#:
+https://www.cnblogs.com/lxhbky/p/6673230.html
+
+office2016:
+网盘上有两个文件夹: office安装包和office破解工具. 好像不能用office安装包里边的破解工具, 而是用另一个文件夹的.
+KMSPico是这时候装的. 装到programfiles里了.
+实测可用.在office 破解工具里点清除什么什么,再安装kmspico即可.
+
+vscode重新配置:
+vscode自动检测编码:安装changeEncode,并去掉用户配置"files.encoding": "utf8"，(默认没有)即可.
+vscode-vim下ctrl+c改回复制等等:在settigns.json里加(前面2行不需要)
+{
+    "git.enableSmartCommit": true,
+    "files.autoSave": "afterDelay",
+    "vim.handleKeys":{
+        "<C-c>": false,
+        "<C-x>": false,
+        "<C-z>": false,
+        "<C-v>": false,
+        "<C-s>": false,
+        "<C-a>": false,
+        "<C-f>": false,
+    }
+}
+vscode设置里(file下拉菜单就有)可以打开autosave, 避免磁盘不同步的问题
+
+我的gmail邮箱:dujluo@gmail.com 密码HEI
+
+java绘图:
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class JFrmaeGraphics extends JPanel{
+
+    public void paint(Graphics g){
+
+        g.drawLine(10, 10, 200, 300);
+    }
+
+    public static void main(String[] args){
+        JFrame frame= new JFrame("Welecome to JavaTutorial.net");
+        frame.getContentPane().add(new JFrmaeGraphics());
+        frame.setSize(600, 400);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+    }
+}
