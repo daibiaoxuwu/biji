@@ -2154,3 +2154,4 @@ public class JFrmaeGraphics extends JPanel{
         frame.setResizable(false);
     }
 }
+
