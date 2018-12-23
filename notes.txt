@@ -2155,3 +2155,24 @@ public class JFrmaeGraphics extends JPanel{
     }
 }
 
+python import cv2是通过pip install opencv-python安装的.
+
+
+神经网络_产生式模型_VAE
+    
+无法用远程byobu: 用git bash打开, 选项里选窗口-界面语言zh-cn(好像没用)以及
+文本 本地local:zh-cn 字符集:utf-8
+参考https://www.v2ex.com/t/308882, cmder的问题
+同时,
+    取消勾选"按键"中上面那三个,可以正常用退格删除什么的.左右移动和tab还是永不了.
+
+使用tensorflow-gpu:
+. /home/xueshuxinxing/djl/tensorflow-gpu/lib/python3.6/venv/scripts/common/activate
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/home/xueshuxinxing/djl/tensorflow-gpu/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/home/xueshuxinxing/djl/tensorflow-gpu/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+python就可以了
+
+ scp -P 4714 xueshuxinxing@166.111.121.42 /data/zhijie/home_data/all/* data/
+
