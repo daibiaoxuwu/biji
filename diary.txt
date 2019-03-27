@@ -476,3 +476,6 @@ https://github.com/Trinkle23897/THU-CST-Cracker
 任务：
 看看electron，一个js转应用的东西。
 powertool，拆解内核手动管理线程。
+
+软工
+安装spark
