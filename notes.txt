@@ -2176,3 +2176,13 @@ python就可以了
 
  scp -P 4714 xueshuxinxing@166.111.121.42 /data/zhijie/home_data/all/* data/
 
+java绘图:从190214workspace里翻出来的untitled工程(现在在
+workspace/srt/untitled)里边的drawshape_saveasimage.java里.
+
+开一个新项目 gradle每次都要下载的问题：
+1 （好像只能在开新项目处，不行就new-import project from sources）里选gradle
+后面选项里三选一选第三个local那个
+2 配置环境变量 GRADLE_HOME=C:\Users\d\.gradle\wrapper\dists\gradle-4.10.2-all\9fahxiiecdb76a5g3aw9oi8rv\gradle-4.10.2
+一定是到具体版本的 里边的目录结构有bin docs 还有个getting-started.html
+PATH=%GRADLE_HOME/bin 而且 关闭所有intellij窗口并重启 关一个它命令行不更新的
+关命令行它的path就不更新进去

@@ -455,4 +455,6 @@ wiki
 
 2019.02.09
 将cyvasse的C#版(文件夹cs)从黑电脑的回收站里抢救了出来.同步到github以及
-硬盘的备份/workspace还有黄电脑的workspace.不太清楚版本对不对,反正能运行.
+硬盘的备份/workspace还有黄电脑的workspace.不太清楚版本对不对,反正能运行
+
+数学 作业 1.1246.
