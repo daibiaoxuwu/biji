@@ -17,3 +17,23 @@ JMP的地址和CPU相关。
 启动代码再加载OS的加载程序，或者提供选择OS的菜单。这个启动代码是认识文件系统格式的，可以同时有加载windows或linux内核的能力。
 
 BIOS是一套**标准**，这样同一个磁盘就可以在所有电脑上启动。
+
+
+
+
+
+
+
+
+
+0509 PPT19讲
+
+多核cpu不能用关中断避免并发问题. 原子指令可以.
+
+Hoare语义中 P V操作都需要等待. 其它操作V不需要等待.
+
+![1557363007467](C:\Users\lm\AppData\Roaming\Typora\typora-user-images\1557363007467.png)
+
+左上waitcv 右上signalcv 重点
+
+考试: 测试用例?PIAZZA里有

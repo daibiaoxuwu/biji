@@ -1,4 +1,4 @@
-
+﻿
 
 2018年 07月 03日 星期二 01:21:48 CST
 title:  vim小技巧
@@ -2175,4 +2175,112 @@ export LD_LIBRARY_PATH=/home/xueshuxinxing/djl/tensorflow-gpu/lib${LD_LIBRARY_PA
 python就可以了
 
  scp -P 4714 xueshuxinxing@166.111.121.42 /data/zhijie/home_data/all/* data/
+
+android下载资源dl.google.com下不下来的解决方法:
+ctrlshifts 搜索proxy 去点test connection连http://dl.google.com 估计会timeout
+打开shadowsocks 在cortana找"更改代理设置", 现在是127.0.0.1:1080, 在设置里使用手动代理, http代理, 填上127.0.0.1:1080,test 就行了. 之后build它问你要不要写到gradle文件里, 你说写, 还http/https都写, https的勾打上就行了.
+
+win10彻底关停windowsdefender减少开机磁盘占用
+https://www.windowscentral.com/how-permanently-disable-windows-defender-antivirus-windows-10
+恢复注册表 运行1.cmd即可
+
+https://store.rg-adguard.net/ windowsstore下载器
+
+java maven
+使用intellij new project 选maven 不选任何模板 出来一个pom.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.company.djl</groupId>
+    <artifactId>djl</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.15</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+其他都是自己给的
+dependencies里头写依赖项, 会从本地/云端拿她和她的依赖项($user_homer\.m2\repository,
+可在$MAVEN_HOME/conf/setting.xml的localRepository修改,
+idea的maven的配置文件其实是D:\prog\apache-maven-3.5.4\conf
+查看位置方法:https://blog.csdn.net/cdnight/article/details/80674697
+镜像: settings里mirrors标签加就行了. 
+镜像据说阿里的还是很好的, 已经配好了, 加了几个别的:
+
+作者：张钧泳
+链接：https://www.zhihu.com/question/47261839/answer/134716331
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+<mirrors>
+<mirror>
+        <id>alimaven</id>
+        <name>aliyun maven</name>
+        <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        <mirrorOf>central</mirrorOf>
+    </mirror>
+    <mirror>
+        <id>central</id>
+        <name>Maven Repository Switchboard</name>
+        <url>http://repo1.maven.org/maven2/</url>
+        <mirrorOf>central</mirrorOf>
+    </mirror>
+    <mirror>
+        <id>repo2</id>
+        <mirrorOf>central</mirrorOf>
+        <name>Human Readable Name for this Mirror.</name>
+        <url>http://repo2.maven.org/maven2/</url>
+    </mirror>
+    <mirror>
+        <id>ibiblio</id>
+        <mirrorOf>central</mirrorOf>
+        <name>Human Readable Name for this Mirror.</name>
+        <url>http://mirrors.ibiblio.org/pub/mirrors/maven2/</url>
+    </mirror>
+    <mirror>
+        <id>jboss-public-repository-group</id>
+        <mirrorOf>central</mirrorOf>
+        <name>JBoss Public Repository Group</name>
+        <url>http://repository.jboss.org/nexus/content/groups/public</url>
+    </mirror>
+    <!-- 中央仓库在中国的镜像 -->
+    <mirror>
+        <id>maven.net.cn</id>
+        <name>oneof the central mirrors in china</name>
+        <url>http://maven.net.cn/content/groups/public/</url>
+        <mirrorOf>central</mirrorOf>
+    </mirror>
+</mirrors>
+
+
+build标签是解决Usage of API documented as @since 1.7+. 指定javaversion是1.8.
+https://www.cnblogs.com/whgk/p/7112560.html
+
+java分析pdf: apache的pdfbox https://pdfbox.apache.org/download.cgi#20x, Source
+code including examples pdfbox-2.0.15-src.zip
+15.1MB,里边examples文件夹是maven项目, 用idea
+import进来打开任何文件都有main都可以跑.
+
+java分析word: https://www.baeldung.com/java-microsoft-word-with-apache-poi
+项目见java分析word文件夹. maven项目, 用idea import即可.
 
