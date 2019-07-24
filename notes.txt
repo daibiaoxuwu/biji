@@ -2284,3 +2284,175 @@ import进来打开任何文件都有main都可以跑.
 java分析word: https://www.baeldung.com/java-microsoft-word-with-apache-poi
 项目见java分析word文件夹. maven项目, 用idea import即可.
 
+vue调试:
+ mounted(){
+    window.vue = this;
+ }
+ 然后浏览器命令行window.vue._data
+
+打印机 word双面打印就是1 3 5 7 2 4 6 要手动拿出来一张张换次序 头朝里白面
+向上塞进去 再换回来 奇数也一样不会打一页白的 20190622
+
+电脑睡眠: 高级选项还有一个"关闭硬盘"选项,可能是这个导致不能一直开着.
+
+unity istrigger避免碰撞
+
+
+win10下载文件夹打开缓慢的问题:
+https://www.laptopmag.com/articles/slow-windows-downloads-folder
+
+unity 枪战游戏可以直接设置子弹穿过自己 不碰撞 用这个 设置layer
+https://docs.unity3d.com/Manual/LayerBasedCollision.html
+
+vim设置undodir和backupdir, 把un~和~文件集中放置
+undodir:
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+    let myUndoDir = expand(vimDir . '/undodir')
+    " Create dirs
+    call system('mkdir ' . vimDir)
+    call system('mkdir ' . myUndoDir)
+    let &undodir = myUndoDir
+    set undofile
+endif
+
+backupdir:模仿的
+let mybackupDir = expand(vimDir . '/backupdir')
+" Create dirs
+call system('mkdir ' . vimDir)
+call system('mkdir ' . mybackupDir)
+let &backupdir = mybackupDir
+set backup
+
+前文有个set nobackup设置给去掉了
+测试可用, un~就不是un了而是路径%%路径%%文件名这种格式了
+
+magicavoxel 画体素的软件
+github的file2vox 一个能支持大于126的vox转换器
+
+https://evozi.zendesk.com/hc/en-us/articles/360018011632-Shadowsocks-Free-Servers-Lists
+翻墙列表
+http://shadow.tunnelz.online/
+https://free-ss.site/这个试过了可以用 jp的 可能定期要换密码
+https://us.ishadowx.net/
+https://free.gyteng.com/
+https://go.freess.org/
+https://www.ssrtool.com/tool/free_ssr
+https://get.ss8.fun/
+SSR好像是可以订阅自动跟着换密码
+
+windows自带的"右键打开powershell"是按住shift执行的.在
+HKEY_CLASSES_ROOT\Directory\Background\shell\下有自带的注册项.
+
+windows可能默认不用独显!可以看看英伟达设置和任务管理器
+
+关于视频制作:
+爱剪辑挺好使的. 不过有弹窗, 而且会影响很多win10照片/视频应用运行,
+必须杀掉爱剪辑进程.
+win10自带的照片应用可以完成视频裁剪和拼接.可以剪掉片头.剪出来的mp4也比avi小.(不知道为什么)
+小软工课上对视频的要求:
+https://www.kdd.org/kdd2019/News/view/short-video-production-guide 
+提到了录频,格式转换等工具
+下载了freemake家的. 顺便freemake有个youtube下载器. 结果都有免费使用限制...
+转换器会被加上水印 youtube下载器只有50个超过3分钟时间的下载次数.
+两个工具:
+https://prezi.com/
+14天免费, 一个高级PPT
+https://www.renderforest.com/
+
+wordweb: (官网,不是winstore版本) 支持ctrl+右键查询. chrome需要添加插件.
+
+latex:
+overleaf是一个在线编辑并可以用富文本模式(不用写latex)的版本.
+本地的话, vim-latex也可以看看.
+
+win10查看环境变量 cmd是echo %PATH%
+powershell语法是不一样的
+PowerShell uses a different syntax than the Windows Command Prompt.
+To retreive the PATH variable use $Env:Path or Get-ChildItem Env:Path.
+Source: Creating and Modifying Environment Variables - Microsoft Technet
+
+vim的gui替代品...?
+想了想先用vscode吧
+有空可以看看neovim
+
+vim 查看变量
+echo $VIMRUNTIME
+好像查看_vimrc里的let变量就不用加$符号直接echo
+
+更好的终端...?
+cmder 和 comemu
+cmder似乎比comemu更好, comemu似乎不太支持tab
+Cmder builds on [ConEmu](https://code.google.com/p/conemu-maximus5) console emulator, by adding enhancements from [clink](http://mridgers.github.io/clink/) (such as bash-style completion in cmd.exe and PowerTab in powershell.exe) and optionally extending it with [msysgit](http://msysgit.github.io), that brings Unix tools to Windows.
+
+vimdiff: 配置好了. 之前装在program files (x86) 字符问题导致命令用不太对
+右键即可对比
+最后加了一行使自动最大化
+au GUIEnter * simalt ~x
+要加在最后
+https://superuser.com/questions/140419/how-to-start-gvim-maximized
+
+]c               - advance to the next block with differences
+[c               - reverse search for the previous block with differences
+do (diff obtain) - bring changes from the other file to the current file
+dp (diff put)    - send changes from the current file to the other file
+zo               - unfold/unhide text
+zc               - refold/rehide text
+zr               - unfold both files completely
+zm               - fold both files completely
+
+https://unix.stackexchange.com/questions/52754/whats-the-recommended-way-of-copying-changes-with-vimdiff
+
+vscode设置里加    "diffEditor.originalEditable": true,
+虽然它不认得, 但是能使得对比时能修改左边的文件
+
+vscode配色...?好像没记在笔记里?
+
+自动启动应用 只要cortana搜"自动启动"即可.
+全称是"查看在启动windows时看看哪些应用在自动启动"
+也有一个是Startup folder
+win+r 输入C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp即可
+https://kb.iu.edu/d/adlf
+
+downloading something from cli从命令行下载东西
+https://github.com/junegunn/vim-plug
+
+Installation
+Download plug.vim and put it in the "autoload" directory.
+
+Vim
+Unix
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+You can automate the process by putting the command in your Vim configuration file as suggested here.
+
+Windows (PowerShell)
+md ~\vimfiles\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\vimfiles\autoload\plug.vim"
+  )
+)
+Neovim
+Unix
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+Windows (PowerShell)
+md ~\AppData\Local\nvim\autoload
+$uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+(New-Object Net.WebClient).DownloadFile(
+  $uri,
+  $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+    "~\AppData\Local\nvim\autoload\plug.vim"
+  )
+)
+
+
+vim编辑vimrc:
+:e $MYVIMRC

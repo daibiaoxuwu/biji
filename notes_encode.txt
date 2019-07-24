@@ -1,0 +1,2181 @@
+
+
+2018年 07月 03日 星期二 01:21:48 CST
+title:  vim小技巧
+    下面我们都按这种格式来记笔记啦
+    上面这句话是在vim输入:read !date产生的.会产生新的一行.
+quote:  https://blog.csdn.net/zimmermanlin/article/details/8922067
+    这里也有更好的解决方法. read命令和这里提到的vim中的ab缩写都很有趣.
+
+
+2018年 07月 03日 星期二 01:25:01 CST
+title:  gitignore中不是"忽略什么什么"而是"保留什么什么"的解决办法:
+    */*
+    !*/*.vhd
+    就可以忽略所有下面的目录并且提取所有的下面目录的vhd文件啦 见quartus工作区
+    顺带一提,这个.gitignore是glob模式的正则表达式.所以一个*就可以完成别人.*的结果啦
+    gitignore的规则还是没有搞懂,过段时间再看
+
+
+2018年 07月 03日 星期二 01:29:16 CST
+title:  linux 下 eclipse安装
+    只要在命令行输入eclipse,它就会说 你没有安装eclipse,在apt里有.
+    codeblocks安装也是这样的.
+
+G
+
+"函数传递引用: #include<iostream>  #include<cstdio>  using namespace std;
+void pp(int &x)  {      x=4;  }    int main()  {      int x=2;        pp(x);
+printf("%d",x);  }   "   ""
+
+"系统设置-外观-行为选项卡-打钩"将显示桌面图标到启动器" 工作区有点问题经常崩溃
+最好把那边底下改成"菜单栏在窗口那显示"和"总是显示".菜单栏就是什么文件|编辑|查看|什么的"
+""
+
+"相关论文和资源非常丰富，远不局限于我发的这些，所以也需要你自己继续扩充 "   ""
+
+"可以更改“下载”文件夹位置：下载文件夹属性-位置-移动即可。会直接移动过去，快速访问链接也是。"
+""
+
+"语料库 语法树 词向量什么的 "   ""
+
+"只需要这三个文件
+其中inputdata有改动.下载功能取消了.把四个包放在(在此目录以下的)Minst_data目录下即可.
+在minstreldemo里把import Images改成了import images就过了,不清楚为什么.
+存在language下的tenslite里."    "BLOB"
+
+"另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ )
+，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起
+" ""
+
+"另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ )
+，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起
+" ""
+
+"这里用的ubnutulivecd修复,因为现在系统是ubuntu提供的gnu grub.   sudo
+apt-add-repository ppa：yannubuntu / boot-repair sudo apt-get update sudo
+apt-get install -y boot-repair boot-repair 要点上面的 recommended
+参考https://jingyan.baidu.com/article/4ae03de3dbdac83eff9e6be0.html    " ""
+
+"给了最后一组任务
+在新的文件夹里,n5和n7在wiley文件夹下面.n5已经爬完了,它改用的phantomjs.没有看错误信息,以后可能会再跑一次.
+n7用的firefox.n72尝试了一下,但最后只是加了点tryexcept的输出----除了把截止条件改为了加载第一条文字的readcubePdfLink---这应该没什么风险,而的确加快了进程."
+""
+
+"默认全是normal模式   b:加一个#和一个空格,到下一行 c:f r_ 把下一个空格换成_ d
+爬虫 wiley从底下的mongo抄到上面"  ""
+
+"从中午开始吧.日记似乎不需要多少时间.我们从19:39开始写这个日记.
+中午一直在预习大物实验,下午一点送女票去实验之后,自己也径直到了实验室.中午紫荆一层吃的牛肉面,给我的分量应该是不小心少了,但是我们用了7分钟就吃完了.做了波的实验.结束的时候大概是四点多.回寝之后颓了一个小时左右,到五点四十,去跑步健身了."
+""
+
+"参考 https://segmentfault.com/q/1010000003991188?_ea=450880 use default
+gradle是默认的，可能需要做的是offline。（可以搜索一下设置）"   ""
+
+"新建:(关于ssh什么的还有一些..按廖雪峰来得了) git remote add origin
+git@github.com:daibiaoxuwu/_____.git 上传:先 git add . git commit -m '...'
+然后git push即可上传. 下载: git pull:功能是git fetch+git merge origin/master
+git fetch的意思是更新这里的一个叫做origin/master的branch,不会在branch命令下显示
+git merge只会把旧提交和新提交合并到最新的那个版本
+所以如果你的commit领先仓库上的,git pull会显示already up-to-date,此时输入git
+status会发现领先origin/master 共x个提交.此时: git reset
+origin/master:跳转指针,stage也跟着跳转了,与指针一致 git checkout .
+将工作区的改动丢弃.此时,如果工作区在新的改动中添加了文件,这里会让那个文件变为未跟踪状态而不是删除它,可以status中查看,不会自动删除.
+# 删除 untracked files git clean -f  # 连 untracked 的目录也一起删掉 git clean
+-fd  # 连 gitignore 的untrack 文件/目录也一起删掉
+（慎用，一般这个是用来删掉编译出来的 .o之类的文件用的） git clean -xfd  #
+在用上述 git clean 前，墙裂建议加上 -n
+参数来先看看会删掉哪些文件，防止重要文件被误删 git clean -nxfd git clean -nf
+git clean -nfd"  ""
+
+"官方正确卸载 MongoDB
+如果要在你的系统中完全卸载MongoDB，你必须卸载MongoDB的程序文件，配置文件，和所有的包含数据和日志的文件和文件夹。下面我将演示如何完全卸载MongoDB
+1. 停止MongoDB 使用如下命名停止MongoDB的守护进程： sudo service mongod stop
+2. 移除MongoDB的程序文件 删除你以前所有的MongoDB的安装包： sudo apt-get purge
+mongodb-org*   3.删除数据文件和日志文件的目录 sudo rm -r /var/log/mongodb  sudo
+rm -r /var/lib/mongodb
+本文参考了MongoDB的官方安装文档，如果有兴趣的同学可以参考原版的官方文档，地址如下：
+https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+https://www.cnblogs.com/zlslch/p/6932970.html   "   ""
+
+"输液 800-1130 130-600 "    ""
+
+"把两万文件合并到主文件夹的combine.txt
+做了两个词向量combine100.bin和combine200.bin 它们的size是100和200 writing to
+/home/d/workspace/java/eclipse/work/lib/combine.txt.json        java -cp "*"
+-Xmx8g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators parse
+-outputFormat json -file /home/d/Downloads/p21 -timeout 600000
+换了服务器跑的更快...已经11G了,有时间可以合并一下
+语法树不知道如何表示.单论节点的话,一个节点太深,种类太多. (ROOT (ROOT(S
+(ROOT(S(NP (ROOT(S(NP(DT (ROOT(S(NP(NN (ROOT(S(NP(VP (ROOT(S(NP(VP(VBZ
+(ROOT(S(NP(VP(ADJP (ROOT(S(NP(VP(ADJP(JJ (ROOT(S(NP(VP(ADJP(,
+(ROOT(S(NP(VP(ADJP(ADVP (ROOT(S(NP(VP(ADJP(ADVP(RB (ROOT(S(NP(VP(ADJP(ADVP(,
+(ROOT(S(NP(VP(ADJP(ADVP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(IN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(DT (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(NN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(IN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(DT
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(NN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(IN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NNS
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(CC
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PRP$
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(NN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(IN
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP(NNS
+(ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP(.
+尝试了一下,词向量果然会舍弃大量的低频词...那尝试拿词向量为正确结果训练一个lstm然后输出更全面的词向量好了.
+看了一些资料,觉得用语法树有点费劲,先做一个只依靠文字的再说.一会也可以把每个语法树结构当成词."
+""
+
+"安装时：要安装好Anaconda2之后，再安装Anaconda3，这里Anaconda3的安装目录必须选在D:\Anaconda2\envs子目录下，如图所示，最后的”py3”可以自己另取。
+安装完成之后，在CMD里面直接输入python会启动Python2，而使用activate
+py3（py3即之前Python3安装目录文件夹的名字）命令之后，再使用python即可切换至Python3，如下图所示。使用activate
+py3命令之后，在命令行前面会出现一个[py3]标记，此时使用任何的python命令都是在Python3下进行的。使用deactivate命令可取消激活Python3。（由于安装叫了Miniconda3，直接文件夹更名为py3，如果有故障可以更名回来。）
+来源： http://blog.csdn.net/infin1te/article/details/50445217  "    ""
+
+"安装到s:\tools（新建的）  C空间不够   出现这个 改了，删掉s
+tools里的了，改到移动硬盘E的programs\MATLAB里。
+破解码是09806-07443-53955-64350-21751-41297
+让换硬盘时候我的电脑里右键一个iso点弹出 右键另一个iso点挂载就行了 完事了出这个
+1 按它说的下载mingw
+https://cn.mathworks.com/support/compilers.html?sec=win64&s_cid=pi_scl_5_R2017b_win64
+然后按这个  "    "BLOB"
+
+"安装搜狗输入法:
+先在安装时选择语言英文.安装好后languagesupport等他更新,如果是备份的话语言第一个直接汉语了,不是的话拖上去应该就行了.之后应用systemwide,重启(注意:注销再回来也行!更快!),回来找fctix(应该在,否则装一下)
+选好了后官网下载64位的搜狗拼音deb包,sudo dpkg -i 文件名.deb,尝试sudo apt
+--fix-broken install和sudo apt install
+-f即可.在fctix配置中"附加组件"里有搜狗拼音了.
+不要去文本输入的输入源那里,并不能添加搜狗的."   ""
+
+"文件名规范:  1 项目编号  2 调试号 发布版本为0 对版本的第几次调试性修改为1 2 3
+3 大型变化(feature)  4-5 小型变化号
+如果一个工程是由多个文件组成,1项目编号变为两位,第一位仍然为项目编号,第二位为文件编号
+例如:  30000 第一次编写  可能经过几个小的版本,到达30005  30005 可以运行的爬虫
+这个爬虫进行精简运行的时候 存为31005  31005 第一个可以运行的爬虫的简化
+在运行时找到了一些问题,改成了31006  31006 第一个爬虫测试通过
+这之后可以直接进行另一个方向的精简 进入32006 然后修改为32007
+在最后可以把32007和30005整合一下,变为30007  30007 大致通过
+30007之后可能找到新的改动,这时候直接拿起32007改就可以了,改之后存为32008,再给到30008;如果是精简的方面不对,拿起32007改成33007即可.
+工作空间规范:  bin:放置不用的非代码  old:放置不用的代码  notes:放置笔记 "   ""
+
+"内部春初 android data com.company.text2
+files下：这是application.persistancepath的值"  ""
+
+"如果你想创建格式美美的，且包含文字，表格，图片，公式甚至是不同型号标题的笔记，那么推荐你使用
+Markdown 笔记。为知笔记支持 Markdown
+的渲染，用简单的语法就可以写出赏心悦目的笔记。   ##### 简单两步完成操作 1.
+直接新建普通的笔记，在标题加 .md 后缀  2. 在正文中撰写 Markdown
+语法，点击保存并阅读，就可以看到渲染后美美的笔记啦。   简单介绍几种常用语法
+##### 标题 在行首插入 1 到 6个#，分别表示标题 1 到标题 6   ```  ##### 这是标题5
+###### 这是标题6 ```   ##### 这是标题5 ###### 这是标题6     ##### 列表 ######
+有序列表 有序列表则使用数字加一个英文句点，并加空格，再输入文字   ``` 1. 你好
+1. 为知笔记 1. 加油！ ```   1. 你好 1. 为知笔记 1. 加油！   ###### 无序序列表
+无序列表使用星号、加号或是减号作为列表标记，并加一个空格，再输入文字   ``` +
+Android + iPhone + iPad ```   + Android + iPhone + iPad   ##### 链接
+[描述]（链接地址）  ``` [为知笔记](www.wiz.cn)   ``` [为知笔记](www.wiz.cn)
+##### 表格 ``` | 为知笔记|客户端  | 版本 | |-------|------|--------| | WizNote
+| iPhone| 7.0.0 | ``` <br/>   | 为知笔记|客户端  | 版本 | |-|-|-| | WizNote |
+iPhone| 7.0.0 |    ##### 图片
+直接将图片插入到对应的位置即可，无需任何语法，比一般的 Markdown
+编辑器简单很多。      ##### 目录  在任何你想要展示Markdown 笔记目录的地方，添加
+`[TOC]`   点击保存后的效果：   [TOC]   ##### Mathjax 公式
+可以创建行内公式，例如：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$
+或者块级公式，     $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+点击保存后的效果：    可以创建行内公式，例如：$\Gamma(n) = (n-1)!\quad\forall
+n\in\mathbb N$ 或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
+##### 流程图   ```flow  st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com op1=>operation: My Operation sub1=>subroutine: My
+Subroutine cond=>condition: Yes or No?:>http://www.google.com io=>inputoutput:
+catch something...   st->op1->cond cond(yes)->io->e cond(no)->sub1(right)->op1
+``` [了解更多关于流程图的语法说明](http://adrai.github.io/flowchart.js/ )
+除了以上 Markdown
+中一般用到的基本语法，为知笔记还支持引用、时序图、脚注等渲染哦~查看更多
+[为知笔记 Markdown 新手指南](http://blog.wiz.cn/feature-markdown.html)   #####
+Mac 端支持更换 Markdown 模板 除了默认提供的 Markdown 渲染样式，为知笔记 Mac
+端还提供了更多 Markdown 渲染模板供你选择哦~ 点击系统顶部菜单
+WizNote->偏好设置->阅读->选择markdown模板->选中相应模板->确定 即可            "
+"BLOB"
+
+"如 git clone https://github.com/daibiaoxuwu/tensorflow-train.git "指定目录"
+(或者用git@daibiaoxuwu/tensorflow-train.git什么的)"   ""
+
+"要提前学vhdl quarters2要用老一点的版本.最好还是去实验室用. 实验前注意要求
+不能用加法器什么的 第一节课PPT有"    ""
+
+"使用deja-dup,在livecd什么更新都不下载就有,并且里边的install不需要apt update.
+deja-dup备份在10分钟左右?信息有8g左右,没有包含任何系统文件,也就是:
+不包含vim和vimrc 不包含java,android等等安在/里的软件
+不包含/etc/profile等环境变量 不包含设置:输入法.但是很简单.配置输入法将另起一条.
+不过包含了Firefox的历史记录." ""
+
+"百度首页  登录  注册  网页 新闻 贴吧 知道 音乐 图片 视频 地图 文库 百科
+进入词条全站搜索帮助  清除历史记录关闭
+声明：百科词条人人可编辑，词条创建和修改均免费，绝不存在官方及代理商付费代编，请勿上当受骗。详情>>
+首页 分类 艺术 科学 自然 文化 地理 生活 社会 人物 经济 体育 历史 特色百科
+历史上的今天 数字博物馆 史记·2016 城市百科 二战百科 非遗百科 用户 蝌蚪团
+燃梦计划 百科任务 百科商城 权威合作 合作模式 常见问题 联系方式 手机百科 网页版
+个人中心    比爱迪生还牛，却成为史上最倒霉的天才：尼古拉·特斯拉 39.1w
+特斯拉是一个多义词，请在下列义项上选择浏览（共7个义项） 添加义项
+?纯电动汽车品牌 ?计算处理器 ?物理单位 ?许可证协议 ?美国著名工程师
+?天南星科花烛属红掌品种 ?传记片 收藏  查看我的收藏 8032 有用+1 已投票  14
+特斯拉 （物理单位）编辑 锁定
+特斯拉英文为tesla（字首小写），符号表示为T，是磁通量密度或磁感应强度的国际单位制导出单位。在1960年巴黎召开的国际计量大会上，此单位被命名以纪念在电磁学领域做出重要贡献的美籍塞尔维亚发明家、物理学家、机械工程师、电气工程师尼古拉·特斯拉。
+中文名 特斯拉  外文名 tesla  符号表示 T  命名时间 1960年  纪念人物
+尼古拉·特斯拉  1特斯拉=1×10^4高斯=1×10^6微特斯拉
+1×10^3毫特斯拉=1×10^6微特斯拉=1特斯拉 1 T =
+1Wb/m2=1N/(A·m)=1Kg/(A·s^2)=1N·s/C·m 国际单位制导出单位   具有专门名称   ? 赫兹
+( 频率)  ? 牛顿 ( 力/重力)  ? 帕斯卡 ( 压强/应力)  ? 焦耳 ( 能量/功/热量)  ?
+瓦特 ( 功率/辐射通量)  ? 库仑 ( 电荷量)  ? 伏特 ( 电势/电压/电动势)  ? 欧姆 (
+电阻)  ? 西门子 ( 电导)  ? 法拉 ( 电容量)  ? 特斯拉 ( 磁通量密度/磁感应强度)  ?
+韦伯 ( 磁通量)  ? 亨利 ( 电感)  ? 摄氏度 ( 摄氏温度)  ? 弧度 ( 平面角)  ?
+球面度 ( 立体角)  ? 流明 ( 光通量)  ? 勒克斯 ( 光照度)  ? 贝克勒 ( 放射性活度)
+? 戈瑞 ( 吸收剂量)  ? 希沃特 ( 剂量当量)  ? 卡塔尔 ( 催化活性)          其他
+? 平方米 ( 面积)  ? 立方米 ( 体积)  ? 米每秒 ( 速率/速度)  ? 弧度每秒 ( 角速度)
+? 米每平方秒 ( 加速度)  ? 牛米 ( 力矩)  ? 每米 ( 波数)  ? 千克每立方米 ( 密度)
+? 立方米每千克 ( 比体积)  ? 摩每立方米 ( 物质浓度)  ? 立方米每摩 ( 摩尔体积)  ?
+焦每开 ( 熵)  ? 焦每摩开 ( 摩尔热容量/摩尔熵)  ? 焦每千克开 ( 比热容量/比熵)  ?
+焦每摩 ( 摩尔能)  ? 焦每千克 ( 比能)  ? 焦每立方米 ( 能量密度)  ? 牛每米 (
+表面张力)  ? 瓦每平方米 ( 热通量密度/辐射照度/功率密度)  ? 瓦每开米 ( 导热系数)
+? 平方米每秒 ( 动黏度)  ? 帕秒 ( 黏度)  ? 库每立方米 ( 电荷密度)  ? 安每平方米
+( 电流密度)  ? 西每米 ( 电导率)  ? 西平方米每摩 ( 摩尔电导)  ? 法每米 (
+介电常数)  ? 亨每米 ( 磁导率)  ? 伏每米 ( 电场强度)  ? 安每米 ( 磁场强度)  ?
+坎每平方米 ( 亮度)  ? 库每千克 ( 照射)  ? 戈每秒 ( 吸收剂量率)
+相关内容：国际单位制基本单位 国际单位制  词条标签： 科学    图集  特斯拉图册
+V百科往期回顾       词条统计 浏览次数：1334728次 编辑次数：11次历史版本
+最近更新：2017-10-13 创建者：breadann 猜你关注 特斯拉新能源汽车 北京特斯拉4s店
+北京特斯拉二手车 进口福特 银率网 土耳其烤肉 醇基燃料 酒店家具 400免费电话
+东方cj官网 新手上路 成长任务 编辑入门 编辑规则 百科术语 我有疑问 我要质疑
+在线客服 参加讨论 意见反馈 投诉建议 举报不良信息 未通过词条申诉 投诉侵权信息
+封禁查询与解封 ?2018 Baidu 使用百度前必读 | 百科协议 | 百度百科合作平台 |
+京ICP证030173号   京公网安备11000002000001号  进入词条  清除历史记录关闭  编辑
+收藏 赞  登录  分享  分享到微信朋友圈  打开微信“扫一扫”即可将网页分享至朋友圈"
+"BLOB"
+
+"命令是gu(变小写) gU(变大写).要加上范围.一行:0(到行首)gU$.
+10gU，则进行11行小写到大写的转换. "  ""
+
+"vimrc加入set term=xterm-256color"  ""
+
+"ubuntu系统下 命令行输入sensor即可
+https://www.linuxidc.com/Linux/2015-06/119201.htm 命令行运行psensor是图形化界面
+设置了首选项使它开机运行,运行在右上角状态栏" ""
+
+"ubuntu自带了iso到启动盘的工具,只要右键iso文件 即可."   ""
+
+"ubuntu备份0207 在新thinkpad-D:\ubuntu备份 里." ""
+
+"tesseract "    ""
+
+"swap只给了两个G...应该是8到16个的."    ""
+
+"stanford nlp:   cite: https://nlp.stanford.edu/software/lex-parser.html
+Sample input and output The parser can read various forms of plain text input
+and can output various analysis formats, including part-of-speech tagged text,
+phrase structure trees, and a grammatical relations (typed dependency) format.
+For example, consider the text:  The strongest rain ever recorded in India shut
+down the financial hub of Mumbai, snapped communication lines, closed airports
+and forced thousands of people to sleep in their offices or walk home during
+the night, officials said today. The following output shows part-of-speech
+tagged text, then a context-free phrase structure grammar representation, and
+finally a typed dependency representation. All of these are different views of
+the output of the parser.  The/DT strongest/JJS rain/NN ever/RB recorded/VBN
+in/IN India/NNP shut/VBD down/RP the/DT financial/JJ hub/NN of/IN Mumbai/NNP
+,/, snapped/VBD communication/NN lines/NNS ,/, closed/VBD airports/NNS and/CC
+forced/VBD thousands/NNS of/IN people/NNS to/TO sleep/VB in/IN their/PRP$
+offices/NNS or/CC walk/VB home/NN during/IN the/DT night/NN ,/, officials/NNS
+said/VBD today/NN ./.   (ROOT   (S     (S       (NP         (NP (DT The) (JJS
+strongest) (NN rain))         (VP           (ADVP (RB ever))           (VBN
+recorded)           (PP (IN in)             (NP (NNP India)))))       (VP
+(VP (VBD shut)           (PRT (RP down))           (NP             (NP (DT the)
+(JJ financial) (NN hub))             (PP (IN of)               (NP (NNP
+Mumbai)))))         (, ,)         (VP (VBD snapped)           (NP (NN
+communication) (NNS lines)))         (, ,)         (VP (VBD closed)
+(NP (NNS airports)))         (CC and)         (VP (VBD forced)           (NP
+(NP (NNS thousands))             (PP (IN of)               (NP (NNS people))))
+(S             (VP (TO to)               (VP                 (VP (VB sleep)
+(PP (IN in)                    "  ""
+
+"saver的定义需要在所有变量之后.
+在本地刚clone的classold版本中saver是有一行Saver(tf.global_variables())的."  ""
+
+"rm -r 删除目录 sudo rm -rf 强制删除文件夹 不行的话sudo chmod 777 文件夹名    "
+""
+
+"python3默认编码utf-8:意思是python自己字符串什么的是utf8的
+打开一个gbk文件时候,写 with open('a.txt')as f: f.readline()
+这一行readline就会报错,这里在readline后边再加encode()什么的肯定没用了. with
+open('a.txt')as f:  改成 with open('a.txt',encoding='gbk')as f:  即可."  ""
+
+"pycharm运行语料库的时候添加tensorflow包，说与pycosat冲突，暂时删除pycosat.
+卸载好像出现了问题。 RemoveError: This operation will remove conda without
+replacing it with  another version of conda.
+但是这样好像导致卸载成功了。然而这之后tensorflow又和futures冲突而报错。
+网上查到win上的tensorflow不支持python2.opencv只支持2.（截至20170530）
+anaconda上安装tensorflow：http://blog.csdn.net/jay100500/article/details/72809338
+"  ""
+
+"papersmith开始些项目路径"  ""
+
+"mongodb会用掉一些var空间.清理:清理无用安装包:sudo apt-get clean"   ""
+
+"lstm: workspace/languange/lstm/1.py 下载自
+https://www.cnblogs.com/DjangoBlog/p/6888812.html lstm生成预测序列的简单案例
+https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm.py
+tensorlayer 还没看   老师给的代码         word2vec:"   ""
+
+"linux的python2和3的区分不是很好,不能共享包."   ""
+
+"linux path:新安装的android opencv都放在programs里.不要放在/里了.
+爬虫的geckodriver放在/home/d/bin里.(专门给它新建的文件夹) linux
+文件管理器:nautilus
+注意!命令行运行时候里边删除的东西应该是无法恢复的!而且一旦窗口最小化就会消失.
+"  ""
+
+"indoor工程的opencv340：
+只要把这个装在手机上就能跑那个工程了。但是点任何键闪退。"  ""
+
+"import tensorflow.examples.tutorials.mnist.input_data mnist =
+input_data.read_data_sets("MNIST_data/", one_hot=True)"  ""
+
+"import tensorflow.examples.tutorials.mnist.input_data mnist =
+input_data.read_data_sets("MNIST_data/", one_hot=True)"  ""
+
+"https://zhidao.baidu.com/question/561689400673695884.html?qbl=relate_question_7&word=vim%C9%E8%D6%C3%B8%F7%B8%F6%CB%F5%BD%F8
+以及有时间总结一下vim各个缩进设置"    ""
+
+"https://www.linuxidc.com/Linux/2013-11/93169.htm kill -HUP
+ppid这句话里ppid就是ppid不要换成什么数字. " ""
+
+"https://www.jianshu.com/p/4195577585e6    基于tensorflow的MNIST手写数字识别  "
+""
+
+"https://www.cnblogs.com/zy6103/p/6943557.html" ""
+
+"https://www.cnblogs.com/xia-weiwen/p/7416666.html "    ""
+
+"https://www.cnblogs.com/liangml/p/5969404.html "   ""
+
+"https://stackoverflow.com/questions/31436157/e-art-failed-sending-reply-to-debugger-broken-pipe-but-application-still-runs/37370764#37370764
+4 down vote  Explaining the error:  E/ART: Failed sending reply to debugger:
+Broken pipe.   What is E/ART?  ART is the Android RunTime. This is the bytecode
+interpreter on your Android phone. The E simply indicates the logging level of
+ERROR.  What is "sending reply to debugger"?  Debugging on the Android phone is
+done using the adb (Android Debugging Bridge). The adb process runs on your dev
+machine (your laptop or PC) and a daemon runs on the Android device (i.e., the
+emulator or handset).  What is a broken pipe?  Your dev machine and the Android
+device communicate like a client server and a broken pipe means that the
+communication has become invalid. For instance, the client (the Android device)
+is trying to send a reply to the server (the adb process running on the dev
+machine) but the server has already closed the socket.  How to fix it  First
+make sure your app is building correctly by performing a clean/rebuild.  Then
+if you are running your app using USB debugging on a real phone then you can
+    often fix the problem by unplugging the USB cable and then plugging it back
+    in to reestablish the client/server connection.  If this doesn't work, you
+    can disconnect the USB cable and (stop the emulator if necessary) and close
+    Android Studio. This is often enough to stop the adb process. Then when you
+    open Android Studio again it will restart and the connection will be
+    reestablished.  If this doesn't work, you can try stopping the adb server
+    manually using the instructions in this question. For instance, you can try
+    opening command prompt or terminal and going to the sdk/platform-tools
+    directory and typing:  adb kill-server adb start-server     "   ""
+
+"https://segmentfault.com/q/1010000008262180 cat packages/*.txt >> combine.txt
+2w txt 几秒钟 不过由于读入大文件卡死我们还是一个一个文件读好了   "   ""
+
+"https://jingyan.baidu.com/article/9faa7231e7b78b473c28cbb6.html "  ""
+
+"https://jingyan.baidu.com/article/4ae03de3dbdac83eff9e6be0.html"   ""
+
+"https://blog.csdn.net/code_better/article/details/53287587 "   ""
+
+"http://www.ddooo.com/softdown/112942.htm     " "BLOB"
+
+"http://www.cnblogs.com/baiboy/p/nltk1.html nlp词性:
+http://blog.csdn.net/u011215144/article/details/78860834 或者这个更好
+https://stackoverflow.com/questions/1833252/java-stanford-nlp-part-of-speech-labels
+27.     VB     Verb, base form 动词基本形式 32.     VBZ     Verb, 3rd person
+singular present 动词第三人称单数 31.     VBP     Verb, non-3rd person singular
+present 动词非第三人称单数 28.     VBD     Verb, past tense 动词过去式 30.
+VBN     Verb, past participle 过去分词 29.     VBG     Verb, gerund or present
+participle 动名词和现在分词       MD     Modal 情态助动词     "  ""
+
+"http://www.52nlp.cn/tag/%E8%AF%8D%E5%90%91%E9%87%8F 这里少了一句,参考:
+https://spacy.io/usage/ 少python -m spacy download en"  ""
+
+"http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/mnist_pros.html
+官方文档(主要看) http://blog.csdn.net/sa14023053/article/details/51884894
+一个tensorflow简洁代码 https://www.jianshu.com/p/4195577585e6
+基于tensorflow的MNIST手写数字识别（二）--入门篇 (里边有一个
+http://blog.csdn.net/u014046170/article/details/47445919
+python解析minst的代码)"   ""
+
+"http://wdxtub.com/2016/09/21/byobu-guide/
+我们先跟着快速入门指南来学习一下基本的操作（这里只列出最常用的，具体的大家可以自己查阅）：
+Shift-F1 在一个新窗口中显示帮助。有什么操作忘记的话，这是最快捷的方法 F2
+创建一个新窗口。跟 F2 相关的操作都是跟界面相关的（其中 Session
+部分因为不太直观，这里不介绍） Shift-F2 水平切分窗口 Ctrl-F2 垂直切分窗口 F3/F4
+用来切换窗口。 Alt-Left/Right 切换窗口 Shift-Left/Right/Up/Down
+在切分的窗口间切换 Shift-F3/F4 在切分的窗口间切换 F5 重载 profile，刷新数据 F6
+关闭会话，但是在 Mac 上键盘是冲突的 F7 进入滚动模式，用来查看历史记录 F8
+给当前的窗口重命名，方便以后辨认 F9 启动 byobu 配置窗口 Ctrl-F9
+输入命令，并且在所有的窗口中执行 Shift-F9 输入命令，并且在所有的切分面板中执行
+"  ""
+
+"http://dl.pconline.com.cn/download/1107001.html即可破解。
+以及quarters9北邮人上有破解版，可以找冰箭要。"   ""
+
+"http://blog.csdn.net/u013378306/article/details/68064352 后半部分 命令行到
+/home/d/workspace/java/eclipse/work/lib 目录下(把所有jar包放在这里) java -mx4g
+-cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout
+15000 Note the the timeout is in milliseconds.    wget --post-data 'The quick
+brown fox jumped over the lazy dog.'
+'localhost:9000/?properties={"annotators":"tokenize,ssplit,pos","outputFormat":"json"}'
+-O -
+而一个java样例就在/home/d/workspace/java/eclipse/work这里,可以用eclipse直接开.
+输出:
+{"sentences":[{"index":0,"tokens":[{"index":1,"word":"The","originalText":"The","characterOffsetBegin":0,"characterOffsetEnd":3,"pos":"DT","before":"","after":"
+"},{"index":2,"word":"quick","originalText":"quick","characterOffsetBegin":4,"characterOffsetEnd":9,"pos":"JJ","before":"
+","after":"
+"},{"index":3,"word":"brown","originalText":"brown","characterOffsetBegin":10,"characterOffsetEnd":15,"pos":"JJ","before":"
+","after":"
+"},{"index":4,"word":"fox","originalText":"fox","characterOffsetBegin":16,"characterOffsetEnd":19,"pos":"NN","before":"
+","after":"
+"},{"index":5,"word":"jumped","originalText":"jumped","characterOffsetBegin":20,"characterOffsetEnd":26,"pos":"VBD","before":"
+","after":"
+"},{"index":6,"word":"over","originalText":"over","characterOffsetBegin":27,"characterOffsetEnd":31,"pos":"IN","before":"
+","after":"
+"},{"index":7,"word":"the","originalText":"the","characterOffsetBegin":32,"characterOffsetEnd":35,"pos":"DT","before":"
+","after":"
+"},{"index":8,"word":"lazy","originalText":"lazy","characterOffsetBegin":36,"characterOffsetEnd":40,"pos":"JJ","before":"
+","after":"
+"},{"index":9,"word":"dog","originalText":"dog","characterOffsetBegin":41,"characterOffsetEnd":44,"pos":"NN","before":"
+","    http://blog.csdn.net/thriving_fcl/article/details/76595253
+python发送请求"    ""
+
+"http://blog.csdn.net/u012436149/article/details/62058318
+ensorflow学习笔记（三十六）：learning rate decay 原创 2017年03月14日 21:39:26
+learning rate decay
+在训练神经网络的时候，通常在训练刚开始的时候使用较大的learning rate，
+随着训练的进行，我们会慢慢的减小learning
+rate。对于这种常用的训练策略，tensorflow
+也提供了相应的API让我们可以更简单的将这个方法应用到我们训练网络的过程中。 接口
+tf.train.exponential_decay(learning_rate, global_step, decay_steps, decay_rate,
+staircase=False, name=None)  参数:  learning_rate : 初始的learning rate
+global_step : 全局的step，与 decay_step 和 decay_rate一起决定了 learning
+rate的变化。  staircase : 如果为 True global_step/decay_step 向下取整
+更新公式： decayed_learning_rate = learning_rate * decay_rate ^ (global_step /
+decay_steps) 1 2 4   1 decayed_learning_rate = learning_rate * 2
+decay_rate ^ (global_step / decay_steps) 3 1 4 2 这个代码可以看一下
+learning_rate 的变化趋势： import tensorflow as tf global_step = tf.Variable(0,
+trainable=False) initial_learning_rate = 0.1 #初始学习率 learning_rate =
+tf.train.exponential_decay(initial_learning_rate, global_step=global_step,
+decay_steps=10,decay_rate=0.9) opt =
+tf.train.GradientDescentOptimizer(learning_rate) add_global =
+global_step.assign_add(1) with tf.Session() as sess:
+tf.global_variables_initializer().run() print(sess.run(learning_rate)) for i in
+range(10): _, rate = sess.run([add_global, learning_rate]) print(rate) 1 2 3 4
+5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 37   1 import tensorflow as tf 2 3
+global_step = tf.Variable(0, trainable=False) 4 5 initial_learning_rate = 0.1
+#初始学习率 6 7 learning_rate =
+tf.train.exponential_decay(initial_learning_rate, 8
+global_step=global_step, 9
+decay_steps=10,decay_rate=0.9) 10 opt =
+tf.train.GradientDescentOptimizer(learning_rate) 11 12 add_global =
+global_step.assign_add(1) 13 with tf.Session() as sess: 14
+tf.global_variables_initializer().run() 15     print(sess.run(learning_rate))
+16     for i in range(10): 17         _, rate = sess.run([add_global,
+learning_rate]) 18         print(rate)"    ""
+
+"http://blog.csdn.net/u010429424/article/details/48498081 chmod 777 文件名
+给所有人以全部对文件操作的权限 chmod -R 777 WhoJoy/  对整个目录操作  chmod 777
+* 对所有文件操作" ""
+
+"http://blog.csdn.net/thriving_fcl/article/details/76595253 python发送请求
+https://www.cnblogs.com/DjangoBlog/p/6888812.html lstm生成预测序列的简单案例
+https://github.com/dav/word2vec dav的github 词向量案例
+下载到了download/word2vec文件夹
+https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm.py
+tensorlayer   https://github.com/danielfrg/word2vec danielfrg的词向量
+应该是官方的 1.4k星
+http://nbviewer.jupyter.org/github/danielfrg/word2vec/blob/master/examples/word2vec.ipynb
+python自己下载的word2vec库-word2vec教程.下载到download/word2vec1文件夹.里边有一些案例.
+http://nbviewer.jupyter.org/github/danielfrg/word2vec/blob/master/examples/doc2vec.ipynb
+也是它的链接里的. github上搜索别的word2vec可能也好
+https://code.google.com/p/word2vec/ 应该也是.在google上,没看.
+https://nlp.stanford.edu/software/lex-parser.html
+斯坦福parser.结尾的使用方法和例子比较重要.   http://www.nltk.org/api/nltk.html
+www.cnblogs.com/baiboy/p/nltk1.html
+http://www.52nlp.cn/python%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E8%B7%B5-%E5%9C%A8nltk%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%96%AF%E5%9D%A6%E7%A6%8F%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8
+https://www.douban.com/group/topic/93196251/
+blog.csdn.net/a398942089/article/details/53048189
+nltk的,应用到python里的.我想直接读文件好一点吧.
+http://blog.csdn.net/a398942089/article/details/53048189 javaapi java里的
+没什么用
+http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/word2vec.html
+极客学院官方文档翻译 看字词词向量部分
+https://stanfordnlp.github.io/CoreNLP/annotators.html 看看corenlp的annotators
+https://stanfordnlp.github.io/CoreNLP/other-languages.html
+有它对python的支持.暂时不看.
+https://stanfordnlp.github.io/CoreNLP/caseless.html caseless
+本身没啥用,但是给了个从文件读取的代码例子和格式.conll.
+https://stanfordnlp.github.io/CoreNLP/corenlp-server.html
+讲解了怎么用server(重要)
+https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks/3_NeuralNetworks
+可以稍微看看.已下载.案例.这是简单神经网络模型,没有词向量什么的.
+https://github.com/jikexueyuanwiki/tensorflow-zh/blob/master/SOURCE/api_docs/python/nn.md
+tensorflow文档(已下载)   http://www.runoob.com/python/python-json.html
+python如"    ""
+
+"http://blog.csdn.net/thriving_fcl/article/details/73381217
+随便找的例子,在workspace的class/class2里.tf2虚拟环境.python2."  ""
+
+"http://blog.csdn.net/qq_37549757/article/details/56012895
+以后要用白机记住！设置-软件和更新-'可从互联网下载'的前四个打上钩！
+提示：进虚拟机选中文，语言设置进fctix，很顺利 切换输入法点那个小键盘或者小企鹅
+甚至搜索引擎都是百度的   /etc/profile添加: export
+JAVA_HOME=/home/d/programs/jdk1.8.0_161 export JRE_HOME=${JAVA_HOME}/jre export
+CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib export PATH=${JAVA_HOME}/bin:$PATH
+eclipse下载去官网.选中科大的镜像非常快.其他的下载也比百度网盘快多了. cd
+/usr/share/applications/ 做好了cp到桌面 eclipse.desktop:   [Desktop Entry]
+Encoding=UTF-8  Name=Eclipse  Comment=Eclipse
+Exec=/home/d/programs/eclipse-installer/eclipse-inst
+Icon=/home/d/programs/eclipse-installer/icon.xpm  Terminal=false
+StartupNotify=true  Type=Application  Categories=Application;Development;
+然后sudo chmod u+x  eclipse.desktop 这里复制的时候会丢掉这些权限.
+如果u+x不好就换成777好了.   最后的处理：报错找不到java： A Java Runtime
+Environment (JRE) or Java Development Kit(JDK) must be available in order to
+run Eclipse. No Java virtualmachine was found after searching the following
+locations: D:\eclipse\jre\bin\java.exe java.exe in your current PATH
+在解压的eclipse installer文件夹里的eclipse-inst.ini的开头两行加入 -vm
+/home/d/programs/jdk1.8.0_161/bin/java(改成正确的java可执行的路径） 即可.
+opencv:  http://www.linuxidc.com/Linux/2016-05/131609.htm
+https://www.cnblogs.com/xiaomanon/p/5490281.html  sudo apt-get install
+build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev
+libavformat-dev libswscale-dev python-dev python-numpy libjpeg-dev libpng12-dev
+libtiff5-dev libjasper-dev libdc1394-22-dev ant
+有两个包没有找到，他会中止别的软件包的安装。 E: 无法定位软件包 libttb2 E:
+无法定位软件包 libttb-dev
+以及，安装ant的时候会附带着安装java-openjdk8和9什么的.不影响用自己的java.
+cmake -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local ../   在sudo
+make之前要做: sudo update-alternatives --install /usr/bin/java java
+/home/d/programs/jdk1.8.0_161/bin/java 300  sudo update-alternatives --install
+/usr/bin/javac javac /home/d/programs/jdk1.8.0_161/bin/javac 300 sudo
+update-alternatives --config java  sudo update-alternatives --config javac
+然后再sudo make sudo make install "   ""
+
+"http://blog.csdn.net/mack415858775/article/details/39695277"   ""
+
+"http://blog.csdn.net/lordofrobots/article/details/77719020 "   ""
+
+"http://blog.csdn.net/jay100500/article/details/72809338
+Windows下通过Anaconda安装TensorFlow及Spyder编译器
+找不到让安装cuba的地方了，不过还是装上了 是一个安装应用
+官方文档上讲了所有三种方法
+教程方面看了http://blog.csdn.net/lengguoxing/article/details/78456279
+这里用了anaconda的方法，因为似乎不支持，应该选择python3.5而不是6.其他系统支持。
+conda remove -n tensorflow --all可以删除一个不小心建错了的环境。
+刚刚建好tensorflow： # # To activate this environment, use: # > activate
+tensorflow # # To deactivate an active environment, use: # > deactivate # # *
+for power-users using bash, you must source #  tensorflow如果选gpu，要输入pip
+    install tensorflow-gpu 否则pip install tensorflow即可。gpu需要cuda
+    一定是cuda8！以及对应cuda8的cudnn。但是安装这俩之后还是说找不到nvcuda.dll，全电脑查找也没有找到。"
+    ""
+
+"http://blog.csdn.net/andyzhaojianhui/article/details/46692549 nohup 重定向输出
+http://blog.csdn.net/u014595019/article/details/52759104  多层lstm
+tf.train.match_filenames_once如何验证文件是否正确读取？  原创 2017年07月14日
+12:12:26        标签：      python
+用到了tf.train.match_filenames_once这个函数去读取tfrecords文件，却不知道文件是否已经读取到，用以下这段代码可以轻松测试。
+[python] view plain copy        import tensorflow as tf
+directory = "*.*"        file_names = tf.train.match_filenames_once(directory)
+init = (tf.global_variables_initializer(), tf.local_variables_initializer())
+with tf.Session() as sess:            sess.run(init)
+print(sess.run(file_names))        输出不是  [ ]  即代表文件已经读取到
+斯坦福nlp可以添加: -threads 4参数 以及别忘了-outputFormat json参数   nohup java
+-cp "*" -Xmx6g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators
+tokenize,ssplit,pos,lemma,parse -file /home/d/Downloads/p2r -ouutFormat json
+-threads 4 &  [1] 12383  d@d-ThinkPad-E460:~/workspace/java/eclipse/work/lib$
+nohup: 忽略输入并把输出追加到'nohup.out'
+防止挂起:https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/      1. 查看
+vim 是否支持 clipboard 功能$ vim --version | grep clipboard  2. 如果有
++clipboard 则跳过这一步; 如果显示的是 -clipboard 说明不支持, 需要Ubuntu$ sudo
+apt install vim-gtk  因为默认安装的 vim 有些功能不支持, 安装 vim-gtk 包可以get
+the extra featuresMac# 查看选项  $ brew options vim  $ brew install/reinstall
+vim --with-client-server  3. 使用 + 寄存器与系统粘贴板互通数据,  "+yy 等操作
+作者：cnlzxin  链接：https://www.zhihu.com/question/19863631/answer/182346296
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+http://blog.csdn.net/u014595019/article/details/52759104  lstm+dropout
+有时间整一下虚拟机,它们占了8个G  已清理 曾经在worm/mongo的文件8g现在移动到了u盘
+保存了一张'内存情况'        {u'docId': u'journals_dcc_Howgrave-GrahamS01.txt',
+u'sentences': [{u'tokens': [{u'index': 1, u'word': u'Introduction', u'lemma':
+u'introduction', u'after': u' ', u'pos': u'NN', u'characterOffsetEnd': 12,
+u'characterOffsetBegin': 0, u'originalText': u'Introduction', u'before': u''},
+{u'index': 2, u'word': u'Lattice" ""
+
+"http://blog.chinaunix.net/uid-9950859-id-98683.html  分类： LINUX 2009-05-25
+09:25:42   看到论坛有个帖子问如何高效率删除文件最后一行,当然    sed -i '$d'
+urfile    :|dd of=urfile seek=1 bs=$(($(stat -c%s urfile)-$(tail -1 urfile|wc
+-c)))    dd这个速度已经很快了,很猛    说到底这些命令最后还是用c,所以用c写了个
+[root@localhost truncate]# cat last_d.c  #include <stdio.h> #include <unistd.h>
+#include <fcntl.h> #include <sys/stat.h> #include <stdlib.h>  #define
+GUESS_LINE_SIZE 80 //这里假设最后一行的长度最大只能为80  int get_line_size(char
+*ptr);  int main(int argc, char *argv[]) { char buf[GUESS_LINE_SIZE]; int
+line_len, fd; struct stat stat_buf;  if ((fd = open(argv[1], O_RDWR)) < 0) {
+    printf("open error!\n");                 return -1; }  if (lstat(argv[1],
+    &stat_buf) < 0) { printf("lstat error!\n");                 return -1; }
+    if (lseek(fd, -GUESS_LINE_SIZE, SEEK_END) < 0) { printf("lseek error!\n");
+    return -1;                    }  if (read(fd, buf, GUESS_LINE_SIZE) < 0) {
+        printf("read error!\n");                 return -1; }          line_len
+        = get_line_size(buf); //printf("line_len = %d\n", line_len);  if
+        (truncate(argv[1], stat_buf.st_size - line_len) < 0) { printf("truncate
+        error!\n");                 return -1; }  return 0; }  int
+        get_line_size(char *ptr) { int line_len = 0; int i = GUESS_LINE_SIZE -
+        2;  while (*(ptr + i) != '\n') { //printf("%c", *(ptr + i));
+        i--;                 line_len++; } return line_len; }      "    ""
+
+"git修改默认编辑器为vim git config --global core.editor vim "   ""
+
+"git remote set-url origin git+ssh://git@github.com/username/reponame.git  "
+""
+
+"do{a++;}while(a<5);"   ""
+
+"dense1 = tf.layers.dense(inputs=x,                        units=1024,
+activation=tf.nn.relu,
+kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),
+kernel_regularizer=tf.nn.l2_loss)  "  ""
+
+"cameramanager 690行 //          Camera.Parameters parameters =
+mCamera.getParameters(); //          parameters.setRotation(rotation); //
+mCamera.setParameters(parameters);  "    ""
+
+"换linux了。网页：
+https://stackoverflow.com/questions/23472173/opencv-error-opencv-was-not-initialized-correctly-application-will-be-shut-do
+opencverror
+https://stackoverflow.com/questions/42219784/installation-failed-with-message-invalid-file
+opencverror    Windows下通过Anaconda安装TensorFlow及Spyder编译器
+http://blog.csdn.net/jay100500/article/details/72809338
+http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html
+tensorflow文档 Windows下Anaconda2(Python2)和Anaconda3(Python3)的共存
+http://blog.csdn.net/infin1te/article/details/50445217
+http://blog.csdn.net/juanjuan1314/article/details/52411354
+从零开始使用tensorflow（2）——词向量
+http://blog.csdn.net/dabokele/article/details/54293560 TensorFlow入门和示例分析
+https://www.jianshu.com/p/4195577585e6
+基于tensorflow的MNIST手写数字识别（二）--入门篇"    ""
+
+"[Neumann and Matas 2012] Neumann, L., and Matas, J. 2012. Real-time scene text
+localization and recognition. In Proc. CVPR, 3538–3545."    ""
+
+"Physical Education "   ""
+
+"Nutrition and food science 还没有和0215合并！ 1American Journal of Clinical
+Nutrition 1n.py 2International Journal of Obesity---nature 2n.py
+从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py 3Journal of
+Agricultural and Food Chemistry--pubs acs里n3 4Journal of Food Science---n4
+wiley(改过啦) 5The Journal of Food Science Education--n5 wiley 6Journal of
+Nutrition--改的r3,n6.py,要解析 6n.py 7Obesity---n7   Forensic science
+Criminology wiley f1.py Journal of the Canadian Society of Forensic Science
+只有tandofonline的 Science & Justice 3f.py sciencedirect.com sd Energy 1Annals
+of Nuclear Energy OK 1e.py-sd  2Biofuels, Bioproducts and Biorefining OK
+仅783个 wiley e2.py 3Energy Conversion and Management OK 需要权限 3e.py-sd
+4Energy and Environmental Science pubs rsc org e4 需要权限 5Energy 5e.py-sd
+IEEE Transactions on Energy Conversion IEEE Transactions on Nuclear Science
+IEEE Transactions on Sustainable Energy 6International Journal of Hydrogen
+Energy 6e.py-sd Journal of Nuclear Science and Technology 7Journal of Photonics
+for Energy 新网站. 8Progress in Nuclear Energy 8e.py Nuclear Engineering and
+    Design ok 11e sd raw2 e11 完成 Nuclear Engineering and Technology  finish
+    12e sd 爬完 解析完成。 Nuclear Science and Engineering ok 和9e一样。13e
+    在爬爬完7 9Nuclear Technology ok
+    新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py
+    !!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了.
+    e9完成 Physical Education African Journal for Physical, Health Education,
+    Recreation and Dance 新网站而且打不开.  Acta Psychiatrica Scandinavica
+    Addiction Australian and New   Zealand Journal of Psychiatry 成功
+    Biological Psychiatry 不行 European Neuropsychopharmacology 不行  European
+    Psychiatry 6s  International Journal   of Geriatric Psychiatry s7  Journal
+    of Clinical   Psychopharmacology 不行  Molecular Psychiatry running 9s
+    nature-7p 补完 用2n和22n  Neuropsychopharmacology 10s nature-7p
+    10s2以不同的格式，10s接替回来。 以及-4 -2 -1个  "   ""
+
+"Nutrition and food science Psychiatry Forensic science Energy "    ""
+
+"Nutrition and food science 1American Journal of Clinical Nutrition 1n.py
+Oxford n1.py解析到88-5(在线）OK 2International Journal of Obesity---nature
+2n.py 从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py这个放弃了.
+22n.py n22.py解析完毕 OK 6Journal of Nutrition--改的r3,n6.py,要解析 6n.py
+改的n1.py n6.py 在解析(在线) RUNNING 完成   Forensic science Science & Justice
+3f.py sciencedirect.com sd 2爬完 f3.py完成 OK Energy 1Annals of Nuclear Energy
+1e.py-sd 2爬完 给补完一下。在raw2下。sdsolve成功。复制到e1.py OK 3Energy
+Conversion and Management 3e.py-sd 爬完 e3.py完成 OK  4Energy and Environmental
+Science pubs rsc org e4 需要权限 在爬 OK 5Energy 5e.py-sd 爬完解析完 OK
+有一些付费的url错误 6International Journal of Hydrogen Energy 6e.py-sd
+爬完解析完 OK 付费url 7Journal of Photonics for Energy 新网站. PASS 8Progress
+in Nuclear Energy 8e.py 爬完   OK 9Nuclear Technology
+新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py
+!!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了.
+Physical Education African Journal for Physical, Health Education, Recreation
+and Dance 新网站而且打不开. psychiatry  Acta Psychiatrica Scandinavica爬完
+Addiction成功 Australian and New   Zealand Journal of Psychiatry 成功
+Biological Psychiatry 不行 European Neuropsychopharmacology 不行  European
+Psychiatry 6s 爬完 OK  International Journal   of Geriatric Psychiatry s7 爬完
+Journal of Clinical   Psychopharmacology 不行  Molecular Psychiatry 9s
+nature-7p 爬完 补完 s9.py 又遇到格式变更  Neuropsychopharmacology 10s nature-7p
+爬完     Schizophrenia Bulletin Oxford的 s20（raw数据库里）爬完 u盘s20.py
+s201.py是没有url的 s203解析完成！ Schizophrenia Research 30s。py raw2 s30 完成
+Twin Research and Human Genetics World Psychiatry wiley s100.py 爬完     "
+""
+
+"Nutrition and food science 1American Journal of Clinical Nutrition 1n.py
+2International Journal of Obesity---nature 2n.py
+从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py 3Journal of
+Agricultural and Food Chemistry--pubs acs里n3 4Journal of Food Science---n4
+wiley(改过啦) 5The Journal of Food Science Education--n5 wiley 6Journal of
+Nutrition--改的r3,n6.py,要解析 6n.py 7Obesity---n7   Forensic science
+Criminology wiley f1.py Journal of the Canadian Society of Forensic Science
+只有tandofonline的 Science & Justice 3f.py sciencedirect.com sd Energy 1Annals
+of Nuclear Energy 1e.py-sd 2Biofuels, Bioproducts and Biorefining wiley e2.py
+3Energy Conversion and Management 3e.py-sd 4Energy and Environmental Science
+pubs rsc org e4 需要权限 5Energy 5e.py-sd IEEE Transactions on Energy
+Conversion IEEE Transactions on Nuclear Science IEEE Transactions on
+Sustainable Energy 6International Journal of Hydrogen Energy 6e.py-sd Journal
+of Nuclear Science and Technology 7Journal of Photonics for Energy 新网站.
+8Progress in Nuclear Energy 8e.py Nuclear Engineering and Design Nuclear
+Engineering and Technology Nuclear Science and Engineering 9Nuclear Technology
+新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py
+!!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了.
+Physical Education African Journal for Physical, Health Education, Recreation
+and Dance 新网站而且打不开.  Acta Psychiatrica Scandinavica Addiction
+Australian and New   Zealand Journal of Psychiatry 成功  Biological Psychiatry
+不行 European Neuropsychopharmacology 不行  European Psychiatry 6s
+International Journal   of Geriatric Psychiatry s7  Journal of Clinical
+Psychopharmacology 不行  Molecular Psychiatry 9s nature-7p
+Neuropsychopharmacology 10s nature-7p 以及-4 -2 -1个   "    ""
+
+"桌面的virtual.sh是个脚本,运行它没用,source virtual.sh才有用"   ""
+
+"Linux下打开超大文件方法 http://www.cnblogs.com/yuzhoushenqi/p/6635974.html
+在Linux下用VIM打开大小几个G、甚至几十个G的文件时，是非常慢的。
+这时，我们可以利用下面的方法分割文件，然后再打开。 1 查看文件的前多少行 head
+-10000 /var/lib/mysql/slowquery.log > temp.log
+上面命令的意思是：把slowquery.log文件前10000行的数据写入到temp.log文件中。 2
+查看文件的后多少行 tail -10000 /var/lib/mysql/slowquery.log > temp.log
+上面命令的意思是：把slowquery.log文件后10000行的数据写入到temp.log文件中。 3
+查看文件的几行到几行 sed -n '10,10000p' /var/lib/mysql/slowquery.log > temp.log
+上面命令的意思是：把slowquery.log文件第10到10000行的数据写入到temp.log文件中。
+"    ""
+
+"C:\Users\d\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs
+"  ""
+
+"520 周日 做完数电 今晚 做完ai大作业 今晚 到6月2号,是还有两周 复习数电 明天早上
+写图形学 还不着急 周四有组会 抽时间去测试一下srt 把作业拿了,问问延迟的事情
+还...做游戏不? 复习电子学实验
+整个,包括lstm和challenge项目,都移动到/mnt/data3/djl了.  train已经全改成7输出了.
+现在trainreader用的是老一套,trainreader2里希望用上爬下来的动词表.
+不是很清楚resp和resp2的区别...  python train.py -P 1 -g 1 -s p1k7
+-o跑得卓有成效,28小时后就达到90%以上了.可以再减少学习率.   python train.py -P 0
+-g 1 -s p0k7 反而不高,很奇怪.  listclemma还没跑好. 0窗口:跑一个 python
+listclemma.py
+1:改好了trainreader,希望引入爬好的verbset文件后可以显示一圈错.同时,也希望拿到单词查错功能.
+现在1窗口希望做做动词时态的重新归类.做完睡觉.算了睡了. 2:继续跑python train.py
+-g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b 3:跑一个python train.py -P 2 -g 1
+-s p2k7 -o 第三个动词 4:跑第四个动词p3 g1 还有半个0可用.   动词 表格再处理一下.
+python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b
+-o尝试大模型.第二个动词.32个小时依然是80%上下.       查找被动语气的python
+train.py -P 0 -g 0 -s d1 -D -o倒是在32小时前就达到93%正确率了.   todo:
+对句号不空格的,会被识别成一句话连着.找别人把这个分开.     欠着一次数电.
+周四有大雾实验. 下周一有srt讨论. 以及做大作业.
+1)重构现有的tense:变成7个选项:这个已经做了,reader2是旧的,reader是新的.
+2)重构:改成标准的16时态. 3)写好测试,再去跑一跑样本
+4)大模型(纯粹数值放大)试试效果.至少三个的用大模型可以做的很好.python run.py -g
+0 -o  -P 3 -s p3n1b -L 0.00005 -m bigrnnmodel应该依次训练. 5)训练后面(4
+5动词的)几个模型 6)动词反时态字典要重写.在安装git的新代码.
+7)找没有被语法树标出来的动词.神经网络或者尝试法.对...对抗神经网络?!
+8)看看seq2seq能不能抢救一下 正在做:tense模型改成输出
+追加:解决跑run.py突然正确率90%掉到30%   现在问题是parser出的acl是什么意思
+不标识一些定语从句的被动语态了?而且带pass的都是被动语态?文件在download下的一个pdf,但是是针对3.7.0的,现在更到了3.9.1
+2 被动语气 输入的应该没有什么问题了,到时候看结果. python rundp.py -g 1 -o -s
+dp是运行(o从零开始) python rundp.py -t并且改改readerdp才能输出单句结果什么的.
+至少可行. 1)得到结果 2)把核心动词的位置也放进去(挺容易的应该)
+...也可以稍微提前点做?   3 虚拟语气
+可能可能可能放着吧...拖一拖.再可能到处找找代码,不行就手写好了.   4 输入法(放)
+组会: 1 搭配 a-dependency-b 3gram语法树
+看语料里这种语法树出现得多不多.可以问梦器. 2 判断句子合理性 比如分小
+判断(如何找到谓语?遍历可能,看可能性) 3 假设只有一个动词,依次看句子合理性,
+或者训练如何找到谓语 4 每段看基准时态. 5
+不要看'第4个动词',可解释一些,只看一部分(也做一些时态划分) 6
+语法树不一定全是错的 ...using改成use就有可能错.到底多少错? 另外,打开的网页:
+http://www.tensorfly.cn/tfdoc/api_docs/python/nn.html 文档
+https://blog.csdn.net/l494926429/article/details/51737883 没什么用
+highwaynetworks 一种门也可学习的,使得训练更简单的框架
+https://github.com/NickShahML/tensorflow_with_latest_papers seq2seq实现
+拼音:第一行中文第二行英文.   " ""
+
+"505 周四 ai改进：双挂 82 gen2  83 改进为gen为0的walk继续到gen为-1
+如果这里搜索到要点还能继续搜索 84 加上对手预搜索
+上午找周青学长拿小米5然后去拍点照片.下午有实验.已经预习过了. 1
+506周五写电子学实验报告 2 506周五的英语课作业 3 507周一的电子学 要学回来 4
+508周二大作业(尝试别的方法?) 5 510周四组会 6 srt 7 图形学
+整个,包括lstm和challenge项目,都移动到/mnt/data3/djl了.
+不是很清楚resp和resp2的区别...  python train.py -P 1 -g 1 -s p1k7
+-o跑得卓有成效,28小时后就达到90%以上了.可以再减少学习率.   python train.py -P 0
+-g 1 -s p0k7 反而不高,很奇怪.  listclemma还没跑好. 0窗口:跑一个 python
+listclemma.py
+1:改好了trainreader,希望引入爬好的verbset文件后可以显示一圈错.同时,也希望拿到单词查错功能.
+现在1窗口希望做做动词时态的重新归类.做完睡觉.算了睡了. 2:继续跑python train.py
+-g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b 3:跑一个python train.py -P 2 -g 1
+-s p2k7 -o 第三个动词 4:跑第四个动词p3 g1 还有半个0可用.   动词 表格再处理一下.
+python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b
+-o尝试大模型.第二个动词.32个小时依然是80%上下.       查找被动语气的python
+train.py -P 0 -g 0 -s d1 -D -o倒是在32小时前就达到93%正确率了.   todo:
+对句号不空格的,会被识别成一句话连着.找别人把这个分开.     欠着一次数电.
+周四有大雾实验. 下周一有srt讨论. 以及做大作业.
+1)重构现有的tense:变成7个选项:这个已经做了,reader2是旧的,reader是新的.
+2)重构:改成标准的16时态. 3)写好测试,再去跑一跑样本
+4)大模型(纯粹数值放大)试试效果.至少三个的用大模型可以做的很好.python run.py -g
+0 -o  -P 3 -s p3n1b -L 0.00005 -m bigrnnmodel应该依次训练. 5)训练后面(4
+5动词的)几个模型 6)动词反时态字典要重写.在安装git的新代码.
+7)找没有被语法树标出来的动词.神经网络或者尝试法.对...对抗神经网络?!
+8)看看seq2seq能不能抢救一下 正在做:tense模型改成输出
+追加:解决跑run.py突然正确率90%掉到30%   现在问题是parser出的acl是什么意思
+不标识一些定语从句的被动语态了?而且带pass的都是被动语态?文件在download下的一个pdf,但是是针对3.7.0的,现在更到了3.9.1
+2 被动语气 输入的应该没有什么问题了,到时候看结果. python rundp.py -g 1 -o -s
+dp是运行(o从零开始) python rundp.py -t并且改改readerdp才能输出单句结果什么的.
+至少可行. 1)得到结果 2)把核心动词的位置也放进去(挺容易的应该)
+...也可以稍微提前点做?   3 虚拟语气
+可能可能可能放着吧...拖一拖.再可能到处找找代码,不行就手写好了.   4 输入法(放)
+组会: 1 搭配 a-dependency-b 3gram语法树
+看语料里这种语法树出现得多不多.可以问梦器. 2 判断句子合理性 比如分小
+判断(如何找到谓语?遍历可能,看可能性) 3 假设只有一个动词,依次看句子合理性,
+或者训练如何找到谓语 4 每段看基准时态. 5
+不要看'第4个动词',可解释一些,只看一部分(也做一些时态划分) 6
+语法树不一定全是错的 ...using改成use就有可能错.到底多少错? 另外,打开的网页:
+http://www.tensorfly.cn/tfdoc/api_docs/python/nn.html 文档
+https://blog.csdn.net/l494926429/article/details/51737883 没什么用
+highwaynetworks 一种门也可学习的,使得训练更简单的框架
+https://github.com/NickShahML/tensorflow_with_latest_papers seq2seq"  ""
+
+"4.9周2 数电作业 4.16上午 两次 数电复习 尽快 图形学作业 4.22 还有14天 已完成
+到时后再看看 室内定位项目 预先跑一遍 尽快
+作出python和C#结合的 等待中 语法项目 写出虚拟语气和被动语态 尽快 等服务器
+虚拟语气有几篇论文                          被动语态完全没有research过
+写完移植到项目平台上                  (问一下ddl什么时候)  大雾实验报告 周四
+输入法作业 4.22 四子棋作业 5.7 数字逻辑实验 周五 需要先看看电子书
+美社文要求的爱剪辑软件学习 第八周(22日)前   今日任务: 12：30 还有11.5小时 1
+完成输入法 2 数字逻辑实验 实验报告晚上再说好啦  "    ""
+
+"4.8周一 数电作业 4.9上午交 数电复习 尽快 图形学作业 4.22 还有14天 [
+任选书上第二章光栅图形学算法(画线，裁剪，区域填充等)
+具体要求详见第一次习题课PPT。
+请自选测例对实现算法进行测试，提交提交代码和实验结果，并在报告中简要注明选题和附加效果对应的代码段。
+] 室内定位项目 预先跑一遍 尽快                        作出python和C#结合的
+等待中 语法项目 写出虚拟语气和被动语态 尽快 等服务器
+虚拟语气有几篇论文                          被动语态完全没有research过
+写完移植到项目平台上                  (问一下ddl什么时候)  大雾实验报告 周四
+输入法作业 4.22 四子棋作业 5.7 数字逻辑实验 周五 需要先看看电子书
+美社文要求的爱剪辑软件学习 第八周(22日)前   今日任务: 15:30 还有8.5小时 1
+完成图形学作业 2 完成输入法 3 晚一些完成数电作业  "    ""
+
+"4.11周3 大雾实验报告 周四  数字逻辑实验 周五 需要先看看电子书  语法   数电作业
+4.16上午 两次 数电复习 尽快   室内定位项目 现在一边是做C#调用tesseract
+一边是关于两点的情况下通过旋转测距的问题                         包括:1
+理论模型 为什么对这些参数敏感                                 2 实际模型
+做一个通过特征点或者文字框或者手动的demo来解释这件事情
+其中横屏更理想一些,因为不太大地扭动误差不大,而且会有一个更大的旋转角度
+用一个poi拍7 8张图片的误差比较小.但是少到3 4张(好像)就不行. 还有一本书可以参考.
+语法项目 写出虚拟语气和被动语态 下周末前
+虚拟语气有几篇论文                          被动语态完全没有research过
+写完移植到项目平台上                  (问一下ddl什么时候) 输入法作业 4.22
+基础要求基本上完成了. 四子棋作业 5.7 图形学作业 4.22 还有14天 已完成
+到时后再看看
+关于安装spacy:http://www.52nlp.cn/tag/%E8%AF%8D%E5%90%91%E9%87%8F   今日任务:
+问问图形学讲了啥 12：30 还有11.5小时 1 完成输入法 2 数字逻辑实验
+实验报告晚上再说好啦    "   ""
+
+"2017.01.24  在系统更新的时候收到错误消息:  The upgrade needs a total of 117 M
+free space on disk '/boot'. Please free at least an additional 59.5 M of disk
+space on '/boot'. You can remove old kernels using 'sudo apt autoremove', and
+you could also set COMPRESS=xz in /etc/initramfs-tools/initramfs.conf to reduce
+the size of your initramfs.  之后通过sudo apt-get autoremove移除了一个G的东西.
+一些参考资料:  [url]         http://www.linuxidc.com/Linux/2017-12/149655.htm
+[comment]    解决/boot不足的方法:1 手动进入目录并删除 2 ubuntu tweak清理大师
+[favour]    /ubuntu " ""
+
+"10:20 language English. Connect to network, set baidu as first search
+engine(have to add on) in firefox, connect to wiz. 10:21 sougou input: download
+from website. don't depackage immediately.  安装搜狗输入法:
+先在安装时选择语言英文.安装好后languagesupport等他更新,如果是备份的话语言第一个直接汉语了,不是的话拖上去应该就行了.之后应用systemwide,重启(注意:注销再回来也行!更快!),回来找fctix(应该在,否则装一下)
+选好了后官网下载64位的搜狗拼音deb包,sudo dpkg -i 文件名.deb,尝试sudo apt
+--fix-broken install和sudo apt install
+-f即可.在fctix配置中"附加组件"里有搜狗拼音了.
+不要去文本输入的输入源那里,并不能添加搜狗的. 注意 在livecd下重启的话
+用户名ubuntu密码为空即可。 默认的切换输入法方式（暂时先用fctix了）是ctrl+space
+10：56安装pip 直接写 sudo apt install python-pip
+python3-pip是不行的，显示无法定位软件包
+python-pip，到系统设置-软件和更新里打开允许那四个来源即可。
+另外apt如果给他列一些东西，有一个包没有找到剩下的都不会被装。
+添加了源，运行那一句就没有问题了。   11：03安装virtualenv 1 sudo apt install
+virtualenv( pip install virtualenv也行)一个virtualenv可以调用不同的python版本.
+2 cd到一个目录然后virtualenv --no-site-packages
+venv(在当前目录下创建一个venv文件夹在里边放虚拟机,名字就是venv)参数 -p
+用哪个python 3 source venv/bin/activate开启虚拟机 4 deactivate离开
+虚拟机如果被锁住,不能用pip,不要sudo,这会使得pip安到虚拟机外边. 1  sudo chown -R
+$USER venv/ 2  sudo chmod 777 venv/ 即可解锁. linux:
+在workspace/language/virtual/stnlp下装了一个虚拟机,python3的 pip了个nltk      "
+""
+
+"1. 最新的用端到端神经网络实现语法检查的论文及代码:
+https://github.com/stanfordmlgroup/nlc 2. Hwee Tou Ng
+长期从事相关研究，他的论文列表里有不少关于语法检查的
+https://www.comp.nus.edu.sg/~nght/publicat.htm"  ""
+
+"1 即时测略 暗地图 类似星际的游戏
+造兵,抢占资源点,造基地,(可以去掉地)造采矿基地和造兵基地,拆基地.
+造单位:"指挥装置",无战斗力,附着在一队士兵上.士兵只能按队为单位行动.(相当于炉石卡牌,士兵有攻击力防御力,打的时候互相扣除,只是掉血有可能会掉攻击力)
+同类士兵可以合并重组.不同类士兵不能组合.士兵也有AOE型,对大型队伍伤害提升,或者掉更多血型,或者掉更多攻击力型,或者减速型.士兵一次接触战斗一回合.有遮挡物可以有阴影视野.
+1a.可以改成原来的"一个士兵有满血和半血状态,半血时候攻击力不变但是移动速度减半."并且有"包围"机制.
+2 原来的圆规足球和圆规战斗系列 3 星之卡比联机3v3或者5v5或者10v10版
+或者大型充满AI的战争中扮演一个士兵的角色.可能什么都不做就赢了,也可能会尽力杀敌但是输掉.或者扮演小队长,有一些集合,分散,防守,求援等命令,(AI会听的...嘛)
+"  ""
+
+"1 re的match、search、findall、finditer
+http://blog.csdn.net/djskl/article/details/44357389      1、match  [python]
+view plain copy        re.match(pattern, string[, flags])
+从首字母开始开始匹配，string如果包含pattern子串，则匹配成功，返回Match对象，失败则返回None，若要完全匹配，pattern要以$结尾。
+2、search  [python] view plain copy        re.search(pattern, string[, flags])
+若string中包含pattern子串，则返回Match对象，否则返回None，注意，如果string中存在多个pattern子串，只返回第一个。
+3、findall  [python] view plain copy        re.findall(pattern, string[,
+flags])      返回string中所有与pattern相匹配的全部字串，返回形式为数组。
+2 findall返回数组
+如果里边有一个元组,只返回元组内的东西.如果有多个,返回一个tuple的数组,每个tuple元素对应一个元组.这时候是没有group(0)全部的.而且findall不重叠.
+" ""
+
+"1 mongodump  在win上是一个独立的exe,和mongodb同处.在这里也是.命令:mongodump -d
+数据库名 -o 路径名  2 mongo去重 在mongodb里边写    db.userInfo.aggregate([
+{          $group: { _id: {userName: '$userName',age: '$age'},count: {$sum:
+1},dups: {$addToSet: '$_id'}}      },      {          $match: {count: {$gt: 1}}
+}  ]).forEach(function(doc){      doc.dups.shift();
+db.userInfo.remove({_id: {$in: doc.dups}});  })
+db.n2.aggregate([{$group: { _id: {url: '$url'},count: {$sum: 1},dups:
+{$addToSet: '$_id'}}},{$match: {count: {$gt:
+1}}}]).forEach(function(doc){doc.dups.shift();db.n2.remove({_id: {$in:
+doc.dups}});})(要改三处）
+https://www.cnblogs.com/nicolegxt/p/24b3653947991ebe73e5d70609ab2943.html
+mongodb的安装:sudo apt-get install mongodb 然后要mongod需要一个磁盘至少有3G空间
+mongod --dbpath workspace/worm/mongo/db --logpath workspace/worm/mongo/db.log
+--logappend &可以改变mongodb的存储位置并且开启一个后台进程  mongod --dbpath
+/media/d/EE/mongo/db --logpath /media/d/EE/mongo/db.log --logappend
+不要加sudo --logappend可以附加而不是新建.&代表后台运行.
+以及如何关闭一个后台的mongo进程: ps -aux | grep
+mongo找到这个名字里有mongo的进程--他也会找到自己 读到进程号  sudo kill 进程号
+即可. 或者db.shutdownServer()  mongodb集合重命名 db.orders.renameCollection(
+"orders2014" ) https://www.cnblogs.com/jcuan/p/5866881.html
+win上mongodump不加参数dump所有数据: ubuntu上恢复报错:删除admin文件夹即可.    "
+""
+
+"1 join函数可以把list of strings合并成一个string.注意方向.' '.join(a)
+前面的是字符串,所以可以是空字符串''也可以是很长的东西.  2 a是一个list.
+a.append(东西)
+在list后面插入东西.可以类型不同,可以是None.a只有一个元素时可以写a=['a']或者a=['a',].
+3 a=list()空列表 a=dict()空词典(或者 a=[] a={}) "    ""
+
+"1 启动pymongo：sudo mongod即可  2 文件1000.py是爬acta数据库的  3
+文件2000.py是爬第一个数据库：      http://pubs.acs.org/journal/achre4
+accounts of chemical research    4 pymongo的用法：  # -*- coding: utf-8 -*-
+import re  import urllib2  import pymongo  from pymongo import MongoClient
+import pprint    client = MongoClient()#建立链接  db =
+client.test_database#建立（第二次是打开）数据库test_database  posts =
+db.posts##建立（第二次是打开）聚集posts  print
+db.posts.count()#输出这一聚集的条目数量  #
+post={"title":name0,"author":name2,"ee":name3,"pages":name1}  #
+posts.insert_one(post)#把post插入posts聚集      5 html的用法：
+reqpath='/journal/acta-materialia/vol/44/issue/1';      req =
+urllib2.Request('https://www.sciencedirect.com'+reqpath)  #新建申请
+req.add_header('User-agent', 'Mozilla 5.10')      res = urllib2.urlopen(req)
+html = res.read()                                           #读进来      rst1 =
+re.findall("<li class=\"js-article(.*?)li>", html)   #查找
+findall返回的是一个list  #如果这种只有一个分组(.*?)的 list就是分组里边的内容
+是字符串 更多的话list的每一个元素自己是一个tuple记录每个括号      for i in
+rst1:    6 格式要求  "title":题目  "url":pdf下载页面  "authors":作者
+"ee":概览页面  "year":年份  "pages":页码    7 debug  7.1
+忽略换行符：因为(.*?)是不会跨行的，必须在正则表达式后边加上re.S来多行匹配。这时候\n也会在里边。
+7.2 一定注意正则表达式的()和| 要转义  7.3 beautifulsoup的select是css筛选
+不是search  7.4 用学姐的例子在下载html时会出错下的东西很少不知道为什么  7.5
+list不要第一个元素：l=l[1:]  7.6
+注意matchobject.groups()是把所有的group从group(1)作为列表的第0个元素输出的
+少一个！（groups()函数很好用，可以调试的时候输出所有group并且看有多少）  7.7
+正则表达式嵌套匹配【这个是不是该开个专题？】如果写(s(.*?)a)*这样的话，对串siasja，只有两个group，算了直接看下面的例子
+7.8 而且正则表达式一定要注意是不是从头匹配
+否则在？匹配可以出很奇怪的情况【是不是该学一下形式语言】
+ii='sdakjf(sdfsd)(sdfsd2)(ss3)'  >>> re.search('(.*?)(\((.*?)\))*',ii).groups()
+('', None, None)  >>> ii='sdakjf(sdfsd)(sdfsd2)(ss3)11'  >>>
+re.search('(.*?)(\((.*?)\))*(.+)',ii).groups()  ('', None, None,
+'sdakjf(sdfsd)(sdfsd2)(ss3)11')  >>>
+re.search('(.*?)(\((.*?)\))*([^\(]+)',ii).groups()  ('', None, None, 'sdakjf')
+>>> re.search('(.*?)(\((.*?)\))*([^\(]+)$',ii).groups()  ('sdakjf', '(ss3)',
+'ss3', '11')  >>> ii='sdakjf(sdfsd)(sdfsd2)(ss3)'  >>> re.search('(.*"  ""
+
+"启动mongodb: mongod --dbpath /media/d/EE/mongo/db --logpath
+/media/d/EE/mongo/db.log --logappend  把mongodb放在EE u盘里.
+这个脚本写到了mongo.sh里. ee.sh会跳到ee里的工作区.以后在那里操作.
+/media/d/EE/nutri/w
+mongodb在一个新的地方创建的话似乎会花很久...不知道是不是故意的.而且kingson
+u盘好像有点慢. 大量的文件在win10电脑下...比如说e3.py     Botany For a more
+comprehensive list, see List of botany journals. American Journal of Botany
+wiley b1.py 在爬 爬完 Annals of Botany sciencedirect 2b.py爬完
+无法解析...等win10电脑,而且也不知道raw怎么样. Aquatic Botany  sciencedirect
+International Journal of Plant Sciences  4b2.py 继承6e.py New Phytologist w/5b
+在爬 继承自5r 所以w5也可以用应该. 有点少,明天问问学姐要不要多拿几个吧.
+Chronobiology Chronobiology International  talor的... Forestry For a more
+comprehensive list, see List of forestry journals. Bosque 外文的 Canadian
+Journal of Forest Research Forest Ecology and Management Genetics Genetica
+Genetics Heredity Journal of Genetics Nature Genetics Theoretical and Applied
+Genetics Husbandry Rangifer Immunology Allergy Annual Review of Immunology
+Current Opinion in Immunology European Journal of Immunology Immunity Journal
+of Allergy and Clinical Immunology Journal of Immunology Nature Immunology
+Nature Reviews Immunology Trends in Immunology"  ""
+
+"-H 设置硬资源限制. -S 设置软资源限制. -a 显示当前所有的资源限制. -c
+size:设置core文件的最大值.单位:blocks -d size:设置数据段的最大值.单位:kbytes -f
+size:设置创建文件的最大值.单位:blocks -l
+size:设置在内存中锁定进程的最大值.单位:kbytes -m
+size:设置可以使用的常驻内存的最大值.单位:kbytes -n
+size:设置内核可以同时打开的文件描述符的最大值.单位:n -p
+size:设置管道缓冲区的最大值.单位:kbytes -s size:设置堆栈的最大值.单位:kbytes -t
+size:设置CPU使用时间的最大上限.单位:seconds -v
+size:设置虚拟内存的最大值.单位:kbytes -u <程序数目> 用户最多可开启的程序数目
+遇到无权限不合法的情况,把数字改小即可.  例如服务器上可以写ulimit -m 50
+这个50应该是G单位."   ""
+
+"第一次安装  打开后仍然经常会编译很久gradle没有解决  Android studio 报错
+installation failed with message failed to finalize
+session:INSTALL_FAILED_INVALID_APK
+解决方法：https://www.cnblogs.com/gaigaige/p/7444215.html
+File->Setting->Build->Instant Run 第一个取消勾选"   ""
+
+"利用ssh传输文件
+转自：http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html
+在linux下一般用scp这个命令来通过ssh传输文件。   1、从服务器上下载文件 scp
+username@servername:/path/filename /var/www/local_dir（本地目录）  例如scp
+root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt
+的文件下载到/var/www/local_dir（本地目录）   2、上传本地文件到服务器 scp
+/path/filename username@servername:/path    例如scp /var/www/test.php
+root@192.168.0.101:/var/www/
+把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中
+3、从服务器下载整个目录 scp -r
+username@servername:/var/www/remote_dir/（远程目录）
+/var/www/local_dir（本地目录） 例如:scp -r root@192.168.0.101:/var/www/test
+/var/www/   4、上传目录到服务器 scp  -r local_dir
+username@servername:remote_dir 例如：scp -r test  root@192.168.0.101:/var/www/
+把当前目录下的test目录上传到服务器的/var/www/ 目录
+注：目标服务器要开启写入权限。 "    ""
+
+"在github上下载...而且我不知道为什么第一次下了个0.16,要用0.18以上!运行一下geckodriver
+--version就好!"   ""
+
+"在主文件夹下1文件夹是python2的虚拟环境,(安装tensorflow) 进入:source
+1/bin/activate 退出:deactivate"    ""
+
+""更新完了vimrc没了,先用这个小巧的:(linux好像没有编码问题)(没有经过检验) " All
+system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  " the
+call to :runtime you can find below.  If you wish to change any of those  "
+settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  "
+will be overwritten everytime an upgrade of the vim packages is performed.  "
+It is recommended to make changes after sourcing debian.vim since it alters  "
+the value of the 'compatible' option.    " This line should not be removed as
+it ensures that various options are  " properly set to work with the
+Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment
+the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets
+'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other
+options should be set AFTER setting 'compatible'.  "set compatible    " Vim5
+and later versions support syntax highlighting. Uncommenting the next  " line
+enables syntax highlighting by default.  if has("syntax")    syntax on  endif
+" If using a dark background within the editing area and syntax highlighting  "
+turn on this option as well  "set background=dark    " Uncomment the following
+to have Vim jump to the last position when  " reopening a file  "if
+has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <=
+line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to
+have Vim load indentation rules and plugins  " according to the detected
+filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The
+following are commented out as they cause vim to behave a lot  " differently
+from regular Vi. They are highly recommended though.  "set showcmd        "
+Show (partial) command in status line.  "set showmatch        " Show matching
+brackets.  "set ignorecase        " Do case insensitive matching  "set
+smartcase        " Do smart case matching  "set incsearch        " Incremental
+search  "set autowrite        " Automati"   ""
+
+""win上gvim经常出现编码不识别和相对行号的问题...这里也没有经过测试. set
+nocompatible  source $VIMRUNTIME/vimrc_example.vim  source
+$VIMRUNTIME/mswin.vim  behave mswin  " Platform  function! MySys()    if
+has("win16") || has("win32") || has("win64") || has("win95")      return
+"windows"    elseif has("unix")      return "linux"    endif  endfunction
+"处理文本中显示乱码  set encoding=utf-8  set
+fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,latin1  if MySys() ==
+"windows"    set termencoding=chinese    set fileencoding=chinese  elseif
+MySys() == "linux"    let &termencoding=&encoding    set
+fileencodings=utf-8,gbk,ucs-bom,cp936  endif    "防止特殊符号无法正常显示。  if
+exists("&ambiwidth")      set ambiwidth=double  endif    "使用中文菜单，并使用
+UTF-8 编码。{{{  "如果没有这句的话，在非 UTF-8 的系统，如 Windows 下，用了
+UTF-8 的 encoding 后  "菜单会乱码。}}}  set langmenu=zh_CN.UTF-8
+"使用中文提示信息，并使用 UTF-8 编码。{{{  "如果没有这句的话，在非 UTF-8
+的系统，用了 UTF-8 的 encoding 后  "系统提示会乱码。}}}  language messages
+zh_CN.UTF-8    " 解决菜单乱码，先指定语言。{{{>>>自己根据相关版本添加<<<
+"导入删除菜单脚本，删除乱码的菜单}}}  source $VIMRUNTIME/delmenu.vim
+"导入正常的菜单脚本  source $VIMRUNTIME/menu.vim  8    set nu  "
+不要使用vi的键盘模式，而是vim自己的   "解决菜单乱码  source
+$VIMRUNTIME/delmenu.vim  source $VIMRUNTIME/menu.vim  "解决consle输出乱码
+language messages zh_CN.utf-8    " history文件中需要记录的行数   set
+history=100     " 在处理未保存或只读文件的时候，弹出确认   set confirm     "
+与windows共享剪贴板   set clipboard+=unnamed     " 侦测文件类型   filetype on
+" 载入文件类型插件   filetype plugin on     " 为特定文件类型载入相关缩进文件
+filetype indent on     " 保存全局变量   set viminfo+=!     "
+带有如下符号的单词不要被换行分割   set iskeyword+=_,$,@,%,#,-     " 语法高亮
+syntax on     " 高亮字符，让其不受100列限制   :highlight OverLength ctermbg=red
+ctermfg=white guibg=red guifg=white   :match OverLength '\%101v.*'     "
+状态行颜色   highlight StatusLine guifg=SlateBlue guibg=Yellow   highlight
+StatusLineNC guifg=Gray guibg=White
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""   "
+文件设置
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""   "
+不要备份文件（根据自己需要取舍）   set nobackup     " 不要生成swap"    ""
+
+"" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  "
+the call to :runtime you can find below.  If you wish to change any of those  "
+settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  "
+will be overwritten everytime an upgrade of the vim packages is performed.  "
+It is recommended to make changes after sourcing debian.vim since it alters  "
+the value of the 'compatible' option.    " This line should not be removed as
+it ensures that various options are  " properly set to work with the
+Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment
+the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets
+'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other
+options should be set AFTER setting 'compatible'.  "set compatible    " Vim5
+and later versions support syntax highlighting. Uncommenting the next  " line
+enables syntax highlighting by default.  if has("syntax")    syntax on  endif
+" If using a dark background within the editing area and syntax highlighting  "
+turn on this option as well  "set background=dark    " Uncomment the following
+to have Vim jump to the last position when  " reopening a file  "if
+has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <=
+line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to
+have Vim load indentation rules and plugins  " according to the detected
+filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The
+following are commented out as they cause vim to behave a lot  " differently
+from regular Vi. They are highly recommended though.  "set showcmd        "
+Show (partial) command in status line.  "set showmatch        " Show matching
+brackets.  "set ignorecase        " Do case insensitive matching  "set
+smartcase        " Do smart case matching  "set incsearch        " Incremental
+search  "set autowrite        " Automatically save before commands like :next
+and :ma"  ""
+
+"" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  "
+the call to :runtime you can find below.  If you wish to change any of those  "
+settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  "
+will be overwritten everytime an upgrade of the vim packages is performed.  "
+It is recommended to make changes after sourcing debian.vim since it alters  "
+the value of the 'compatible' option.    " This line should not be removed as
+it ensures that various options are  " properly set to work with the
+Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment
+the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets
+'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other
+options should be set AFTER setting 'compatible'.  "set compatible    " Vim5
+and later versions support syntax highlighting. Uncommenting the next  " line
+enables syntax highlighting by default.  if has("syntax")    syntax on  endif
+" If using a dark background within the editing area and syntax highlighting  "
+turn on this option as well  "set background=dark    " Uncomment the following
+to have Vim jump to the last position when  " reopening a file  "if
+has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <=
+line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to
+have Vim load indentation rules and plugins  " according to the detected
+filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The
+following are commented out as they cause vim to behave a lot  " differently
+from regular Vi. They are highly recommended though.  "set showcmd        "
+Show (partial) command in status line.  "set showmatch        " Show matching
+brackets.  "set ignorecase        " Do case insensitive matching  "set
+smartcase        " Do smart case matching  "set incsearch        " Incremental
+search  "set autowrite        " Automatically save before commands like :next
+and :ma"  ""
+
+"删除一个dpkg安装的应用: dpkg -l列出东西 grep一下sogou就行 选择 dpkg
+-l来查看软件的状态。 选择 dpkg -P来卸载软件。因为dpkg
+--remove只是删除安装的文件，但不删除配置文件。而dpkg
+--purge则安装文件和配置文件都删除。 sudo dpkg sogoupinyin
+然后登出登入,在输入法(上边那个键盘)里选择配置当前输入法->添加输入法即可.  "
+""
+
+" 语料库 语法树 词向量什么的
+相关论文和资源非常丰富，远不局限于我发的这些，所以也需要你自己继续扩充
+另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ )
+，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起
+1. 最新的用端到端神经网络实现语法检查的论文及代码:
+https://github.com/stanfordmlgroup/nlc 2. Hwee Tou Ng
+长期从事相关研究，他的论文列表里有不少关于语法检查的
+https://www.comp.nus.edu.sg/~nght/publicat.htm"    ""
+
+" ssh -p 22223 djl@166.111.139.15  密码djl p小写 scp -P 22223 one.txt
+djl@166.111.139.15:/home/djl/  要输入密码 P大写 注意大小写"  ""
+
+" cvpr.pdf 路径 C:\Users\d\Downloads\ 大小 3.38 MB 类型 WPS PDF 文档 修改日期
+2018年2月10日 8:51:58 文件被导入 2018年2月10日 8:53:09 "  ""
+
+" Tokenization tokenize Sentence .words() / .word(int)就是分词汇 Sentence
+Splitting ssplit Document .sentences() / .sentence(int)就是分句子 Part of
+Speech Tagging pos Sentence .posTags() / .posTag(int)词性 VBD什么的
+Lemmatization lemma Sentence .lemmas() / .lemma(int)词汇原型 Named Entity
+Recognition ner Sentence .nerTags() /
+.nerTag(int)名称实体,一般是O,有的是PERSON什么的 Constituency Parsing parse
+Sentence .parse() 在开头的{"index":0,"parse":"(ROOT\n (S\n (NP (DT The) (JJ
+quick) (JJ brown) (NN fox))\n (VP (VBD jumped)\n (PP (IN over)\n (NP (DT the)
+(JJ lazy) (NN dog))))\n (. .)))"句法结构 Dependency Parsing depparse Sentence
+.governor(int) / .incomingDependencyLabel(int)
+{"dep":"ROOT","governor":0,"governorGloss":"ROOT","dependent":5,"dependentGloss":"jumped"}依赖关系
+Coreference Resolution dcoref Document .coref() Natural Logic Polarity natlog
+Sentence .natlogPolarities() / natlogPolarity(int) Open Information Extraction
+openie Sentence .openie() / .openieTriples()  .depparse的结果:22s
+已经含有了enhancedPlusPlusDependencies
+{"sentences":[{"index":0,"basicDependencies":[{"dep":"ROOT","governor":0,"governorGloss":"ROOT","dependent":5,"dependentGloss":"jumped"},{"dep":"det","governor":4,"governorGloss":"fox","dependent":1,"dependentGloss":"The"},{"dep":"amod","governor":4,"governorGloss":"fox","dependent":2,"dependentGloss":"quick"},{"dep":"amod","governor":4,"governorGloss":"fox","dependent":3,"dependentGloss":"brown"},{"dep":"nsubj","governor":5,"governorGloss":"jumped","dependent":4,"dependentGloss":"fox"},{"dep":"case","governor":9,"governorGloss":"dog","dependent":6,"dependentGloss":"over"},{"dep":"det","governor":9,"governorGloss":"dog","dependent":7,"dependentGloss":"the"},{"dep":"amod","governor":9,"governorGloss":"dog","dependent":8,"dependentGloss":"lazy"},{"dep":"nmod","governor":5,"governorGloss":"jumped","dependent":9,"dependentGloss":"dog"},{"dep":"punct","governor":5,"governorGloss":"jumped","dependent":10,"dependentGloss":"."}],"enhancedDependencies":[{"dep":"ROOT","governor":0,"governorGloss":"ROO"
+""
+
+"  原创 2016年12月17日 21:09:03 标签： ubuntu / log  由于ubuntu日志文件syslog
+和 kern.log 时刻在增长，一会儿就使得根目录文件夹不够用了，需使用如下命令清理
+sudo -i  然后输入密码，执行：  echo > /var/log/syslog echo > /var/log/kern.log
+就可以了. "  ""
+
+"  windows的 要用华为手机助手 按小按钮    " ""
+
+"   首页 职业
+前端Web前端工程师微信小程序移动端Android工程师iOS工程师后端Python工程师PHP工程师Golang工程师大数据大数据平台研发工程师人工智能机器学习工程师
+课程 课程库职业路径知识体系图系列课程 企业 微软人工智能
+百度AI图像技术课AWS云计算腾讯云课程专区Qualcomm公开课  社区
+Wiki技术问答社群资料下载 线下课程 Web前端Python+人工智能  登录注册 首页 Wiki
+人工智能 深度学习 TensorFlow 官方文档中文版 关于 起步 介绍 下载及安装 基本用法
+教程 总览 MNIST 机器学习入门 深入 MNIST TensorFlow 运作方式入门 卷积神经网络
+字词的向量表示 递归神经网络 曼德布洛特(Mandelbrot)集合 偏微分方程 MNIST数据下载
+运作方式 总览 变量:创建、初始化、保存和加载 TensorBoard:可视化学习
+TensorBoard:图表可视化 读取数据 线程和队列 添加新的Op 自定义数据读取 使用gpu
+共享变量 资源 总览 BibTex 引用 示例使用 FAQ 术语表 Tensor排名、形状和类型 其他
+常见问题汇总 相关资源 个人学习心得 离线下载 获取电子书 相关资源   The Swift
+Programming Language 中文版   神经网络与深度学习   JavaScript语法详解
+感觉像是为了避免万向节死锁才产生的误差   CAShapeLayer+陀螺仪设计
+程序员如何应对诸如“给我弄个网站吧”的请求？  离线下载 获取电子书
+极客学院团队出品 · 更新于 2018-02-10 22:00:55 下载与安装  你可以使用我们提供的
+Pip, Docker, Virtualenv, Anaconda 或 源码编译的方法安装 TensorFlow. Pip 安装
+Pip 是一个 Python 的软件包安装与管理工具. 在安装 TensorFlow
+过程中要涉及安装或升级的包详见 列表 首先安装 pip (或 Python3 的 pip3 ): #
+Ubuntu/Linux 64-bit $ sudo apt-get install python-pip python-dev  # Mac OS X $
+sudo easy_install pip 安装 TensorFlow : # Ubuntu/Linux 64-bit, CPU only, Python
+2.7: $ sudo pip install --upgrade
+https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+# Ubuntu/Linux 64-bit, GPU enabled, Python 2.7. Requires CUDA toolkit 7.5 and
+CuDNN v4. # For other versions, see "Install from sources" below. $ sudo pip
+install --upgrade
+https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl
+# Mac OS X, CPU only: $ sudo easy_install --upgrade six $ sudo pip install
+--upgrade
+https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl
+如果是 Python3 : # Ubuntu/Linux 64-bit, CPU only, Python 3.4: $ sudo pip3
+install --upgrade
+https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp34-cp34m-linux_x86_64.whl
+# Ubuntu/Linux 64-bit, GPU enabled, Python 3.4. Requires CUDA toolkit 7.5 and
+CuDNN v4. # For other versions, see "Install from sources" below. $ sudo pip3
+install --upgrade https://st" ""
+
+"   博客  学院  下载  GitChat  论坛  问答  商城  头条  活动  招聘  ITeye  码云
+CSTO  论坛  问答  商城  极客头条  活动  招聘  ITeye  码云  CSTO  写博客  发Chat
+登录注册    我的博客  消息(3)  设置  反馈  帮助  退出    TensorFlow
+完整的TensorFlow入门教程 原创 2017年11月06日 12:27:04 标签： tensorflow /
+入门教程 / python / 机器学习 / 1219 编辑 删除
+1：你想要学习TensorFlow，首先你得安装Tensorflow，在你学习的时候你最好懂以下的知识：
+a：怎么用python编程；      b：了解一些关于数组的知识；
+c：最理想的情况是：关于机器学习，懂一点点；或者不懂也是可以慢慢开始学习的。
+2：TensorFlow提供很多API，最低级别是API:TensorFlow
+Core，提供给你完成程序控制,还有一些高级别的API，它们是构建在 TensorFlow
+Core之上的，这些高级别的API更加容易学习和使用，于此同时，这些高级别的API使得重复的训练任务更加容易，
+也使得多个使用者操作对他保持一致性，一个高级别的API像tf.estimator帮助你管理数据集合，估量，训练和推理。
+3：TensorsTensorFlow的数据中央控制单元是tensor(张量)，一个tensor由一系列的原始值组成，这些值被形成一个任意维数的数组。
+一个tensor的列就是它的维度。   4： [python] view plain copy   print? import
+tensorflow as tf   import tensorflow as tf 上面的是TensorFlow
+程序典型的导入语句，作用是：赋予Python访问TensorFlow类(classes)，方法（methods），符号(symbols)
+5：The Computational Graph TensorFlow核心程序由2个独立部分组成：     a:Building
+the computational graph构建计算图     b:Running the computational
+graph运行计算图 一个computational
+graph(计算图)是一系列的TensorFlow操作排列成一个节点图。 [python] view plain
+copy   print? node1 = tf.constant(3.0, dtype=tf.float32)   node2 =
+tf.constant(4.0)# also tf.float32 implicitly   print(node1, node2)   node1 =
+tf.constant(3.0, dtype=tf.float32) node2 = tf.constant(4.0)# also tf.float32
+implicitly print(node1, node2) 最后打印结果是： [python] view plain copy
+print? Tensor("Const:0", shape=(), dtype=float32) Tensor("Const_1:0",shape=(),
+dtype=float32)   Tensor("Const:0", shape=(), dtype=float32)
+Tensor("Const_1:0",shape=(), dtype=float32)
+要想打印最终结果，我们必须用到session:一个session封装了TensorFlow运行时的控制和状态
+[python] view plain copy   print? sess = tf.Session()   print(sess.run([node1,
+node2]))   sess = tf.Session() print(sess.run([node1, node2]))
+我们可以组合Tensor节点操作(操作仍然是一个节点)来构造更加复杂的计算， [python]
+view plain copy   print? node3 = tf.add(node1, node2)   print("node3:", node3)
+print("sess.run(node3):", sess.run(node3))   node3 = tf.add(node1, node2)
+print("node3:", node3) print("sess.run(node3" "BLOB"
+
+"   #### 网页收藏
+使用电脑版浏览器收藏网页时，可以先在为知笔记插件中心[安装网页剪接器插件](http://blog.wiz.cn/downloads-webclipper.html)，安装后当在浏览器里看到有价值的网页时，点击浏览器上方的
+**为知笔记图标**，选择保存位置后点击确定，网页内容就保存到为知笔记啦！ ####
+微博收藏
+在桌面客户端或网页版，点击头像旁的下拉按钮->帐户设置->帐户关联->绑定微博后，当你在微博上看到感兴趣、有意思的文字或图片时，直接
+**评论或转发此微博时输入
+@保存到为知笔记**，微博内容就保存到为知笔记了，同步后查看即可。 #### 邮件收藏 +
+对于有意义的邮件，如果想永久保存到为知笔记，只需转发此邮件给你的个人 mywiz
+邮箱即可。 + 对于在其他 app
+中看到有兴趣的内容，一般也是可以通过邮件分享保存到为知笔记的，点击分享，选择邮件分享，收件人是
+mywiz 邮箱即可。   **注：个人 mywiz 邮箱可以到个人信息页查看**       "  "BLOB"
+
+"    http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/
+这是一篇讲怎么学习android编程的博客，你看看需要装哪些软件    [杜迦罗]
+http://e.jikexueyuan.com/android.html?hmsr=stormzhang_index_word_03.20
+[杜迦罗]    https://yun.baidu.com/s/1dD5RRQ5    [杜迦罗]    好像要先学JAVA
+[杜迦罗]        [杜迦罗]    我再买点书给你    [杜迦罗]
+这两个是视频，我看有讲怎么装环境，运行程序什么的，你先看看 "   ""
+
+
+"我的手机是安卓6.0-23版,将(android视图下)根目录build.gradle的26改成23,并且安装一些23的kit:
+tools-android-sdk manager安装6.0系统. 然后报错round-icon:把round-icon那行删掉"
+""
+
+"与家人和朋友在微信聊天中留下的文字、图片、音频等各种美好信息，需要保存起来收好？
+各种微信公众账号推送的生活实用小百科、同城活动、震撼新闻，以及经验总结等文章，需要保存起来随时待用？
+微信中各种有价值的信息都可以一键永久收藏到为知笔记。 #### 准备工作： **第一步:
+**  关注为知笔记公众账号，可以通过直接扫描二维码或者搜“为知笔记”关注
+**第二步:**绑定为知笔记帐号到微信。关注为知笔记公众帐号后，会收到为知笔记消息，点击相应提示绑定即可
+#### 开始保存微信内容到为知笔记 + 保存公众帐号推送的文章
+阅读公众帐号推送的文章，点击 **右上角的更多**按钮，选择
+**为知笔记**，图文信息就自动保存到为知笔记了 + 保存家人或朋友间的聊天内容
+**长按**聊天文字或图片，点击 **更多**，选择为知笔记，内容就自动保存到为知笔记了
++ 保存和为知笔记的对话
+任何时候，在为知笔记公众帐号中输入文字、图片、音频、位置，都可以自动保存到为知笔记，而且音频可以直接转化成文字哦。
+以上保存的微信内容，需要您打开为知笔记后同步查看哦。" "BLOB"
+
+"最后四个学科在win电脑桌面左侧右上角xxx_xxx_xxx_xxx的zip包里.
+win电脑应该留存有完整数据库. 以及最新的physicaleducation在home/d/db0226/下.
+以后的工作移动到了kingson u盘.包括db数据库. 虽然有点小但是先这样吧."  ""
+
+"最后采用了virtualenv来解决23共存的问题. 1 sudo apt install virtualenv( pip3
+install virtualenv可能也行)一个virtualenv可以调用不同的python版本. 2
+cd到一个目录然后virtualenv --no-site-packages
+venv(在当前目录下创建一个venv文件夹在里边放虚拟机,名字就是venv)参数 -p
+用哪个python 3 source venv/bin/activate开启虚拟机 4 deactivate离开
+虚拟机如果被锁住,不能用pip,不要sudo,这会使得pip安到虚拟机外边. 1  sudo chown -R
+$USER venv/ 2  sudo chmod 777 venv/ 即可解锁. linux:
+在workspace/language/virtual/stnlp下装了一个虚拟机,python3的 pip了个nltk"    ""
+
+
+
+"函数传递引用: #include<iostream>  #include<cstdio>  using namespace std;    void pp(int &x)  {      x=4;  }    int main()  {      int x=2;        pp(x);      printf("%d",x);  }   "   ""
+
+"系统设置-外观-行为选项卡-打钩"将显示桌面图标到启动器" 工作区有点问题经常崩溃 最好把那边底下改成"菜单栏在窗口那显示"和"总是显示".菜单栏就是什么文件|编辑|查看|什么的"   ""
+
+"相关论文和资源非常丰富，远不局限于我发的这些，所以也需要你自己继续扩充 "   ""
+
+"可以更改“下载”文件夹位置：下载文件夹属性-位置-移动即可。会直接移动过去，快速访问链接也是。"    ""
+
+"语料库 语法树 词向量什么的 "   ""
+
+"只需要这三个文件       其中inputdata有改动.下载功能取消了.把四个包放在(在此目录以下的)Minst_data目录下即可. 在minstreldemo里把import Images改成了import images就过了,不清楚为什么. 存在language下的tenslite里."    "BLOB"
+
+"另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ ) ，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起 " ""
+
+"另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ ) ，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起 " ""
+
+"这里用的ubnutulivecd修复,因为现在系统是ubuntu提供的gnu grub.   sudo apt-add-repository ppa：yannubuntu / boot-repair sudo apt-get update sudo apt-get install -y boot-repair boot-repair 要点上面的 recommended   参考https://jingyan.baidu.com/article/4ae03de3dbdac83eff9e6be0.html    " ""
+
+"给了最后一组任务 在新的文件夹里,n5和n7在wiley文件夹下面.n5已经爬完了,它改用的phantomjs.没有看错误信息,以后可能会再跑一次. n7用的firefox.n72尝试了一下,但最后只是加了点tryexcept的输出----除了把截止条件改为了加载第一条文字的readcubePdfLink---这应该没什么风险,而的确加快了进程." ""
+
+"默认全是normal模式   b:加一个#和一个空格,到下一行 c:f r_ 把下一个空格换成_ d 爬虫 wiley从底下的mongo抄到上面"  ""
+
+"从中午开始吧.日记似乎不需要多少时间.我们从19:39开始写这个日记. 中午一直在预习大物实验,下午一点送女票去实验之后,自己也径直到了实验室.中午紫荆一层吃的牛肉面,给我的分量应该是不小心少了,但是我们用了7分钟就吃完了.做了波的实验.结束的时候大概是四点多.回寝之后颓了一个小时左右,到五点四十,去跑步健身了." ""
+
+"参考 https://segmentfault.com/q/1010000003991188?_ea=450880 use default gradle是默认的，可能需要做的是offline。（可以搜索一下设置）"   ""
+
+"新建:(关于ssh什么的还有一些..按廖雪峰来得了) git remote add origin git@github.com:daibiaoxuwu/_____.git 上传:先 git add . git commit -m '...' 然后git push即可上传. 下载: git pull:功能是git fetch+git merge origin/master git fetch的意思是更新这里的一个叫做origin/master的branch,不会在branch命令下显示 git merge只会把旧提交和新提交合并到最新的那个版本 所以如果你的commit领先仓库上的,git pull会显示already up-to-date,此时输入git status会发现领先origin/master 共x个提交.此时: git reset origin/master:跳转指针,stage也跟着跳转了,与指针一致 git checkout . 将工作区的改动丢弃.此时,如果工作区在新的改动中添加了文件,这里会让那个文件变为未跟踪状态而不是删除它,可以status中查看,不会自动删除. # 删除 untracked files git clean -f  # 连 untracked 的目录也一起删掉 git clean -fd  # 连 gitignore 的untrack 文件/目录也一起删掉 （慎用，一般这个是用来删掉编译出来的 .o之类的文件用的） git clean -xfd  # 在用上述 git clean 前，墙裂建议加上 -n 参数来先看看会删掉哪些文件，防止重要文件被误删 git clean -nxfd git clean -nf git clean -nfd"  ""
+
+"官方正确卸载 MongoDB 如果要在你的系统中完全卸载MongoDB，你必须卸载MongoDB的程序文件，配置文件，和所有的包含数据和日志的文件和文件夹。下面我将演示如何完全卸载MongoDB 1. 停止MongoDB 使用如下命名停止MongoDB的守护进程： sudo service mongod stop   2. 移除MongoDB的程序文件 删除你以前所有的MongoDB的安装包： sudo apt-get purge mongodb-org*   3.删除数据文件和日志文件的目录 sudo rm -r /var/log/mongodb  sudo rm -r /var/lib/mongodb         本文参考了MongoDB的官方安装文档，如果有兴趣的同学可以参考原版的官方文档，地址如下：  https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/           https://www.cnblogs.com/zlslch/p/6932970.html   "   ""
+
+"输液 800-1130 130-600 "    ""
+
+"把两万文件合并到主文件夹的combine.txt 做了两个词向量combine100.bin和combine200.bin 它们的size是100和200 writing to /home/d/workspace/java/eclipse/work/lib/combine.txt.json        java -cp "*" -Xmx8g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators parse -outputFormat json -file /home/d/Downloads/p21 -timeout 600000  换了服务器跑的更快...已经11G了,有时间可以合并一下   语法树不知道如何表示.单论节点的话,一个节点太深,种类太多. (ROOT (ROOT(S (ROOT(S(NP (ROOT(S(NP(DT (ROOT(S(NP(NN (ROOT(S(NP(VP (ROOT(S(NP(VP(VBZ (ROOT(S(NP(VP(ADJP (ROOT(S(NP(VP(ADJP(JJ (ROOT(S(NP(VP(ADJP(, (ROOT(S(NP(VP(ADJP(ADVP (ROOT(S(NP(VP(ADJP(ADVP(RB (ROOT(S(NP(VP(ADJP(ADVP(, (ROOT(S(NP(VP(ADJP(ADVP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(IN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(DT (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(NN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(IN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(DT (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(NN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(IN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NNS (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(CC (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PRP$ (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(NN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(IN (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP(NNS (ROOT(S(NP(VP(ADJP(ADVP(PP(NP(NP(PP(NP(NP(NP(PP(NP(NP(NP(PP(NP(.     尝试了一下,词向量果然会舍弃大量的低频词...那尝试拿词向量为正确结果训练一个lstm然后输出更全面的词向量好了.   看了一些资料,觉得用语法树有点费劲,先做一个只依靠文字的再说.一会也可以把每个语法树结构当成词." ""
+
+"安装时：要安装好Anaconda2之后，再安装Anaconda3，这里Anaconda3的安装目录必须选在D:\Anaconda2\envs子目录下，如图所示，最后的”py3”可以自己另取。 安装完成之后，在CMD里面直接输入python会启动Python2，而使用activate py3（py3即之前Python3安装目录文件夹的名字）命令之后，再使用python即可切换至Python3，如下图所示。使用activate py3命令之后，在命令行前面会出现一个[py3]标记，此时使用任何的python命令都是在Python3下进行的。使用deactivate命令可取消激活Python3。（由于安装叫了Miniconda3，直接文件夹更名为py3，如果有故障可以更名回来。）  来源： http://blog.csdn.net/infin1te/article/details/50445217  "    ""
+
+"安装到s:\tools（新建的）  C空间不够   出现这个 改了，删掉s tools里的了，改到移动硬盘E的programs\MATLAB里。 破解码是09806-07443-53955-64350-21751-41297 让换硬盘时候我的电脑里右键一个iso点弹出 右键另一个iso点挂载就行了 完事了出这个   1 按它说的下载mingw https://cn.mathworks.com/support/compilers.html?sec=win64&s_cid=pi_scl_5_R2017b_win64 然后按这个  "    "BLOB"
+
+"安装搜狗输入法: 先在安装时选择语言英文.安装好后languagesupport等他更新,如果是备份的话语言第一个直接汉语了,不是的话拖上去应该就行了.之后应用systemwide,重启(注意:注销再回来也行!更快!),回来找fctix(应该在,否则装一下) 选好了后官网下载64位的搜狗拼音deb包,sudo dpkg -i 文件名.deb,尝试sudo apt --fix-broken install和sudo apt install -f即可.在fctix配置中"附加组件"里有搜狗拼音了. 不要去文本输入的输入源那里,并不能添加搜狗的."   ""
+
+"文件名规范:  1 项目编号  2 调试号 发布版本为0 对版本的第几次调试性修改为1 2 3  3 大型变化(feature)  4-5 小型变化号  如果一个工程是由多个文件组成,1项目编号变为两位,第一位仍然为项目编号,第二位为文件编号    例如:  30000 第一次编写  可能经过几个小的版本,到达30005  30005 可以运行的爬虫  这个爬虫进行精简运行的时候 存为31005  31005 第一个可以运行的爬虫的简化  在运行时找到了一些问题,改成了31006  31006 第一个爬虫测试通过  这之后可以直接进行另一个方向的精简 进入32006 然后修改为32007  在最后可以把32007和30005整合一下,变为30007  30007 大致通过  30007之后可能找到新的改动,这时候直接拿起32007改就可以了,改之后存为32008,再给到30008;如果是精简的方面不对,拿起32007改成33007即可.    工作空间规范:  bin:放置不用的非代码  old:放置不用的代码  notes:放置笔记 "   ""
+
+"内部春初 android data com.company.text2 files下：这是application.persistancepath的值"  ""
+
+"如果你想创建格式美美的，且包含文字，表格，图片，公式甚至是不同型号标题的笔记，那么推荐你使用 Markdown 笔记。为知笔记支持 Markdown 的渲染，用简单的语法就可以写出赏心悦目的笔记。   ##### 简单两步完成操作 1. 直接新建普通的笔记，在标题加 .md 后缀  2. 在正文中撰写 Markdown 语法，点击保存并阅读，就可以看到渲染后美美的笔记啦。   简单介绍几种常用语法   ##### 标题 在行首插入 1 到 6个#，分别表示标题 1 到标题 6   ```  ##### 这是标题5  ###### 这是标题6 ```   ##### 这是标题5 ###### 这是标题6     ##### 列表 ###### 有序列表 有序列表则使用数字加一个英文句点，并加空格，再输入文字   ``` 1. 你好 1. 为知笔记 1. 加油！ ```   1. 你好 1. 为知笔记 1. 加油！   ###### 无序序列表   无序列表使用星号、加号或是减号作为列表标记，并加一个空格，再输入文字   ``` + Android + iPhone + iPad ```   + Android + iPhone + iPad   ##### 链接  [描述]（链接地址）  ``` [为知笔记](www.wiz.cn)   ``` [为知笔记](www.wiz.cn)   ##### 表格 ``` | 为知笔记|客户端  | 版本 | |-------|------|--------| | WizNote | iPhone| 7.0.0 | ``` <br/>   | 为知笔记|客户端  | 版本 | |-|-|-| | WizNote | iPhone| 7.0.0 |    ##### 图片 直接将图片插入到对应的位置即可，无需任何语法，比一般的 Markdown 编辑器简单很多。      ##### 目录  在任何你想要展示Markdown 笔记目录的地方，添加 `[TOC]`   点击保存后的效果：   [TOC]   ##### Mathjax 公式     可以创建行内公式，例如：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$         或者块级公式，     $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$   点击保存后的效果：    可以创建行内公式，例如：$\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ 或者块级公式： $$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$     ##### 流程图   ```flow  st=>start: Start:>http://www.google.com[blank] e=>end:>http://www.google.com op1=>operation: My Operation sub1=>subroutine: My Subroutine cond=>condition: Yes or No?:>http://www.google.com io=>inputoutput: catch something...   st->op1->cond cond(yes)->io->e cond(no)->sub1(right)->op1 ``` [了解更多关于流程图的语法说明](http://adrai.github.io/flowchart.js/ )      除了以上 Markdown 中一般用到的基本语法，为知笔记还支持引用、时序图、脚注等渲染哦~查看更多 [为知笔记 Markdown 新手指南](http://blog.wiz.cn/feature-markdown.html)   ##### Mac 端支持更换 Markdown 模板 除了默认提供的 Markdown 渲染样式，为知笔记 Mac 端还提供了更多 Markdown 渲染模板供你选择哦~ 点击系统顶部菜单 WizNote->偏好设置->阅读->选择markdown模板->选中相应模板->确定 即可            "    "BLOB"
+
+"如 git clone https://github.com/daibiaoxuwu/tensorflow-train.git "指定目录"  (或者用git@daibiaoxuwu/tensorflow-train.git什么的)"   ""
+
+"要提前学vhdl quarters2要用老一点的版本.最好还是去实验室用. 实验前注意要求 不能用加法器什么的 第一节课PPT有"    ""
+
+"使用deja-dup,在livecd什么更新都不下载就有,并且里边的install不需要apt update. deja-dup备份在10分钟左右?信息有8g左右,没有包含任何系统文件,也就是: 不包含vim和vimrc 不包含java,android等等安在/里的软件 不包含/etc/profile等环境变量 不包含设置:输入法.但是很简单.配置输入法将另起一条. 不过包含了Firefox的历史记录." ""
+
+"百度首页  登录  注册  网页 新闻 贴吧 知道 音乐 图片 视频 地图 文库 百科  进入词条全站搜索帮助  清除历史记录关闭  声明：百科词条人人可编辑，词条创建和修改均免费，绝不存在官方及代理商付费代编，请勿上当受骗。详情>>   首页 分类 艺术 科学 自然 文化 地理 生活 社会 人物 经济 体育 历史 特色百科 历史上的今天 数字博物馆 史记·2016 城市百科 二战百科 非遗百科 用户 蝌蚪团 燃梦计划 百科任务 百科商城 权威合作 合作模式 常见问题 联系方式 手机百科 网页版 个人中心    比爱迪生还牛，却成为史上最倒霉的天才：尼古拉·特斯拉 39.1w  特斯拉是一个多义词，请在下列义项上选择浏览（共7个义项） 添加义项  ?纯电动汽车品牌 ?计算处理器 ?物理单位 ?许可证协议 ?美国著名工程师 ?天南星科花烛属红掌品种 ?传记片 收藏  查看我的收藏 8032 有用+1 已投票  14  特斯拉 （物理单位）编辑 锁定  特斯拉英文为tesla（字首小写），符号表示为T，是磁通量密度或磁感应强度的国际单位制导出单位。在1960年巴黎召开的国际计量大会上，此单位被命名以纪念在电磁学领域做出重要贡献的美籍塞尔维亚发明家、物理学家、机械工程师、电气工程师尼古拉·特斯拉。 中文名 特斯拉  外文名 tesla  符号表示 T  命名时间 1960年  纪念人物 尼古拉·特斯拉  1特斯拉=1×10^4高斯=1×10^6微特斯拉 1×10^3毫特斯拉=1×10^6微特斯拉=1特斯拉 1 T = 1Wb/m2=1N/(A·m)=1Kg/(A·s^2)=1N·s/C·m 国际单位制导出单位   具有专门名称   ? 赫兹 ( 频率)  ? 牛顿 ( 力/重力)  ? 帕斯卡 ( 压强/应力)  ? 焦耳 ( 能量/功/热量)  ? 瓦特 ( 功率/辐射通量)  ? 库仑 ( 电荷量)  ? 伏特 ( 电势/电压/电动势)  ? 欧姆 ( 电阻)  ? 西门子 ( 电导)  ? 法拉 ( 电容量)  ? 特斯拉 ( 磁通量密度/磁感应强度)  ? 韦伯 ( 磁通量)  ? 亨利 ( 电感)  ? 摄氏度 ( 摄氏温度)  ? 弧度 ( 平面角)  ? 球面度 ( 立体角)  ? 流明 ( 光通量)  ? 勒克斯 ( 光照度)  ? 贝克勒 ( 放射性活度)  ? 戈瑞 ( 吸收剂量)  ? 希沃特 ( 剂量当量)  ? 卡塔尔 ( 催化活性)          其他   ? 平方米 ( 面积)  ? 立方米 ( 体积)  ? 米每秒 ( 速率/速度)  ? 弧度每秒 ( 角速度)  ? 米每平方秒 ( 加速度)  ? 牛米 ( 力矩)  ? 每米 ( 波数)  ? 千克每立方米 ( 密度)  ? 立方米每千克 ( 比体积)  ? 摩每立方米 ( 物质浓度)  ? 立方米每摩 ( 摩尔体积)  ? 焦每开 ( 熵)  ? 焦每摩开 ( 摩尔热容量/摩尔熵)  ? 焦每千克开 ( 比热容量/比熵)  ? 焦每摩 ( 摩尔能)  ? 焦每千克 ( 比能)  ? 焦每立方米 ( 能量密度)  ? 牛每米 ( 表面张力)  ? 瓦每平方米 ( 热通量密度/辐射照度/功率密度)  ? 瓦每开米 ( 导热系数)  ? 平方米每秒 ( 动黏度)  ? 帕秒 ( 黏度)  ? 库每立方米 ( 电荷密度)  ? 安每平方米 ( 电流密度)  ? 西每米 ( 电导率)  ? 西平方米每摩 ( 摩尔电导)  ? 法每米 ( 介电常数)  ? 亨每米 ( 磁导率)  ? 伏每米 ( 电场强度)  ? 安每米 ( 磁场强度)  ? 坎每平方米 ( 亮度)  ? 库每千克 ( 照射)  ? 戈每秒 ( 吸收剂量率)       相关内容：国际单位制基本单位 国际单位制  词条标签： 科学    图集  特斯拉图册 V百科往期回顾       词条统计 浏览次数：1334728次 编辑次数：11次历史版本 最近更新：2017-10-13 创建者：breadann 猜你关注 特斯拉新能源汽车 北京特斯拉4s店 北京特斯拉二手车 进口福特 银率网 土耳其烤肉 醇基燃料 酒店家具 400免费电话 东方cj官网 新手上路 成长任务 编辑入门 编辑规则 百科术语 我有疑问 我要质疑 在线客服 参加讨论 意见反馈 投诉建议 举报不良信息 未通过词条申诉 投诉侵权信息 封禁查询与解封 ?2018 Baidu 使用百度前必读 | 百科协议 | 百度百科合作平台 | 京ICP证030173号   京公网安备11000002000001号  进入词条  清除历史记录关闭  编辑 收藏 赞  登录  分享  分享到微信朋友圈  打开微信“扫一扫”即可将网页分享至朋友圈" "BLOB"
+
+"命令是gu(变小写) gU(变大写).要加上范围.一行:0(到行首)gU$. 10gU，则进行11行小写到大写的转换. "  ""
+
+"vimrc加入set term=xterm-256color"  ""
+
+"ubuntu系统下 命令行输入sensor即可 https://www.linuxidc.com/Linux/2015-06/119201.htm 命令行运行psensor是图形化界面 设置了首选项使它开机运行,运行在右上角状态栏" ""
+
+"ubuntu自带了iso到启动盘的工具,只要右键iso文件 即可."   ""
+
+"ubuntu备份0207 在新thinkpad-D:\ubuntu备份 里." ""
+
+"tesseract "    ""
+
+"swap只给了两个G...应该是8到16个的."    ""
+
+"stanford nlp:   cite: https://nlp.stanford.edu/software/lex-parser.html  Sample input and output The parser can read various forms of plain text input and can output various analysis formats, including part-of-speech tagged text, phrase structure trees, and a grammatical relations (typed dependency) format. For example, consider the text:  The strongest rain ever recorded in India shut down the financial hub of Mumbai, snapped communication lines, closed airports and forced thousands of people to sleep in their offices or walk home during the night, officials said today. The following output shows part-of-speech tagged text, then a context-free phrase structure grammar representation, and finally a typed dependency representation. All of these are different views of the output of the parser.  The/DT strongest/JJS rain/NN ever/RB recorded/VBN in/IN India/NNP shut/VBD down/RP the/DT financial/JJ hub/NN of/IN Mumbai/NNP ,/, snapped/VBD communication/NN lines/NNS ,/, closed/VBD airports/NNS and/CC forced/VBD thousands/NNS of/IN people/NNS to/TO sleep/VB in/IN their/PRP$ offices/NNS or/CC walk/VB home/NN during/IN the/DT night/NN ,/, officials/NNS said/VBD today/NN ./.   (ROOT   (S     (S       (NP         (NP (DT The) (JJS strongest) (NN rain))         (VP           (ADVP (RB ever))           (VBN recorded)           (PP (IN in)             (NP (NNP India)))))       (VP         (VP (VBD shut)           (PRT (RP down))           (NP             (NP (DT the) (JJ financial) (NN hub))             (PP (IN of)               (NP (NNP Mumbai)))))         (, ,)         (VP (VBD snapped)           (NP (NN communication) (NNS lines)))         (, ,)         (VP (VBD closed)           (NP (NNS airports)))         (CC and)         (VP (VBD forced)           (NP             (NP (NNS thousands))             (PP (IN of)               (NP (NNS people))))           (S             (VP (TO to)               (VP                 (VP (VB sleep)                   (PP (IN in)                    "  ""
+
+"saver的定义需要在所有变量之后. 在本地刚clone的classold版本中saver是有一行Saver(tf.global_variables())的."  ""
+
+"rm -r 删除目录 sudo rm -rf 强制删除文件夹 不行的话sudo chmod 777 文件夹名    " ""
+
+"python3默认编码utf-8:意思是python自己字符串什么的是utf8的 打开一个gbk文件时候,写 with open('a.txt')as f: f.readline() 这一行readline就会报错,这里在readline后边再加encode()什么的肯定没用了. with open('a.txt')as f:  改成 with open('a.txt',encoding='gbk')as f:  即可."  ""
+
+"pycharm运行语料库的时候添加tensorflow包，说与pycosat冲突，暂时删除pycosat. 卸载好像出现了问题。 RemoveError: This operation will remove conda without replacing it with  another version of conda.  但是这样好像导致卸载成功了。然而这之后tensorflow又和futures冲突而报错。 网上查到win上的tensorflow不支持python2.opencv只支持2.（截至20170530） anaconda上安装tensorflow：http://blog.csdn.net/jay100500/article/details/72809338 "  ""
+
+"papersmith开始些项目路径"  ""
+
+"mongodb会用掉一些var空间.清理:清理无用安装包:sudo apt-get clean"   ""
+
+"lstm: workspace/languange/lstm/1.py 下载自 https://www.cnblogs.com/DjangoBlog/p/6888812.html lstm生成预测序列的简单案例     https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm.py tensorlayer 还没看   老师给的代码         word2vec:"   ""
+
+"linux的python2和3的区分不是很好,不能共享包."   ""
+
+"linux path:新安装的android opencv都放在programs里.不要放在/里了. 爬虫的geckodriver放在/home/d/bin里.(专门给它新建的文件夹) linux 文件管理器:nautilus 注意!命令行运行时候里边删除的东西应该是无法恢复的!而且一旦窗口最小化就会消失.  "  ""
+
+"indoor工程的opencv340： 只要把这个装在手机上就能跑那个工程了。但是点任何键闪退。"  ""
+
+"import tensorflow.examples.tutorials.mnist.input_data mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)"  ""
+
+"import tensorflow.examples.tutorials.mnist.input_data mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)"  ""
+
+"https://zhidao.baidu.com/question/561689400673695884.html?qbl=relate_question_7&word=vim%C9%E8%D6%C3%B8%F7%B8%F6%CB%F5%BD%F8 以及有时间总结一下vim各个缩进设置"    ""
+
+"https://www.linuxidc.com/Linux/2013-11/93169.htm kill -HUP ppid这句话里ppid就是ppid不要换成什么数字. " ""
+
+"https://www.jianshu.com/p/4195577585e6    基于tensorflow的MNIST手写数字识别  " ""
+
+"https://www.cnblogs.com/zy6103/p/6943557.html" ""
+
+"https://www.cnblogs.com/xia-weiwen/p/7416666.html "    ""
+
+"https://www.cnblogs.com/liangml/p/5969404.html "   ""
+
+"https://stackoverflow.com/questions/31436157/e-art-failed-sending-reply-to-debugger-broken-pipe-but-application-still-runs/37370764#37370764  4 down vote  Explaining the error:  E/ART: Failed sending reply to debugger: Broken pipe.   What is E/ART?  ART is the Android RunTime. This is the bytecode interpreter on your Android phone. The E simply indicates the logging level of ERROR.  What is "sending reply to debugger"?  Debugging on the Android phone is done using the adb (Android Debugging Bridge). The adb process runs on your dev machine (your laptop or PC) and a daemon runs on the Android device (i.e., the emulator or handset).  What is a broken pipe?  Your dev machine and the Android device communicate like a client server and a broken pipe means that the communication has become invalid. For instance, the client (the Android device) is trying to send a reply to the server (the adb process running on the dev machine) but the server has already closed the socket.  How to fix it  First make sure your app is building correctly by performing a clean/rebuild.  Then if you are running your app using USB debugging on a real phone then you can often fix the problem by unplugging the USB cable and then plugging it back in to reestablish the client/server connection.  If this doesn't work, you can disconnect the USB cable and (stop the emulator if necessary) and close Android Studio. This is often enough to stop the adb process. Then when you open Android Studio again it will restart and the connection will be reestablished.  If this doesn't work, you can try stopping the adb server manually using the instructions in this question. For instance, you can try opening command prompt or terminal and going to the sdk/platform-tools directory and typing:  adb kill-server adb start-server     "   ""
+
+"https://segmentfault.com/q/1010000008262180 cat packages/*.txt >> combine.txt 2w txt 几秒钟 不过由于读入大文件卡死我们还是一个一个文件读好了   "   ""
+
+"https://jingyan.baidu.com/article/9faa7231e7b78b473c28cbb6.html "  ""
+
+"https://jingyan.baidu.com/article/4ae03de3dbdac83eff9e6be0.html"   ""
+
+"https://blog.csdn.net/code_better/article/details/53287587 "   ""
+
+"http://www.ddooo.com/softdown/112942.htm     " "BLOB"
+
+"http://www.cnblogs.com/baiboy/p/nltk1.html nlp词性: http://blog.csdn.net/u011215144/article/details/78860834 或者这个更好 https://stackoverflow.com/questions/1833252/java-stanford-nlp-part-of-speech-labels  27.     VB     Verb, base form 动词基本形式 32.     VBZ     Verb, 3rd person singular present 动词第三人称单数 31.     VBP     Verb, non-3rd person singular present 动词非第三人称单数 28.     VBD     Verb, past tense 动词过去式 30.     VBN     Verb, past participle 过去分词 29.     VBG     Verb, gerund or present participle 动名词和现在分词       MD     Modal 情态助动词     "  ""
+
+"http://www.52nlp.cn/tag/%E8%AF%8D%E5%90%91%E9%87%8F 这里少了一句,参考: https://spacy.io/usage/ 少python -m spacy download en"  ""
+
+"http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/mnist_pros.html 官方文档(主要看) http://blog.csdn.net/sa14023053/article/details/51884894 一个tensorflow简洁代码 https://www.jianshu.com/p/4195577585e6 基于tensorflow的MNIST手写数字识别（二）--入门篇 (里边有一个 http://blog.csdn.net/u014046170/article/details/47445919 python解析minst的代码)"   ""
+
+"http://wdxtub.com/2016/09/21/byobu-guide/ 我们先跟着快速入门指南来学习一下基本的操作（这里只列出最常用的，具体的大家可以自己查阅）： Shift-F1 在一个新窗口中显示帮助。有什么操作忘记的话，这是最快捷的方法 F2 创建一个新窗口。跟 F2 相关的操作都是跟界面相关的（其中 Session 部分因为不太直观，这里不介绍） Shift-F2 水平切分窗口 Ctrl-F2 垂直切分窗口 F3/F4 用来切换窗口。 Alt-Left/Right 切换窗口 Shift-Left/Right/Up/Down 在切分的窗口间切换 Shift-F3/F4 在切分的窗口间切换 F5 重载 profile，刷新数据 F6 关闭会话，但是在 Mac 上键盘是冲突的 F7 进入滚动模式，用来查看历史记录 F8 给当前的窗口重命名，方便以后辨认 F9 启动 byobu 配置窗口 Ctrl-F9 输入命令，并且在所有的窗口中执行 Shift-F9 输入命令，并且在所有的切分面板中执行 "  ""
+
+"http://dl.pconline.com.cn/download/1107001.html即可破解。 以及quarters9北邮人上有破解版，可以找冰箭要。"   ""
+
+"http://blog.csdn.net/u013378306/article/details/68064352 后半部分 命令行到 /home/d/workspace/java/eclipse/work/lib 目录下(把所有jar包放在这里) java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000 Note the the timeout is in milliseconds.    wget --post-data 'The quick brown fox jumped over the lazy dog.' 'localhost:9000/?properties={"annotators":"tokenize,ssplit,pos","outputFormat":"json"}' -O -    而一个java样例就在/home/d/workspace/java/eclipse/work这里,可以用eclipse直接开.   输出: {"sentences":[{"index":0,"tokens":[{"index":1,"word":"The","originalText":"The","characterOffsetBegin":0,"characterOffsetEnd":3,"pos":"DT","before":"","after":" "},{"index":2,"word":"quick","originalText":"quick","characterOffsetBegin":4,"characterOffsetEnd":9,"pos":"JJ","before":" ","after":" "},{"index":3,"word":"brown","originalText":"brown","characterOffsetBegin":10,"characterOffsetEnd":15,"pos":"JJ","before":" ","after":" "},{"index":4,"word":"fox","originalText":"fox","characterOffsetBegin":16,"characterOffsetEnd":19,"pos":"NN","before":" ","after":" "},{"index":5,"word":"jumped","originalText":"jumped","characterOffsetBegin":20,"characterOffsetEnd":26,"pos":"VBD","before":" ","after":" "},{"index":6,"word":"over","originalText":"over","characterOffsetBegin":27,"characterOffsetEnd":31,"pos":"IN","before":" ","after":" "},{"index":7,"word":"the","originalText":"the","characterOffsetBegin":32,"characterOffsetEnd":35,"pos":"DT","before":" ","after":" "},{"index":8,"word":"lazy","originalText":"lazy","characterOffsetBegin":36,"characterOffsetEnd":40,"pos":"JJ","before":" ","after":" "},{"index":9,"word":"dog","originalText":"dog","characterOffsetBegin":41,"characterOffsetEnd":44,"pos":"NN","before":" ","    http://blog.csdn.net/thriving_fcl/article/details/76595253 python发送请求"    ""
+
+"http://blog.csdn.net/u012436149/article/details/62058318  ensorflow学习笔记（三十六）：learning rate decay 原创 2017年03月14日 21:39:26 learning rate decay 在训练神经网络的时候，通常在训练刚开始的时候使用较大的learning rate， 随着训练的进行，我们会慢慢的减小learning rate。对于这种常用的训练策略，tensorflow 也提供了相应的API让我们可以更简单的将这个方法应用到我们训练网络的过程中。 接口  tf.train.exponential_decay(learning_rate, global_step, decay_steps, decay_rate, staircase=False, name=None)  参数:  learning_rate : 初始的learning rate  global_step : 全局的step，与 decay_step 和 decay_rate一起决定了 learning rate的变化。  staircase : 如果为 True global_step/decay_step 向下取整 更新公式： decayed_learning_rate = learning_rate * decay_rate ^ (global_step / decay_steps) 1 2 4   1 decayed_learning_rate = learning_rate * 2                         decay_rate ^ (global_step / decay_steps) 3 1 4 2 这个代码可以看一下 learning_rate 的变化趋势： import tensorflow as tf global_step = tf.Variable(0, trainable=False) initial_learning_rate = 0.1 #初始学习率 learning_rate = tf.train.exponential_decay(initial_learning_rate, global_step=global_step, decay_steps=10,decay_rate=0.9) opt = tf.train.GradientDescentOptimizer(learning_rate) add_global = global_step.assign_add(1) with tf.Session() as sess: tf.global_variables_initializer().run() print(sess.run(learning_rate)) for i in range(10): _, rate = sess.run([add_global, learning_rate]) print(rate) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 37   1 import tensorflow as tf 2 3 global_step = tf.Variable(0, trainable=False) 4 5 initial_learning_rate = 0.1 #初始学习率 6 7 learning_rate = tf.train.exponential_decay(initial_learning_rate, 8                                            global_step=global_step, 9                                            decay_steps=10,decay_rate=0.9) 10 opt = tf.train.GradientDescentOptimizer(learning_rate) 11 12 add_global = global_step.assign_add(1) 13 with tf.Session() as sess: 14     tf.global_variables_initializer().run() 15     print(sess.run(learning_rate)) 16     for i in range(10): 17         _, rate = sess.run([add_global, learning_rate]) 18         print(rate)"    ""
+
+"http://blog.csdn.net/u010429424/article/details/48498081 chmod 777 文件名 给所有人以全部对文件操作的权限 chmod -R 777 WhoJoy/  对整个目录操作  chmod 777 * 对所有文件操作" ""
+
+"http://blog.csdn.net/thriving_fcl/article/details/76595253 python发送请求   https://www.cnblogs.com/DjangoBlog/p/6888812.html lstm生成预测序列的简单案例 https://github.com/dav/word2vec dav的github 词向量案例 下载到了download/word2vec文件夹  https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_ptb_lstm.py tensorlayer   https://github.com/danielfrg/word2vec danielfrg的词向量 应该是官方的 1.4k星 http://nbviewer.jupyter.org/github/danielfrg/word2vec/blob/master/examples/word2vec.ipynb python自己下载的word2vec库-word2vec教程.下载到download/word2vec1文件夹.里边有一些案例. http://nbviewer.jupyter.org/github/danielfrg/word2vec/blob/master/examples/doc2vec.ipynb 也是它的链接里的. github上搜索别的word2vec可能也好 https://code.google.com/p/word2vec/ 应该也是.在google上,没看.     https://nlp.stanford.edu/software/lex-parser.html 斯坦福parser.结尾的使用方法和例子比较重要.   http://www.nltk.org/api/nltk.html www.cnblogs.com/baiboy/p/nltk1.html http://www.52nlp.cn/python%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E8%B7%B5-%E5%9C%A8nltk%E4%B8%AD%E4%BD%BF%E7%94%A8%E6%96%AF%E5%9D%A6%E7%A6%8F%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8   https://www.douban.com/group/topic/93196251/ blog.csdn.net/a398942089/article/details/53048189  nltk的,应用到python里的.我想直接读文件好一点吧.   http://blog.csdn.net/a398942089/article/details/53048189 javaapi java里的 没什么用   http://wiki.jikexueyuan.com/project/tensorflow-zh/tutorials/word2vec.html 极客学院官方文档翻译 看字词词向量部分   https://stanfordnlp.github.io/CoreNLP/annotators.html 看看corenlp的annotators   https://stanfordnlp.github.io/CoreNLP/other-languages.html 有它对python的支持.暂时不看.   https://stanfordnlp.github.io/CoreNLP/caseless.html caseless 本身没啥用,但是给了个从文件读取的代码例子和格式.conll.   https://stanfordnlp.github.io/CoreNLP/corenlp-server.html 讲解了怎么用server(重要)   https://github.com/aymericdamien/TensorFlow-Examples/tree/master/notebooks/3_NeuralNetworks 可以稍微看看.已下载.案例.这是简单神经网络模型,没有词向量什么的.   https://github.com/jikexueyuanwiki/tensorflow-zh/blob/master/SOURCE/api_docs/python/nn.md tensorflow文档(已下载)   http://www.runoob.com/python/python-json.html python如"    ""
+
+"http://blog.csdn.net/thriving_fcl/article/details/73381217 随便找的例子,在workspace的class/class2里.tf2虚拟环境.python2."  ""
+
+"http://blog.csdn.net/qq_37549757/article/details/56012895 以后要用白机记住！设置-软件和更新-'可从互联网下载'的前四个打上钩！  提示：进虚拟机选中文，语言设置进fctix，很顺利 切换输入法点那个小键盘或者小企鹅  甚至搜索引擎都是百度的   /etc/profile添加: export JAVA_HOME=/home/d/programs/jdk1.8.0_161 export JRE_HOME=${JAVA_HOME}/jre export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib export PATH=${JAVA_HOME}/bin:$PATH    eclipse下载去官网.选中科大的镜像非常快.其他的下载也比百度网盘快多了. cd /usr/share/applications/ 做好了cp到桌面 eclipse.desktop:   [Desktop Entry]  Encoding=UTF-8  Name=Eclipse  Comment=Eclipse  Exec=/home/d/programs/eclipse-installer/eclipse-inst  Icon=/home/d/programs/eclipse-installer/icon.xpm  Terminal=false  StartupNotify=true  Type=Application  Categories=Application;Development;    然后sudo chmod u+x  eclipse.desktop 这里复制的时候会丢掉这些权限. 如果u+x不好就换成777好了.   最后的处理：报错找不到java： A Java Runtime Environment (JRE) or Java Development Kit(JDK) must be available in order to run Eclipse. No Java virtualmachine was found after searching the following locations: D:\eclipse\jre\bin\java.exe java.exe in your current PATH 在解压的eclipse installer文件夹里的eclipse-inst.ini的开头两行加入 -vm /home/d/programs/jdk1.8.0_161/bin/java(改成正确的java可执行的路径） 即可. opencv:  http://www.linuxidc.com/Linux/2016-05/131609.htm  https://www.cnblogs.com/xiaomanon/p/5490281.html  sudo apt-get install build-essential cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev python-dev python-numpy libjpeg-dev libpng12-dev libtiff5-dev libjasper-dev libdc1394-22-dev ant 有两个包没有找到，他会中止别的软件包的安装。 E: 无法定位软件包 libttb2 E: 无法定位软件包 libttb-dev 以及，安装ant的时候会附带着安装java-openjdk8和9什么的.不影响用自己的java.   cmake -DBUILD_SHARED_LIBS=OFF -DCMAKE_INSTALL_PREFIX=/usr/local ../   在sudo make之前要做: sudo update-alternatives --install /usr/bin/java java /home/d/programs/jdk1.8.0_161/bin/java 300  sudo update-alternatives --install /usr/bin/javac javac /home/d/programs/jdk1.8.0_161/bin/javac 300 sudo update-alternatives --config java  sudo update-alternatives --config javac  然后再sudo make sudo make install "   ""
+
+"http://blog.csdn.net/mack415858775/article/details/39695277"   ""
+
+"http://blog.csdn.net/lordofrobots/article/details/77719020 "   ""
+
+"http://blog.csdn.net/jay100500/article/details/72809338 Windows下通过Anaconda安装TensorFlow及Spyder编译器  找不到让安装cuba的地方了，不过还是装上了 是一个安装应用 官方文档上讲了所有三种方法 教程方面看了http://blog.csdn.net/lengguoxing/article/details/78456279   这里用了anaconda的方法，因为似乎不支持，应该选择python3.5而不是6.其他系统支持。 conda remove -n tensorflow --all可以删除一个不小心建错了的环境。 刚刚建好tensorflow： # # To activate this environment, use: # > activate tensorflow # # To deactivate an active environment, use: # > deactivate # # * for power-users using bash, you must source #  tensorflow如果选gpu，要输入pip install tensorflow-gpu 否则pip install tensorflow即可。gpu需要cuda 一定是cuda8！以及对应cuda8的cudnn。但是安装这俩之后还是说找不到nvcuda.dll，全电脑查找也没有找到。"  ""
+
+"http://blog.csdn.net/andyzhaojianhui/article/details/46692549 nohup 重定向输出   http://blog.csdn.net/u014595019/article/details/52759104  多层lstm      tf.train.match_filenames_once如何验证文件是否正确读取？  原创 2017年07月14日 12:12:26        标签：      python    用到了tf.train.match_filenames_once这个函数去读取tfrecords文件，却不知道文件是否已经读取到，用以下这段代码可以轻松测试。      [python] view plain copy        import tensorflow as tf                directory = "*.*"        file_names = tf.train.match_filenames_once(directory)                init = (tf.global_variables_initializer(), tf.local_variables_initializer())                with tf.Session() as sess:            sess.run(init)            print(sess.run(file_names))        输出不是  [ ]  即代表文件已经读取到      斯坦福nlp可以添加: -threads 4参数 以及别忘了-outputFormat json参数   nohup java -cp "*" -Xmx6g edu.stanford.nlp.pipeline.StanfordCoreNLPClient -annotators tokenize,ssplit,pos,lemma,parse -file /home/d/Downloads/p2r -ouutFormat json -threads 4 &  [1] 12383  d@d-ThinkPad-E460:~/workspace/java/eclipse/work/lib$ nohup: 忽略输入并把输出追加到'nohup.out'  防止挂起:https://www.ibm.com/developerworks/cn/linux/l-cn-nohup/      1. 查看 vim 是否支持 clipboard 功能$ vim --version | grep clipboard  2. 如果有 +clipboard 则跳过这一步; 如果显示的是 -clipboard 说明不支持, 需要Ubuntu$ sudo apt install vim-gtk  因为默认安装的 vim 有些功能不支持, 安装 vim-gtk 包可以get the extra featuresMac# 查看选项  $ brew options vim  $ brew install/reinstall vim --with-client-server  3. 使用 + 寄存器与系统粘贴板互通数据,  "+yy 等操作    作者：cnlzxin  链接：https://www.zhihu.com/question/19863631/answer/182346296  来源：知乎  著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。      http://blog.csdn.net/u014595019/article/details/52759104  lstm+dropout    有时间整一下虚拟机,它们占了8个G  已清理 曾经在worm/mongo的文件8g现在移动到了u盘 保存了一张'内存情况'        {u'docId': u'journals_dcc_Howgrave-GrahamS01.txt', u'sentences': [{u'tokens': [{u'index': 1, u'word': u'Introduction', u'lemma': u'introduction', u'after': u' ', u'pos': u'NN', u'characterOffsetEnd': 12, u'characterOffsetBegin': 0, u'originalText': u'Introduction', u'before': u''}, {u'index': 2, u'word': u'Lattice" ""
+
+"http://blog.chinaunix.net/uid-9950859-id-98683.html  分类： LINUX 2009-05-25 09:25:42   看到论坛有个帖子问如何高效率删除文件最后一行,当然    sed -i '$d' urfile    :|dd of=urfile seek=1 bs=$(($(stat -c%s urfile)-$(tail -1 urfile|wc -c)))    dd这个速度已经很快了,很猛    说到底这些命令最后还是用c,所以用c写了个           [root@localhost truncate]# cat last_d.c  #include <stdio.h> #include <unistd.h> #include <fcntl.h> #include <sys/stat.h> #include <stdlib.h>  #define GUESS_LINE_SIZE 80 //这里假设最后一行的长度最大只能为80  int get_line_size(char *ptr);  int main(int argc, char *argv[]) { char buf[GUESS_LINE_SIZE]; int line_len, fd; struct stat stat_buf;  if ((fd = open(argv[1], O_RDWR)) < 0) { printf("open error!\n");                 return -1; }  if (lstat(argv[1], &stat_buf) < 0) { printf("lstat error!\n");                 return -1; }  if (lseek(fd, -GUESS_LINE_SIZE, SEEK_END) < 0) { printf("lseek error!\n");                 return -1;                    }  if (read(fd, buf, GUESS_LINE_SIZE) < 0) { printf("read error!\n");                 return -1; }          line_len = get_line_size(buf); //printf("line_len = %d\n", line_len);  if (truncate(argv[1], stat_buf.st_size - line_len) < 0) { printf("truncate error!\n");                 return -1; }  return 0; }  int get_line_size(char *ptr) { int line_len = 0; int i = GUESS_LINE_SIZE - 2;  while (*(ptr + i) != '\n') { //printf("%c", *(ptr + i));                  i--;                 line_len++; } return line_len; }      "    ""
+
+"git修改默认编辑器为vim git config --global core.editor vim "   ""
+
+"git remote set-url origin git+ssh://git@github.com/username/reponame.git  "    ""
+
+"do{a++;}while(a<5);"   ""
+
+"dense1 = tf.layers.dense(inputs=x,                        units=1024,                        activation=tf.nn.relu,                       kernel_initializer=tf.truncated_normal_initializer(stddev=0.01),                       kernel_regularizer=tf.nn.l2_loss)  "  ""
+
+"cameramanager 690行 //          Camera.Parameters parameters = mCamera.getParameters(); //          parameters.setRotation(rotation); //          mCamera.setParameters(parameters);  "    ""
+
+"换linux了。网页： https://stackoverflow.com/questions/23472173/opencv-error-opencv-was-not-initialized-correctly-application-will-be-shut-do opencverror https://stackoverflow.com/questions/42219784/installation-failed-with-message-invalid-file opencverror    Windows下通过Anaconda安装TensorFlow及Spyder编译器  http://blog.csdn.net/jay100500/article/details/72809338 http://wiki.jikexueyuan.com/project/tensorflow-zh/get_started/basic_usage.html tensorflow文档 Windows下Anaconda2(Python2)和Anaconda3(Python3)的共存 http://blog.csdn.net/infin1te/article/details/50445217 http://blog.csdn.net/juanjuan1314/article/details/52411354 从零开始使用tensorflow（2）——词向量 http://blog.csdn.net/dabokele/article/details/54293560 TensorFlow入门和示例分析     https://www.jianshu.com/p/4195577585e6 基于tensorflow的MNIST手写数字识别（二）--入门篇"    ""
+
+"[Neumann and Matas 2012] Neumann, L., and Matas, J. 2012. Real-time scene text localization and recognition. In Proc. CVPR, 3538–3545."    ""
+
+"Physical Education "   ""
+
+"Nutrition and food science 还没有和0215合并！ 1American Journal of Clinical Nutrition 1n.py 2International Journal of Obesity---nature 2n.py 从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py 3Journal of Agricultural and Food Chemistry--pubs acs里n3 4Journal of Food Science---n4 wiley(改过啦) 5The Journal of Food Science Education--n5 wiley 6Journal of Nutrition--改的r3,n6.py,要解析 6n.py 7Obesity---n7   Forensic science Criminology wiley f1.py Journal of the Canadian Society of Forensic Science 只有tandofonline的 Science & Justice 3f.py sciencedirect.com sd Energy 1Annals of Nuclear Energy OK 1e.py-sd  2Biofuels, Bioproducts and Biorefining OK 仅783个 wiley e2.py 3Energy Conversion and Management OK 需要权限 3e.py-sd 4Energy and Environmental Science pubs rsc org e4 需要权限 5Energy 5e.py-sd IEEE Transactions on Energy Conversion IEEE Transactions on Nuclear Science IEEE Transactions on Sustainable Energy 6International Journal of Hydrogen Energy 6e.py-sd Journal of Nuclear Science and Technology 7Journal of Photonics for Energy 新网站. 8Progress in Nuclear Energy 8e.py Nuclear Engineering and Design ok 11e sd raw2 e11 完成 Nuclear Engineering and Technology  finish 12e sd 爬完 解析完成。 Nuclear Science and Engineering ok 和9e一样。13e 在爬爬完7 9Nuclear Technology ok 新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py !!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了. e9完成 Physical Education African Journal for Physical, Health Education, Recreation and Dance 新网站而且打不开.  Acta Psychiatrica Scandinavica Addiction Australian and New   Zealand Journal of Psychiatry 成功  Biological Psychiatry 不行 European Neuropsychopharmacology 不行  European Psychiatry 6s  International Journal   of Geriatric Psychiatry s7  Journal of Clinical   Psychopharmacology 不行  Molecular Psychiatry running 9s nature-7p 补完 用2n和22n  Neuropsychopharmacology 10s nature-7p  10s2以不同的格式，10s接替回来。 以及-4 -2 -1个  "   ""
+
+"Nutrition and food science Psychiatry Forensic science Energy "    ""
+
+"Nutrition and food science 1American Journal of Clinical Nutrition 1n.py Oxford n1.py解析到88-5(在线）OK 2International Journal of Obesity---nature 2n.py 从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py这个放弃了. 22n.py n22.py解析完毕 OK 6Journal of Nutrition--改的r3,n6.py,要解析 6n.py     改的n1.py n6.py 在解析(在线) RUNNING 完成   Forensic science Science & Justice 3f.py sciencedirect.com sd 2爬完 f3.py完成 OK Energy 1Annals of Nuclear Energy 1e.py-sd 2爬完 给补完一下。在raw2下。sdsolve成功。复制到e1.py OK 3Energy Conversion and Management 3e.py-sd 爬完 e3.py完成 OK  4Energy and Environmental Science pubs rsc org e4 需要权限 在爬 OK 5Energy 5e.py-sd 爬完解析完 OK 有一些付费的url错误 6International Journal of Hydrogen Energy 6e.py-sd 爬完解析完 OK 付费url 7Journal of Photonics for Energy 新网站. PASS 8Progress in Nuclear Energy 8e.py 爬完   OK 9Nuclear Technology 新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py !!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了. Physical Education African Journal for Physical, Health Education, Recreation and Dance 新网站而且打不开. psychiatry  Acta Psychiatrica Scandinavica爬完 Addiction成功 Australian and New   Zealand Journal of Psychiatry 成功  Biological Psychiatry 不行 European Neuropsychopharmacology 不行  European Psychiatry 6s 爬完 OK  International Journal   of Geriatric Psychiatry s7 爬完  Journal of Clinical   Psychopharmacology 不行  Molecular Psychiatry 9s nature-7p 爬完 补完 s9.py 又遇到格式变更  Neuropsychopharmacology 10s nature-7p 爬完     Schizophrenia Bulletin Oxford的 s20（raw数据库里）爬完 u盘s20.py s201.py是没有url的 s203解析完成！ Schizophrenia Research 30s。py raw2 s30 完成 Twin Research and Human Genetics World Psychiatry wiley s100.py 爬完     "    ""
+
+"Nutrition and food science 1American Journal of Clinical Nutrition 1n.py 2International Journal of Obesity---nature 2n.py 从7拿的7n吧...还要解析.grep发现n88也是,估计是垃圾. 2n.py 3Journal of Agricultural and Food Chemistry--pubs acs里n3 4Journal of Food Science---n4 wiley(改过啦) 5The Journal of Food Science Education--n5 wiley 6Journal of Nutrition--改的r3,n6.py,要解析 6n.py 7Obesity---n7   Forensic science Criminology wiley f1.py Journal of the Canadian Society of Forensic Science 只有tandofonline的 Science & Justice 3f.py sciencedirect.com sd Energy 1Annals of Nuclear Energy 1e.py-sd 2Biofuels, Bioproducts and Biorefining wiley e2.py 3Energy Conversion and Management 3e.py-sd 4Energy and Environmental Science pubs rsc org e4 需要权限 5Energy 5e.py-sd IEEE Transactions on Energy Conversion IEEE Transactions on Nuclear Science IEEE Transactions on Sustainable Energy 6International Journal of Hydrogen Energy 6e.py-sd Journal of Nuclear Science and Technology 7Journal of Photonics for Energy 新网站. 8Progress in Nuclear Energy 8e.py Nuclear Engineering and Design Nuclear Engineering and Technology Nuclear Science and Engineering 9Nuclear Technology 新网站.最早的一年六个的不管了.而且年是每个文章底下有的.9e.py !!!sciencedirect的raw全部需要检查! 1r.py应该是源头...但是它的fill函数错了. Physical Education African Journal for Physical, Health Education, Recreation and Dance 新网站而且打不开.  Acta Psychiatrica Scandinavica Addiction Australian and New   Zealand Journal of Psychiatry 成功  Biological Psychiatry 不行 European Neuropsychopharmacology 不行  European Psychiatry 6s  International Journal   of Geriatric Psychiatry s7  Journal of Clinical   Psychopharmacology 不行  Molecular Psychiatry 9s nature-7p  Neuropsychopharmacology 10s nature-7p 以及-4 -2 -1个   "    ""
+
+"桌面的virtual.sh是个脚本,运行它没用,source virtual.sh才有用"   ""
+
+"Linux下打开超大文件方法 http://www.cnblogs.com/yuzhoushenqi/p/6635974.html  在Linux下用VIM打开大小几个G、甚至几十个G的文件时，是非常慢的。 这时，我们可以利用下面的方法分割文件，然后再打开。 1 查看文件的前多少行 head -10000 /var/lib/mysql/slowquery.log > temp.log 上面命令的意思是：把slowquery.log文件前10000行的数据写入到temp.log文件中。 2 查看文件的后多少行 tail -10000 /var/lib/mysql/slowquery.log > temp.log 上面命令的意思是：把slowquery.log文件后10000行的数据写入到temp.log文件中。 3 查看文件的几行到几行 sed -n '10,10000p' /var/lib/mysql/slowquery.log > temp.log 上面命令的意思是：把slowquery.log文件第10到10000行的数据写入到temp.log文件中。    "    ""
+
+"C:\Users\d\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\rootfs "  ""
+
+"520 周日 做完数电 今晚 做完ai大作业 今晚 到6月2号,是还有两周 复习数电 明天早上 写图形学 还不着急 周四有组会 抽时间去测试一下srt 把作业拿了,问问延迟的事情 还...做游戏不? 复习电子学实验   整个,包括lstm和challenge项目,都移动到/mnt/data3/djl了.  train已经全改成7输出了. 现在trainreader用的是老一套,trainreader2里希望用上爬下来的动词表. 不是很清楚resp和resp2的区别...  python train.py -P 1 -g 1 -s p1k7 -o跑得卓有成效,28小时后就达到90%以上了.可以再减少学习率.   python train.py -P 0 -g 1 -s p0k7 反而不高,很奇怪.  listclemma还没跑好. 0窗口:跑一个 python listclemma.py 1:改好了trainreader,希望引入爬好的verbset文件后可以显示一圈错.同时,也希望拿到单词查错功能. 现在1窗口希望做做动词时态的重新归类.做完睡觉.算了睡了. 2:继续跑python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b 3:跑一个python train.py -P 2 -g 1 -s p2k7 -o 第三个动词 4:跑第四个动词p3 g1 还有半个0可用.   动词 表格再处理一下.  python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b -o尝试大模型.第二个动词.32个小时依然是80%上下.       查找被动语气的python train.py -P 0 -g 0 -s d1 -D -o倒是在32小时前就达到93%正确率了.   todo: 对句号不空格的,会被识别成一句话连着.找别人把这个分开.     欠着一次数电. 周四有大雾实验. 下周一有srt讨论. 以及做大作业.   1)重构现有的tense:变成7个选项:这个已经做了,reader2是旧的,reader是新的. 2)重构:改成标准的16时态. 3)写好测试,再去跑一跑样本 4)大模型(纯粹数值放大)试试效果.至少三个的用大模型可以做的很好.python run.py -g 0 -o  -P 3 -s p3n1b -L 0.00005 -m bigrnnmodel应该依次训练. 5)训练后面(4 5动词的)几个模型 6)动词反时态字典要重写.在安装git的新代码. 7)找没有被语法树标出来的动词.神经网络或者尝试法.对...对抗神经网络?! 8)看看seq2seq能不能抢救一下 正在做:tense模型改成输出 追加:解决跑run.py突然正确率90%掉到30%   现在问题是parser出的acl是什么意思 不标识一些定语从句的被动语态了?而且带pass的都是被动语态?文件在download下的一个pdf,但是是针对3.7.0的,现在更到了3.9.1   2 被动语气 输入的应该没有什么问题了,到时候看结果. python rundp.py -g 1 -o -s dp是运行(o从零开始) python rundp.py -t并且改改readerdp才能输出单句结果什么的. 至少可行. 1)得到结果 2)把核心动词的位置也放进去(挺容易的应该) ...也可以稍微提前点做?   3 虚拟语气 可能可能可能放着吧...拖一拖.再可能到处找找代码,不行就手写好了.   4 输入法(放)   组会: 1 搭配 a-dependency-b 3gram语法树 看语料里这种语法树出现得多不多.可以问梦器. 2 判断句子合理性 比如分小 判断(如何找到谓语?遍历可能,看可能性) 3 假设只有一个动词,依次看句子合理性, 或者训练如何找到谓语 4 每段看基准时态. 5 不要看'第4个动词',可解释一些,只看一部分(也做一些时态划分) 6 语法树不一定全是错的 ...using改成use就有可能错.到底多少错? 另外,打开的网页: http://www.tensorfly.cn/tfdoc/api_docs/python/nn.html 文档 https://blog.csdn.net/l494926429/article/details/51737883 没什么用 highwaynetworks 一种门也可学习的,使得训练更简单的框架    https://github.com/NickShahML/tensorflow_with_latest_papers seq2seq实现  拼音:第一行中文第二行英文.   " ""
+
+"505 周四 ai改进：双挂 82 gen2  83 改进为gen为0的walk继续到gen为-1 如果这里搜索到要点还能继续搜索 84 加上对手预搜索   上午找周青学长拿小米5然后去拍点照片.下午有实验.已经预习过了. 1 506周五写电子学实验报告 2 506周五的英语课作业 3 507周一的电子学 要学回来 4 508周二大作业(尝试别的方法?) 5 510周四组会 6 srt 7 图形学   整个,包括lstm和challenge项目,都移动到/mnt/data3/djl了. 不是很清楚resp和resp2的区别...  python train.py -P 1 -g 1 -s p1k7 -o跑得卓有成效,28小时后就达到90%以上了.可以再减少学习率.   python train.py -P 0 -g 1 -s p0k7 反而不高,很奇怪.  listclemma还没跑好. 0窗口:跑一个 python listclemma.py 1:改好了trainreader,希望引入爬好的verbset文件后可以显示一圈错.同时,也希望拿到单词查错功能. 现在1窗口希望做做动词时态的重新归类.做完睡觉.算了睡了. 2:继续跑python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b 3:跑一个python train.py -P 2 -g 1 -s p2k7 -o 第三个动词 4:跑第四个动词p3 g1 还有半个0可用.   动词 表格再处理一下.  python train.py -g 0 -m bigrnnmodel -L 0.00001 -P 2 -s  p2n1b -o尝试大模型.第二个动词.32个小时依然是80%上下.       查找被动语气的python train.py -P 0 -g 0 -s d1 -D -o倒是在32小时前就达到93%正确率了.   todo: 对句号不空格的,会被识别成一句话连着.找别人把这个分开.     欠着一次数电. 周四有大雾实验. 下周一有srt讨论. 以及做大作业.   1)重构现有的tense:变成7个选项:这个已经做了,reader2是旧的,reader是新的. 2)重构:改成标准的16时态. 3)写好测试,再去跑一跑样本 4)大模型(纯粹数值放大)试试效果.至少三个的用大模型可以做的很好.python run.py -g 0 -o  -P 3 -s p3n1b -L 0.00005 -m bigrnnmodel应该依次训练. 5)训练后面(4 5动词的)几个模型 6)动词反时态字典要重写.在安装git的新代码. 7)找没有被语法树标出来的动词.神经网络或者尝试法.对...对抗神经网络?! 8)看看seq2seq能不能抢救一下 正在做:tense模型改成输出 追加:解决跑run.py突然正确率90%掉到30%   现在问题是parser出的acl是什么意思 不标识一些定语从句的被动语态了?而且带pass的都是被动语态?文件在download下的一个pdf,但是是针对3.7.0的,现在更到了3.9.1   2 被动语气 输入的应该没有什么问题了,到时候看结果. python rundp.py -g 1 -o -s dp是运行(o从零开始) python rundp.py -t并且改改readerdp才能输出单句结果什么的. 至少可行. 1)得到结果 2)把核心动词的位置也放进去(挺容易的应该) ...也可以稍微提前点做?   3 虚拟语气 可能可能可能放着吧...拖一拖.再可能到处找找代码,不行就手写好了.   4 输入法(放)   组会: 1 搭配 a-dependency-b 3gram语法树 看语料里这种语法树出现得多不多.可以问梦器. 2 判断句子合理性 比如分小 判断(如何找到谓语?遍历可能,看可能性) 3 假设只有一个动词,依次看句子合理性, 或者训练如何找到谓语 4 每段看基准时态. 5 不要看'第4个动词',可解释一些,只看一部分(也做一些时态划分) 6 语法树不一定全是错的 ...using改成use就有可能错.到底多少错? 另外,打开的网页: http://www.tensorfly.cn/tfdoc/api_docs/python/nn.html 文档 https://blog.csdn.net/l494926429/article/details/51737883 没什么用 highwaynetworks 一种门也可学习的,使得训练更简单的框架    https://github.com/NickShahML/tensorflow_with_latest_papers seq2seq"  ""
+
+"4.9周2 数电作业 4.16上午 两次 数电复习 尽快 图形学作业 4.22 还有14天 已完成 到时后再看看 室内定位项目 预先跑一遍 尽快                        作出python和C#结合的 等待中 语法项目 写出虚拟语气和被动语态 尽快 等服务器                         虚拟语气有几篇论文                          被动语态完全没有research过                  写完移植到项目平台上                  (问一下ddl什么时候)  大雾实验报告 周四 输入法作业 4.22 四子棋作业 5.7 数字逻辑实验 周五 需要先看看电子书 美社文要求的爱剪辑软件学习 第八周(22日)前   今日任务: 12：30 还有11.5小时 1 完成输入法 2 数字逻辑实验 实验报告晚上再说好啦  "    ""
+
+"4.8周一 数电作业 4.9上午交 数电复习 尽快 图形学作业 4.22 还有14天 [ 任选书上第二章光栅图形学算法(画线，裁剪，区域填充等)  具体要求详见第一次习题课PPT。 请自选测例对实现算法进行测试，提交提交代码和实验结果，并在报告中简要注明选题和附加效果对应的代码段。   ] 室内定位项目 预先跑一遍 尽快                        作出python和C#结合的 等待中 语法项目 写出虚拟语气和被动语态 尽快 等服务器                         虚拟语气有几篇论文                          被动语态完全没有research过                  写完移植到项目平台上                  (问一下ddl什么时候)  大雾实验报告 周四 输入法作业 4.22 四子棋作业 5.7 数字逻辑实验 周五 需要先看看电子书 美社文要求的爱剪辑软件学习 第八周(22日)前   今日任务: 15:30 还有8.5小时 1 完成图形学作业 2 完成输入法 3 晚一些完成数电作业  "    ""
+
+"4.11周3 大雾实验报告 周四  数字逻辑实验 周五 需要先看看电子书  语法   数电作业 4.16上午 两次 数电复习 尽快   室内定位项目 现在一边是做C#调用tesseract 一边是关于两点的情况下通过旋转测距的问题                         包括:1 理论模型 为什么对这些参数敏感                                 2 实际模型 做一个通过特征点或者文字框或者手动的demo来解释这件事情  其中横屏更理想一些,因为不太大地扭动误差不大,而且会有一个更大的旋转角度 用一个poi拍7 8张图片的误差比较小.但是少到3 4张(好像)就不行. 还有一本书可以参考.   语法项目 写出虚拟语气和被动语态 下周末前                         虚拟语气有几篇论文                          被动语态完全没有research过                  写完移植到项目平台上                  (问一下ddl什么时候) 输入法作业 4.22 基础要求基本上完成了. 四子棋作业 5.7 图形学作业 4.22 还有14天 已完成 到时后再看看    关于安装spacy:http://www.52nlp.cn/tag/%E8%AF%8D%E5%90%91%E9%87%8F   今日任务: 问问图形学讲了啥 12：30 还有11.5小时 1 完成输入法 2 数字逻辑实验 实验报告晚上再说好啦    "   ""
+
+"2017.01.24  在系统更新的时候收到错误消息:  The upgrade needs a total of 117 M free space on disk '/boot'. Please free at least an additional 59.5 M of disk space on '/boot'. You can remove old kernels using 'sudo apt autoremove', and you could also set COMPRESS=xz in /etc/initramfs-tools/initramfs.conf to reduce the size of your initramfs.  之后通过sudo apt-get autoremove移除了一个G的东西.  一些参考资料:  [url]         http://www.linuxidc.com/Linux/2017-12/149655.htm    [comment]    解决/boot不足的方法:1 手动进入目录并删除 2 ubuntu tweak清理大师  [favour]    /ubuntu " ""
+
+"10:20 language English. Connect to network, set baidu as first search engine(have to add on) in firefox, connect to wiz. 10:21 sougou input: download from website. don't depackage immediately.  安装搜狗输入法: 先在安装时选择语言英文.安装好后languagesupport等他更新,如果是备份的话语言第一个直接汉语了,不是的话拖上去应该就行了.之后应用systemwide,重启(注意:注销再回来也行!更快!),回来找fctix(应该在,否则装一下) 选好了后官网下载64位的搜狗拼音deb包,sudo dpkg -i 文件名.deb,尝试sudo apt --fix-broken install和sudo apt install -f即可.在fctix配置中"附加组件"里有搜狗拼音了. 不要去文本输入的输入源那里,并不能添加搜狗的. 注意 在livecd下重启的话 用户名ubuntu密码为空即可。 默认的切换输入法方式（暂时先用fctix了）是ctrl+space    10：56安装pip 直接写 sudo apt install python-pip python3-pip是不行的，显示无法定位软件包 python-pip，到系统设置-软件和更新里打开允许那四个来源即可。 另外apt如果给他列一些东西，有一个包没有找到剩下的都不会被装。 添加了源，运行那一句就没有问题了。   11：03安装virtualenv 1 sudo apt install virtualenv( pip install virtualenv也行)一个virtualenv可以调用不同的python版本. 2 cd到一个目录然后virtualenv --no-site-packages venv(在当前目录下创建一个venv文件夹在里边放虚拟机,名字就是venv)参数 -p 用哪个python 3 source venv/bin/activate开启虚拟机 4 deactivate离开 虚拟机如果被锁住,不能用pip,不要sudo,这会使得pip安到虚拟机外边. 1  sudo chown -R $USER venv/ 2  sudo chmod 777 venv/ 即可解锁. linux: 在workspace/language/virtual/stnlp下装了一个虚拟机,python3的 pip了个nltk      "  ""
+
+"1. 最新的用端到端神经网络实现语法检查的论文及代码: https://github.com/stanfordmlgroup/nlc 2. Hwee Tou Ng 长期从事相关研究，他的论文列表里有不少关于语法检查的 https://www.comp.nus.edu.sg/~nght/publicat.htm"  ""
+
+"1 即时测略 暗地图 类似星际的游戏 造兵,抢占资源点,造基地,(可以去掉地)造采矿基地和造兵基地,拆基地. 造单位:"指挥装置",无战斗力,附着在一队士兵上.士兵只能按队为单位行动.(相当于炉石卡牌,士兵有攻击力防御力,打的时候互相扣除,只是掉血有可能会掉攻击力) 同类士兵可以合并重组.不同类士兵不能组合.士兵也有AOE型,对大型队伍伤害提升,或者掉更多血型,或者掉更多攻击力型,或者减速型.士兵一次接触战斗一回合.有遮挡物可以有阴影视野.   1a.可以改成原来的"一个士兵有满血和半血状态,半血时候攻击力不变但是移动速度减半."并且有"包围"机制. 2 原来的圆规足球和圆规战斗系列 3 星之卡比联机3v3或者5v5或者10v10版 或者大型充满AI的战争中扮演一个士兵的角色.可能什么都不做就赢了,也可能会尽力杀敌但是输掉.或者扮演小队长,有一些集合,分散,防守,求援等命令,(AI会听的...嘛)  "  ""
+
+"1 re的match、search、findall、finditer  http://blog.csdn.net/djskl/article/details/44357389      1、match  [python] view plain copy        re.match(pattern, string[, flags])      从首字母开始开始匹配，string如果包含pattern子串，则匹配成功，返回Match对象，失败则返回None，若要完全匹配，pattern要以$结尾。  2、search  [python] view plain copy        re.search(pattern, string[, flags])      若string中包含pattern子串，则返回Match对象，否则返回None，注意，如果string中存在多个pattern子串，只返回第一个。  3、findall  [python] view plain copy        re.findall(pattern, string[, flags])      返回string中所有与pattern相匹配的全部字串，返回形式为数组。       2 findall返回数组 如果里边有一个元组,只返回元组内的东西.如果有多个,返回一个tuple的数组,每个tuple元素对应一个元组.这时候是没有group(0)全部的.而且findall不重叠. " ""
+
+"1 mongodump  在win上是一个独立的exe,和mongodb同处.在这里也是.命令:mongodump -d 数据库名 -o 路径名  2 mongo去重 在mongodb里边写    db.userInfo.aggregate([      {          $group: { _id: {userName: '$userName',age: '$age'},count: {$sum: 1},dups: {$addToSet: '$_id'}}      },      {          $match: {count: {$gt: 1}}      }  ]).forEach(function(doc){      doc.dups.shift();      db.userInfo.remove({_id: {$in: doc.dups}});  })        db.n2.aggregate([{$group: { _id: {url: '$url'},count: {$sum: 1},dups: {$addToSet: '$_id'}}},{$match: {count: {$gt: 1}}}]).forEach(function(doc){doc.dups.shift();db.n2.remove({_id: {$in: doc.dups}});})(要改三处）   https://www.cnblogs.com/nicolegxt/p/24b3653947991ebe73e5d70609ab2943.html    mongodb的安装:sudo apt-get install mongodb 然后要mongod需要一个磁盘至少有3G空间 mongod --dbpath workspace/worm/mongo/db --logpath workspace/worm/mongo/db.log --logappend &可以改变mongodb的存储位置并且开启一个后台进程  mongod --dbpath /media/d/EE/mongo/db --logpath /media/d/EE/mongo/db.log --logappend    不要加sudo --logappend可以附加而不是新建.&代表后台运行. 以及如何关闭一个后台的mongo进程: ps -aux | grep mongo找到这个名字里有mongo的进程--他也会找到自己 读到进程号  sudo kill 进程号 即可. 或者db.shutdownServer()  mongodb集合重命名 db.orders.renameCollection( "orders2014" ) https://www.cnblogs.com/jcuan/p/5866881.html     win上mongodump不加参数dump所有数据: ubuntu上恢复报错:删除admin文件夹即可.    "  ""
+
+"1 join函数可以把list of strings合并成一个string.注意方向.' '.join(a) 前面的是字符串,所以可以是空字符串''也可以是很长的东西.  2 a是一个list.  a.append(东西) 在list后面插入东西.可以类型不同,可以是None.a只有一个元素时可以写a=['a']或者a=['a',].  3 a=list()空列表 a=dict()空词典(或者 a=[] a={}) "    ""
+
+"1 启动pymongo：sudo mongod即可  2 文件1000.py是爬acta数据库的  3 文件2000.py是爬第一个数据库：      http://pubs.acs.org/journal/achre4      accounts of chemical research    4 pymongo的用法：  # -*- coding: utf-8 -*-  import re  import urllib2  import pymongo  from pymongo import MongoClient  import pprint    client = MongoClient()#建立链接  db = client.test_database#建立（第二次是打开）数据库test_database  posts = db.posts##建立（第二次是打开）聚集posts  print db.posts.count()#输出这一聚集的条目数量  # post={"title":name0,"author":name2,"ee":name3,"pages":name1}  # posts.insert_one(post)#把post插入posts聚集      5 html的用法：      reqpath='/journal/acta-materialia/vol/44/issue/1';      req = urllib2.Request('https://www.sciencedirect.com'+reqpath)  #新建申请      req.add_header('User-agent', 'Mozilla 5.10')      res = urllib2.urlopen(req)      html = res.read()                                           #读进来      rst1 = re.findall("<li class=\"js-article(.*?)li>", html)   #查找 findall返回的是一个list  #如果这种只有一个分组(.*?)的 list就是分组里边的内容 是字符串 更多的话list的每一个元素自己是一个tuple记录每个括号      for i in rst1:    6 格式要求  "title":题目  "url":pdf下载页面  "authors":作者  "ee":概览页面  "year":年份  "pages":页码    7 debug  7.1 忽略换行符：因为(.*?)是不会跨行的，必须在正则表达式后边加上re.S来多行匹配。这时候\n也会在里边。  7.2 一定注意正则表达式的()和| 要转义  7.3 beautifulsoup的select是css筛选 不是search  7.4 用学姐的例子在下载html时会出错下的东西很少不知道为什么  7.5 list不要第一个元素：l=l[1:]  7.6 注意matchobject.groups()是把所有的group从group(1)作为列表的第0个元素输出的 少一个！（groups()函数很好用，可以调试的时候输出所有group并且看有多少）  7.7 正则表达式嵌套匹配【这个是不是该开个专题？】如果写(s(.*?)a)*这样的话，对串siasja，只有两个group，算了直接看下面的例子  7.8 而且正则表达式一定要注意是不是从头匹配 否则在？匹配可以出很奇怪的情况【是不是该学一下形式语言】  ii='sdakjf(sdfsd)(sdfsd2)(ss3)'  >>> re.search('(.*?)(\((.*?)\))*',ii).groups()  ('', None, None)  >>> ii='sdakjf(sdfsd)(sdfsd2)(ss3)11'  >>> re.search('(.*?)(\((.*?)\))*(.+)',ii).groups()  ('', None, None, 'sdakjf(sdfsd)(sdfsd2)(ss3)11')  >>> re.search('(.*?)(\((.*?)\))*([^\(]+)',ii).groups()  ('', None, None, 'sdakjf')  >>> re.search('(.*?)(\((.*?)\))*([^\(]+)$',ii).groups()  ('sdakjf', '(ss3)', 'ss3', '11')  >>> ii='sdakjf(sdfsd)(sdfsd2)(ss3)'  >>> re.search('(.*"  ""
+
+"启动mongodb: mongod --dbpath /media/d/EE/mongo/db --logpath /media/d/EE/mongo/db.log --logappend  把mongodb放在EE u盘里. 这个脚本写到了mongo.sh里. ee.sh会跳到ee里的工作区.以后在那里操作. /media/d/EE/nutri/w  mongodb在一个新的地方创建的话似乎会花很久...不知道是不是故意的.而且kingson u盘好像有点慢. 大量的文件在win10电脑下...比如说e3.py     Botany For a more comprehensive list, see List of botany journals. American Journal of Botany wiley b1.py 在爬 爬完 Annals of Botany sciencedirect 2b.py爬完 无法解析...等win10电脑,而且也不知道raw怎么样. Aquatic Botany  sciencedirect International Journal of Plant Sciences  4b2.py 继承6e.py New Phytologist w/5b 在爬 继承自5r 所以w5也可以用应该. 有点少,明天问问学姐要不要多拿几个吧.   Chronobiology Chronobiology International  talor的... Forestry For a more comprehensive list, see List of forestry journals. Bosque 外文的 Canadian Journal of Forest Research Forest Ecology and Management Genetics Genetica Genetics Heredity Journal of Genetics Nature Genetics Theoretical and Applied Genetics Husbandry Rangifer Immunology Allergy Annual Review of Immunology Current Opinion in Immunology European Journal of Immunology Immunity Journal of Allergy and Clinical Immunology Journal of Immunology Nature Immunology Nature Reviews Immunology Trends in Immunology"  ""
+
+"-H 设置硬资源限制. -S 设置软资源限制. -a 显示当前所有的资源限制. -c size:设置core文件的最大值.单位:blocks -d size:设置数据段的最大值.单位:kbytes -f size:设置创建文件的最大值.单位:blocks -l size:设置在内存中锁定进程的最大值.单位:kbytes -m size:设置可以使用的常驻内存的最大值.单位:kbytes -n size:设置内核可以同时打开的文件描述符的最大值.单位:n -p size:设置管道缓冲区的最大值.单位:kbytes -s size:设置堆栈的最大值.单位:kbytes -t size:设置CPU使用时间的最大上限.单位:seconds -v size:设置虚拟内存的最大值.单位:kbytes -u <程序数目> 用户最多可开启的程序数目      遇到无权限不合法的情况,把数字改小即可.  例如服务器上可以写ulimit -m 50 这个50应该是G单位."   ""
+
+"第一次安装  打开后仍然经常会编译很久gradle没有解决  Android studio 报错 installation failed with message failed to finalize session:INSTALL_FAILED_INVALID_APK  解决方法：https://www.cnblogs.com/gaigaige/p/7444215.html  File->Setting->Build->Instant Run 第一个取消勾选"   ""
+
+"利用ssh传输文件 转自：http://www.cnblogs.com/jiangyao/archive/2011/01/26/1945570.html 在linux下一般用scp这个命令来通过ssh传输文件。   1、从服务器上下载文件 scp username@servername:/path/filename /var/www/local_dir（本地目录）  例如scp root@192.168.0.101:/var/www/test.txt  把192.168.0.101上的/var/www/test.txt 的文件下载到/var/www/local_dir（本地目录）   2、上传本地文件到服务器 scp /path/filename username@servername:/path    例如scp /var/www/test.php  root@192.168.0.101:/var/www/  把本机/var/www/目录下的test.php文件上传到192.168.0.101这台服务器上的/var/www/目录中   3、从服务器下载整个目录 scp -r username@servername:/var/www/remote_dir/（远程目录） /var/www/local_dir（本地目录） 例如:scp -r root@192.168.0.101:/var/www/test  /var/www/   4、上传目录到服务器 scp  -r local_dir username@servername:remote_dir 例如：scp -r test  root@192.168.0.101:/var/www/   把当前目录下的test目录上传到服务器的/var/www/ 目录   注：目标服务器要开启写入权限。 "    ""
+
+"在github上下载...而且我不知道为什么第一次下了个0.16,要用0.18以上!运行一下geckodriver --version就好!"   ""
+
+"在主文件夹下1文件夹是python2的虚拟环境,(安装tensorflow) 进入:source 1/bin/activate 退出:deactivate"    ""
+
+""更新完了vimrc没了,先用这个小巧的:(linux好像没有编码问题)(没有经过检验) " All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  " the call to :runtime you can find below.  If you wish to change any of those  " settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  " will be overwritten everytime an upgrade of the vim packages is performed.  " It is recommended to make changes after sourcing debian.vim since it alters  " the value of the 'compatible' option.    " This line should not be removed as it ensures that various options are  " properly set to work with the Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other options should be set AFTER setting 'compatible'.  "set compatible    " Vim5 and later versions support syntax highlighting. Uncommenting the next  " line enables syntax highlighting by default.  if has("syntax")    syntax on  endif    " If using a dark background within the editing area and syntax highlighting  " turn on this option as well  "set background=dark    " Uncomment the following to have Vim jump to the last position when  " reopening a file  "if has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to have Vim load indentation rules and plugins  " according to the detected filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The following are commented out as they cause vim to behave a lot  " differently from regular Vi. They are highly recommended though.  "set showcmd        " Show (partial) command in status line.  "set showmatch        " Show matching brackets.  "set ignorecase        " Do case insensitive matching  "set smartcase        " Do smart case matching  "set incsearch        " Incremental search  "set autowrite        " Automati"   ""
+
+""win上gvim经常出现编码不识别和相对行号的问题...这里也没有经过测试. set nocompatible  source $VIMRUNTIME/vimrc_example.vim  source $VIMRUNTIME/mswin.vim  behave mswin  " Platform  function! MySys()    if has("win16") || has("win32") || has("win64") || has("win95")      return "windows"    elseif has("unix")      return "linux"    endif  endfunction    "处理文本中显示乱码  set encoding=utf-8  set fileencodings=ucs-bom,utf-8,cp936,big5,euc-jp,euc-kr,latin1  if MySys() == "windows"    set termencoding=chinese    set fileencoding=chinese  elseif MySys() == "linux"    let &termencoding=&encoding    set fileencodings=utf-8,gbk,ucs-bom,cp936  endif    "防止特殊符号无法正常显示。  if exists("&ambiwidth")      set ambiwidth=double  endif    "使用中文菜单，并使用 UTF-8 编码。{{{  "如果没有这句的话，在非 UTF-8 的系统，如 Windows 下，用了 UTF-8 的 encoding 后  "菜单会乱码。}}}  set langmenu=zh_CN.UTF-8    "使用中文提示信息，并使用 UTF-8 编码。{{{  "如果没有这句的话，在非 UTF-8 的系统，用了 UTF-8 的 encoding 后  "系统提示会乱码。}}}  language messages zh_CN.UTF-8    " 解决菜单乱码，先指定语言。{{{>>>自己根据相关版本添加<<<  "导入删除菜单脚本，删除乱码的菜单}}}  source $VIMRUNTIME/delmenu.vim  "导入正常的菜单脚本  source $VIMRUNTIME/menu.vim  8    set nu  " 不要使用vi的键盘模式，而是vim自己的   "解决菜单乱码  source $VIMRUNTIME/delmenu.vim  source $VIMRUNTIME/menu.vim  "解决consle输出乱码  language messages zh_CN.utf-8    " history文件中需要记录的行数   set history=100     " 在处理未保存或只读文件的时候，弹出确认   set confirm     " 与windows共享剪贴板   set clipboard+=unnamed     " 侦测文件类型   filetype on     " 载入文件类型插件   filetype plugin on     " 为特定文件类型载入相关缩进文件   filetype indent on     " 保存全局变量   set viminfo+=!     " 带有如下符号的单词不要被换行分割   set iskeyword+=_,$,@,%,#,-     " 语法高亮   syntax on     " 高亮字符，让其不受100列限制   :highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white   :match OverLength '\%101v.*'     " 状态行颜色   highlight StatusLine guifg=SlateBlue guibg=Yellow   highlight StatusLineNC guifg=Gray guibg=White     """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""   " 文件设置   """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""   " 不要备份文件（根据自己需要取舍）   set nobackup     " 不要生成swap"    ""
+
+"" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  " the call to :runtime you can find below.  If you wish to change any of those  " settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  " will be overwritten everytime an upgrade of the vim packages is performed.  " It is recommended to make changes after sourcing debian.vim since it alters  " the value of the 'compatible' option.    " This line should not be removed as it ensures that various options are  " properly set to work with the Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other options should be set AFTER setting 'compatible'.  "set compatible    " Vim5 and later versions support syntax highlighting. Uncommenting the next  " line enables syntax highlighting by default.  if has("syntax")    syntax on  endif    " If using a dark background within the editing area and syntax highlighting  " turn on this option as well  "set background=dark    " Uncomment the following to have Vim jump to the last position when  " reopening a file  "if has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to have Vim load indentation rules and plugins  " according to the detected filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The following are commented out as they cause vim to behave a lot  " differently from regular Vi. They are highly recommended though.  "set showcmd        " Show (partial) command in status line.  "set showmatch        " Show matching brackets.  "set ignorecase        " Do case insensitive matching  "set smartcase        " Do smart case matching  "set incsearch        " Incremental search  "set autowrite        " Automatically save before commands like :next and :ma"  ""
+
+"" All system-wide defaults are set in $VIMRUNTIME/debian.vim and sourced by  " the call to :runtime you can find below.  If you wish to change any of those  " settings, you should do it in this file (/etc/vim/vimrc), since debian.vim  " will be overwritten everytime an upgrade of the vim packages is performed.  " It is recommended to make changes after sourcing debian.vim since it alters  " the value of the 'compatible' option.    " This line should not be removed as it ensures that various options are  " properly set to work with the Vim-related packages available in Debian.  runtime! debian.vim    " Uncomment the next line to make Vim more Vi-compatible  " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous  " options, so any other options should be set AFTER setting 'compatible'.  "set compatible    " Vim5 and later versions support syntax highlighting. Uncommenting the next  " line enables syntax highlighting by default.  if has("syntax")    syntax on  endif    " If using a dark background within the editing area and syntax highlighting  " turn on this option as well  "set background=dark    " Uncomment the following to have Vim jump to the last position when  " reopening a file  "if has("autocmd")  "  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif  "endif    " Uncomment the following to have Vim load indentation rules and plugins  " according to the detected filetype.  "if has("autocmd")  "  filetype plugin indent on  "endif    " The following are commented out as they cause vim to behave a lot  " differently from regular Vi. They are highly recommended though.  "set showcmd        " Show (partial) command in status line.  "set showmatch        " Show matching brackets.  "set ignorecase        " Do case insensitive matching  "set smartcase        " Do smart case matching  "set incsearch        " Incremental search  "set autowrite        " Automatically save before commands like :next and :ma"  ""
+
+"删除一个dpkg安装的应用: dpkg -l列出东西 grep一下sogou就行 选择 dpkg -l来查看软件的状态。 选择 dpkg -P来卸载软件。因为dpkg --remove只是删除安装的文件，但不删除配置文件。而dpkg --purge则安装文件和配置文件都删除。 sudo dpkg sogoupinyin 然后登出登入,在输入法(上边那个键盘)里选择配置当前输入法->添加输入法即可.  "   ""
+
+" 语料库 语法树 词向量什么的   相关论文和资源非常丰富，远不局限于我发的这些，所以也需要你自己继续扩充   另外现在有一款最有名的语法检查产品叫 Grammarly ( https://www.grammarly.com/ ) ，我们从中总结出了我们需要支持的基本语法检查点，其中很多检查都可以用规则来实现，最后集成到一起   1. 最新的用端到端神经网络实现语法检查的论文及代码: https://github.com/stanfordmlgroup/nlc 2. Hwee Tou Ng 长期从事相关研究，他的论文列表里有不少关于语法检查的 https://www.comp.nus.edu.sg/~nght/publicat.htm"    ""
+
+" ssh -p 22223 djl@166.111.139.15  密码djl p小写 scp -P 22223 one.txt  djl@166.111.139.15:/home/djl/  要输入密码 P大写 注意大小写"  ""
+
+" cvpr.pdf 路径 C:\Users\d\Downloads\ 大小 3.38 MB 类型 WPS PDF 文档 修改日期 2018年2月10日 8:51:58 文件被导入 2018年2月10日 8:53:09 "  ""
+
+" Tokenization tokenize Sentence .words() / .word(int)就是分词汇 Sentence Splitting ssplit Document .sentences() / .sentence(int)就是分句子 Part of Speech Tagging pos Sentence .posTags() / .posTag(int)词性 VBD什么的 Lemmatization lemma Sentence .lemmas() / .lemma(int)词汇原型 Named Entity Recognition ner Sentence .nerTags() / .nerTag(int)名称实体,一般是O,有的是PERSON什么的 Constituency Parsing parse Sentence .parse() 在开头的{"index":0,"parse":"(ROOT\n (S\n (NP (DT The) (JJ quick) (JJ brown) (NN fox))\n (VP (VBD jumped)\n (PP (IN over)\n (NP (DT the) (JJ lazy) (NN dog))))\n (. .)))"句法结构 Dependency Parsing depparse Sentence .governor(int) / .incomingDependencyLabel(int) {"dep":"ROOT","governor":0,"governorGloss":"ROOT","dependent":5,"dependentGloss":"jumped"}依赖关系  Coreference Resolution dcoref Document .coref() Natural Logic Polarity natlog Sentence .natlogPolarities() / natlogPolarity(int) Open Information Extraction openie Sentence .openie() / .openieTriples()  .depparse的结果:22s   已经含有了enhancedPlusPlusDependencies  {"sentences":[{"index":0,"basicDependencies":[{"dep":"ROOT","governor":0,"governorGloss":"ROOT","dependent":5,"dependentGloss":"jumped"},{"dep":"det","governor":4,"governorGloss":"fox","dependent":1,"dependentGloss":"The"},{"dep":"amod","governor":4,"governorGloss":"fox","dependent":2,"dependentGloss":"quick"},{"dep":"amod","governor":4,"governorGloss":"fox","dependent":3,"dependentGloss":"brown"},{"dep":"nsubj","governor":5,"governorGloss":"jumped","dependent":4,"dependentGloss":"fox"},{"dep":"case","governor":9,"governorGloss":"dog","dependent":6,"dependentGloss":"over"},{"dep":"det","governor":9,"governorGloss":"dog","dependent":7,"dependentGloss":"the"},{"dep":"amod","governor":9,"governorGloss":"dog","dependent":8,"dependentGloss":"lazy"},{"dep":"nmod","governor":5,"governorGloss":"jumped","dependent":9,"dependentGloss":"dog"},{"dep":"punct","governor":5,"governorGloss":"jumped","dependent":10,"dependentGloss":"."}],"enhancedDependencies":[{"dep":"ROOT","governor":0,"governorGloss":"ROO"  ""
+
+"  原创 2016年12月17日 21:09:03 标签： ubuntu / log  由于ubuntu日志文件syslog 和 kern.log 时刻在增长，一会儿就使得根目录文件夹不够用了，需使用如下命令清理  sudo -i  然后输入密码，执行：  echo > /var/log/syslog echo > /var/log/kern.log 就可以了. "  ""
+
+"  windows的 要用华为手机助手 按小按钮    " ""
+
+"   首页 职业 前端Web前端工程师微信小程序移动端Android工程师iOS工程师后端Python工程师PHP工程师Golang工程师大数据大数据平台研发工程师人工智能机器学习工程师 课程 课程库职业路径知识体系图系列课程 企业 微软人工智能 百度AI图像技术课AWS云计算腾讯云课程专区Qualcomm公开课  社区 Wiki技术问答社群资料下载 线下课程 Web前端Python+人工智能  登录注册 首页 Wiki 人工智能 深度学习 TensorFlow 官方文档中文版 关于 起步 介绍 下载及安装 基本用法 教程 总览 MNIST 机器学习入门 深入 MNIST TensorFlow 运作方式入门 卷积神经网络 字词的向量表示 递归神经网络 曼德布洛特(Mandelbrot)集合 偏微分方程 MNIST数据下载 运作方式 总览 变量:创建、初始化、保存和加载 TensorBoard:可视化学习 TensorBoard:图表可视化 读取数据 线程和队列 添加新的Op 自定义数据读取 使用gpu 共享变量 资源 总览 BibTex 引用 示例使用 FAQ 术语表 Tensor排名、形状和类型 其他 常见问题汇总 相关资源 个人学习心得 离线下载 获取电子书 相关资源   The Swift Programming Language 中文版   神经网络与深度学习   JavaScript语法详解   感觉像是为了避免万向节死锁才产生的误差   CAShapeLayer+陀螺仪设计   程序员如何应对诸如“给我弄个网站吧”的请求？  离线下载 获取电子书   极客学院团队出品 · 更新于 2018-02-10 22:00:55 下载与安装  你可以使用我们提供的 Pip, Docker, Virtualenv, Anaconda 或 源码编译的方法安装 TensorFlow. Pip 安装  Pip 是一个 Python 的软件包安装与管理工具. 在安装 TensorFlow 过程中要涉及安装或升级的包详见 列表 首先安装 pip (或 Python3 的 pip3 ): # Ubuntu/Linux 64-bit $ sudo apt-get install python-pip python-dev  # Mac OS X $ sudo easy_install pip 安装 TensorFlow : # Ubuntu/Linux 64-bit, CPU only, Python 2.7: $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl  # Ubuntu/Linux 64-bit, GPU enabled, Python 2.7. Requires CUDA toolkit 7.5 and CuDNN v4. # For other versions, see "Install from sources" below. $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow-0.8.0-cp27-none-linux_x86_64.whl  # Mac OS X, CPU only: $ sudo easy_install --upgrade six $ sudo pip install --upgrade https://storage.googleapis.com/tensorflow/mac/tensorflow-0.8.0-py2-none-any.whl 如果是 Python3 : # Ubuntu/Linux 64-bit, CPU only, Python 3.4: $ sudo pip3 install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.8.0-cp34-cp34m-linux_x86_64.whl  # Ubuntu/Linux 64-bit, GPU enabled, Python 3.4. Requires CUDA toolkit 7.5 and CuDNN v4. # For other versions, see "Install from sources" below. $ sudo pip3 install --upgrade https://st" ""
+
+"   博客  学院  下载  GitChat  论坛  问答  商城  头条  活动  招聘  ITeye  码云  CSTO  论坛  问答  商城  极客头条  活动  招聘  ITeye  码云  CSTO  写博客  发Chat  登录注册    我的博客  消息(3)  设置  反馈  帮助  退出    TensorFlow 完整的TensorFlow入门教程 原创 2017年11月06日 12:27:04 标签： tensorflow / 入门教程 / python / 机器学习 / 1219 编辑 删除 1：你想要学习TensorFlow，首先你得安装Tensorflow，在你学习的时候你最好懂以下的知识：     a：怎么用python编程；      b：了解一些关于数组的知识；      c：最理想的情况是：关于机器学习，懂一点点；或者不懂也是可以慢慢开始学习的。   2：TensorFlow提供很多API，最低级别是API:TensorFlow Core，提供给你完成程序控制,还有一些高级别的API，它们是构建在 TensorFlow Core之上的，这些高级别的API更加容易学习和使用，于此同时，这些高级别的API使得重复的训练任务更加容易， 也使得多个使用者操作对他保持一致性，一个高级别的API像tf.estimator帮助你管理数据集合，估量，训练和推理。   3：TensorsTensorFlow的数据中央控制单元是tensor(张量)，一个tensor由一系列的原始值组成，这些值被形成一个任意维数的数组。 一个tensor的列就是它的维度。   4： [python] view plain copy   print? import tensorflow as tf   import tensorflow as tf 上面的是TensorFlow 程序典型的导入语句，作用是：赋予Python访问TensorFlow类(classes)，方法（methods），符号(symbols)   5：The Computational Graph TensorFlow核心程序由2个独立部分组成：     a:Building the computational graph构建计算图     b:Running the computational graph运行计算图 一个computational graph(计算图)是一系列的TensorFlow操作排列成一个节点图。 [python] view plain copy   print? node1 = tf.constant(3.0, dtype=tf.float32)   node2 = tf.constant(4.0)# also tf.float32 implicitly   print(node1, node2)   node1 = tf.constant(3.0, dtype=tf.float32) node2 = tf.constant(4.0)# also tf.float32 implicitly print(node1, node2) 最后打印结果是： [python] view plain copy   print? Tensor("Const:0", shape=(), dtype=float32) Tensor("Const_1:0",shape=(), dtype=float32)   Tensor("Const:0", shape=(), dtype=float32) Tensor("Const_1:0",shape=(), dtype=float32) 要想打印最终结果，我们必须用到session:一个session封装了TensorFlow运行时的控制和状态 [python] view plain copy   print? sess = tf.Session()   print(sess.run([node1, node2]))   sess = tf.Session() print(sess.run([node1, node2])) 我们可以组合Tensor节点操作(操作仍然是一个节点)来构造更加复杂的计算， [python] view plain copy   print? node3 = tf.add(node1, node2)   print("node3:", node3)   print("sess.run(node3):", sess.run(node3))   node3 = tf.add(node1, node2) print("node3:", node3) print("sess.run(node3" "BLOB"
+
+"   #### 网页收藏 使用电脑版浏览器收藏网页时，可以先在为知笔记插件中心[安装网页剪接器插件](http://blog.wiz.cn/downloads-webclipper.html)，安装后当在浏览器里看到有价值的网页时，点击浏览器上方的 **为知笔记图标**，选择保存位置后点击确定，网页内容就保存到为知笔记啦！ #### 微博收藏 在桌面客户端或网页版，点击头像旁的下拉按钮->帐户设置->帐户关联->绑定微博后，当你在微博上看到感兴趣、有意思的文字或图片时，直接 **评论或转发此微博时输入 @保存到为知笔记**，微博内容就保存到为知笔记了，同步后查看即可。 #### 邮件收藏 + 对于有意义的邮件，如果想永久保存到为知笔记，只需转发此邮件给你的个人 mywiz 邮箱即可。 + 对于在其他 app 中看到有兴趣的内容，一般也是可以通过邮件分享保存到为知笔记的，点击分享，选择邮件分享，收件人是 mywiz 邮箱即可。   **注：个人 mywiz 邮箱可以到个人信息页查看**       "  "BLOB"
+
+"    http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/  这是一篇讲怎么学习android编程的博客，你看看需要装哪些软件    [杜迦罗]    http://e.jikexueyuan.com/android.html?hmsr=stormzhang_index_word_03.20    [杜迦罗]    https://yun.baidu.com/s/1dD5RRQ5    [杜迦罗]    好像要先学JAVA    [杜迦罗]        [杜迦罗]    我再买点书给你    [杜迦罗]    这两个是视频，我看有讲怎么装环境，运行程序什么的，你先看看 "   ""
+
+"                 " "BLOB"
+
+"            "  "BLOB"
+
+"   "   ""
+
+" " "BLOB"
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+" " ""
+
+"我的手机是安卓6.0-23版,将(android视图下)根目录build.gradle的26改成23,并且安装一些23的kit: tools-android-sdk manager安装6.0系统. 然后报错round-icon:把round-icon那行删掉"   ""
+
+"与家人和朋友在微信聊天中留下的文字、图片、音频等各种美好信息，需要保存起来收好？ 各种微信公众账号推送的生活实用小百科、同城活动、震撼新闻，以及经验总结等文章，需要保存起来随时待用？ 微信中各种有价值的信息都可以一键永久收藏到为知笔记。 #### 准备工作： **第一步: **  关注为知笔记公众账号，可以通过直接扫描二维码或者搜“为知笔记”关注       **第二步:**绑定为知笔记帐号到微信。关注为知笔记公众帐号后，会收到为知笔记消息，点击相应提示绑定即可       #### 开始保存微信内容到为知笔记 + 保存公众帐号推送的文章 阅读公众帐号推送的文章，点击 **右上角的更多**按钮，选择 **为知笔记**，图文信息就自动保存到为知笔记了 + 保存家人或朋友间的聊天内容 **长按**聊天文字或图片，点击 **更多**，选择为知笔记，内容就自动保存到为知笔记了 + 保存和为知笔记的对话 任何时候，在为知笔记公众帐号中输入文字、图片、音频、位置，都可以自动保存到为知笔记，而且音频可以直接转化成文字哦。   以上保存的微信内容，需要您打开为知笔记后同步查看哦。" "BLOB"
+
+"最后四个学科在win电脑桌面左侧右上角xxx_xxx_xxx_xxx的zip包里. win电脑应该留存有完整数据库. 以及最新的physicaleducation在home/d/db0226/下. 以后的工作移动到了kingson u盘.包括db数据库. 虽然有点小但是先这样吧."  ""
+
+"最后采用了virtualenv来解决23共存的问题. 1 sudo apt install virtualenv( pip3 install virtualenv可能也行)一个virtualenv可以调用不同的python版本. 2 cd到一个目录然后virtualenv --no-site-packages venv(在当前目录下创建一个venv文件夹在里边放虚拟机,名字就是venv)参数 -p 用哪个python 3 source venv/bin/activate开启虚拟机 4 deactivate离开 虚拟机如果被锁住,不能用pip,不要sudo,这会使得pip安到虚拟机外边. 1  sudo chown -R $USER venv/ 2  sudo chmod 777 venv/ 即可解锁. linux: 在workspace/language/virtual/stnlp下装了一个虚拟机,python3的 pip了个nltk"    ""
+
+"NULL"  ""
+
+
+2018年 07月 03日 星期二 01:21:48 CST
+title:  vim小技巧
+    下面我们都按这种格式来记笔记啦
+    上面这句话是在vim输入:read !date产生的.会产生新的一行.
+quote:  https://blog.csdn.net/zimmermanlin/article/details/8922067
+    这里也有更好的解决方法. read命令和这里提到的vim中的ab缩写都很有趣.
+
+
+2018年 07月 03日 星期二 01:25:01 CST
+title:  gitignore中不是"忽略什么什么"而是"保留什么什么"的解决办法:
+    */*
+    !*/*.vhd
+    就可以忽略所有下面的目录并且提取所有的下面目录的vhd文件啦 见quartus工作区
+    顺带一提,这个.gitignore是glob模式的正则表达式.所以一个*就可以完成别人.*的结果啦
+    gitignore的规则还是没有搞懂,过段时间再看
+
+
+2018年 07月 03日 星期二 01:29:16 CST
+title:  linux 下 eclipse安装
+    只要在命令行输入eclipse,它就会说 你没有安装eclipse,在apt里有.
+    codeblocks安装也是这样的.
+
+2018年 07月 03日 星期二 09:38:07 CST
+title:  命令行后台运行eclipse
+    nohup eclipse &
+    命令行窗口便可以关闭.
+
+title: 配置新的windows系统：vim部分
+    vim如果从官网上安装windows版本并且勾选了vim.bat安装（要手动勾上）就可以在命令行输入vim运行了。
+    
+    github则是要配一个环境变量。安装github
+    desktop后不能直接使用命令行git，但是在C:\Users\d\AppData\Local\GitHubDesktop\app-1.2.6\resources\app\git\cmd里有git.exe.添加环境变量即可。
+    
+    github无法拉起vim的解决办法(git编辑器)：git config --global core.editor
+    "vim.bat"即可。
+
+    vim粘贴代码时临时关闭自动换行：
+    ：set paste
+    ：set nopaste即可。
+
+    vim开启read !data还是有问题。待解决。
+    vim生成的un~文件是为了下次打开时候还可以撤销上次的内容。所以...留着吧。忍一忍就好了。
+
+    vim关闭长行换行：set textwidth=10000 关闭长行标红：
+    :match OverLength '\%1000001v.*'
+    :highlight Overlength ctermbg=red ctermfg=white guibg=red guifg=white
+
+
+title: 判断两线段是否相交
+    http://www.cnblogs.com/wuwangchuxin0924/p/6218499.html
+
+title: git stash问题
+大概是stash会保存未stage的所有更改(叫做 dirty working
+        tree)然后把他们撤销到上一个commit.
+stash save "__"
+stash apply复原
+stash list查看
+stash apply stash@{1}来使用别的(没试过)
+原文：http://gitbook.liuhui998.com/4_5.html
+一、基本操作
+当你正在做一项复杂的工作时, 发现了一个和当前工作不相关但是又很讨厌的bug. 你这时想先修复bug再做手头的工作, 那么就可以用 git stash 来保存当前的工作状态, 等你修复完bug后,执行'反储藏'(unstash)操作就可以回到之前的工作里.
+$ git stash save "work in progress for foo feature"
+上面这条命令会保存你的本地修改到储藏(stash)中, 然后将你的工作目录和索引里的内容全部重置, 回到你当前所在分支的上次提交时的状态.
+好了, 你现在就可以开始你的修复工作了.
+... edit and test ...
+$ git commit -a -m "blorpl: typofix"
+当你修复完bug后, 你可以用git stash apply来回复到以前的工作状态.
+$ git stash apply
+二、储藏队列
+你也可多次使用'git stash'命令,　每执行一次就会把针对当前修改的‘储藏’(stash)添加到储藏队列中. 
+用'git stash list'命令可以查看你保存的'储藏'(stashes):
+$>git stash list
+stash@{0}: WIP on book: 51bea1d... fixed images
+stash@{1}: WIP on master: 9705ae6... changed the browse code to the official repo
+可以用类似'git stash apply stash@{1}'的命令来使用在队列中的任意一个'储藏'(stashes).
+ 'git stash clear‘则是用来清空这个队列.
+    
+ title: android 解决模拟器权限问题
+    在nexus5s里“关于”里最后一项点击7次进入开发者选项。
+        android 解决listview里按vertical的linear
+        layout上下排列一个图片一个文字然后图片占有特别大一个白边的：
+        android:adjustViewBounds="true" 
+
+title:android materialview中(第一步设置toolbar)style中加默认配色时说minsdk到15,这个到21
+    在build.gradle里把minsdk从15变成21,依然报错:
+    Manifest merger failed : uses-sdk:minSdkVersion 15 cannot be smaller than version 21 declared in library [:feature] D:\workspace\android\Test\feature\build\intermediates\manifests\full\debug\AndroidManifest.xml as the library might be using APIs not available in 15
+	Suggestion: use a compatible library with a minSdk of at most 15,
+		or increase this project's minSdk version to at least 21,
+		or use tools:overrideLibrary="com.example.d.test.feature" to force usage (may lead to runtime failures)
+    这时在dependencies闭包的最后加入
+        compile 'com.android.support:support-v4:28.+'
+    compile 'com.android.support:appcompat-v7:28.+'
+    并且要右键工程总目录找到open module settings(f4),左边点app,右边点flavors
+    调minsdk为21,再在里边点开feature,同样调成21(不知道后面的有没有必要)
+    即可.
+
+title:android报错类似cannot resolve android.widget.Toolbar to android.support.v7.widget.Toolbar
+    可能是自动import的错了.import android.support.v7.widget.Toolbar即可.
+
+title:不小心把工程放在新的feature module下了不是app,怎么解决
+    把东西拷过去之后在app的build.gradle第一行改 apply
+    plugin:'com.android.application'
+    别的操作:删掉旧的feature,用安卓里边的东西删.以及到时候会报错,按提示链接一个文件,
+    里边有一行什么什么feature一行什么什么app,把feature去掉就行.
+    以及右键工程 remove module去掉了那些
+
+titie:好像加入navigationview都会这样,报错
+Program type already present: android.support.design.widget.CoordinatorLayout$Behavior Message{kind=ERROR, text=Program type already present: android.support.design.widget.CoordinatorLayout$Behavior, sources=[Unknown source file], tool name=Optional.of(D8)}
+解决办法:google到的 在dependencies闭包后面加入
+implementation 'com.android.support:design:27.1.0'
+即可
+
+
+title:imageview 图片的cropping 比例不一样时希望填满并且crop多余的
+    设置scaleType为centerCrop即可.
+
+title:java爆栈
+    java跑一个很简单的DFS搜索,第5678层(五千多层)的地方爆栈了.栈还是很小的.
+
+title:java protected类
+    TODO
+
+title:git merge
+    git merge 80bcbeb可以将当前和80bcbeb版本之间merge
+
+title:输出了一段时间出现read: unexpected EOF
+    https://stackoverflow.com/questions/48689930/logcat-crashes-with-error-unexpected-eof
+    回答3(没尝试别的)
+     
+    Fuller answer
+
+    The accepted answer didn't work for me. Rather than turning the logger buffer off, I increased it to the max size.
+
+        Enable developer options in your emulator or device (not Android Studio) if it hasn't been enabled already: In your emulator or device go to Settings > System > About (emulated device) and click on Build number 7 times.
+        Go to Settings > System > Developer options > Logger buffer sizes and choose a higher value.
+
+    enter image description here
+
+        I also had to restart the emulator.
+
+    So the original problem apparently happens because the devices log buffer gets filled up for lengthy logging. Increasing the buffer size allows you to log more in a single logging session.
+    shareimprove this answer
+
+    不是代码的问题,是虚拟机自己log太多了.
+
+title:android读取rss加recyclerview,下拉刷新的应用
+    https://www.androidauthority.com/simple-rss-reader-full-tutorial-733245/
+
+title:android studio自带虚拟机无法联网
+    https://stackoverflow.com/questions/42736038/android-emulator-not-able-to-access-the-internet
+ 56
+down vote
+
+I found a temporary solution on an old Stack Overflow thread at Upgraded to SDK 2.3 - now no emulators have connectivity. Note that this thread talks about Android SDK 2.3, not Android Studio 2.3. The problem seems to be that the emulator can't find the DNS my computer is currently using, and the temporary workaround is to start the emulator from the command line and specify the DNS server. Whatever problem occurred back then must have reappeared in the latest version of Android Studio.
+
+The temporary solution outlined below fixes the problem with the emulator accessing the internet. However, it does not fix the problem that occurs when trying to run Android Device Monitor. Doing so will still make the emulator go offline as described above.
+
+Note that there are two files named "emulator.exe" in the sdk -- one under sdk\tools and another under sdk\emulator. Either might work below, but I use the one under sdk\emulator.
+
+The first step is to find where the SDK is located. Assuming a user name of "jdoe" and a default installation of Android Studio on Windows, the SDK is most likely in
+C:\Users\jdoe\AppData\Local\Android\sdk.
+
+The second step is to determine the name of the AVD (emulator) that you want to run. The command
+C:\Users\jdoe\AppData\Local\Android\sdk\emulator\emulator.exe -list-avds
+will show the names of your AVDs. On my computer it shows only one, Nexus_5X_API_25.
+
+To start the emulator from the command line with a specified DNS server, use something like the following:
+C:\Users\jdoe\AppData\Local\Android\sdk\emulator\emulator.exe -avd Nexus_5X_API_25 -dns-server 8.8.8.8
+
+In this case, 8.8.8.8 is a Google public domain name server.
+
+The above commands can be shortened if you create appropriate environment variables and edit your PATH environment variable, but I recommend caution when doing so.
+
+D:\Sdk\emulator>emulator.exe -avd Nexus_5X_API_24 -dns-server 8.8.8.8
+
+title:汇编问题
+    01 .equ 0_RDONLY 为什么是000000而不是0
+
+    01 header:
+        xxxxx
+    $header:地址 header:访存值
+    记住!汇编$0才是数字0 0就访存去了!
+    汇编 不要图省事把_start改成main用gcc编译 可能遇到读不了文件的情况
+        as -o -g(调试可用) xxx.o xxx.s;
+        ld -o xxx xxx.o;
+        ./xxx
+        gdb ./xxx
+
+title:ubuntu server
+    ubuntu server没有剪切板,可以通过共享文件夹传文件
+
+title:android
+    每个activity只能调用自己的findviewbyid元素,并且要在加载了setcontextview之后.
+
+title:android
+    访问互联网一定要在AndroidMenifest.xml加上
+    <uses-permission android:name="android.permission.INTERNET"/>
+    在application外!
+
+title:android webview 手机UA
+    WebView webView=findViewById(R.id.web_view);
+
+        WebSettings settings = webView.getSettings();
+        settings.setUserAgentString("app/XXX");//添加UA,  “app/XXX”：是与h5商量好的标识，h5确认UA为app/XXX就认为该请求的终端为App
+        settings.setJavaScriptEnabled(true);
+
+        //设置参数
+        settings.setBuiltInZoomControls(true);
+        settings.setAppCacheEnabled(true);// 设置缓存
+
+        webView.setWebChromeClient(new WebChromeClient());
+//        webView.setWebViewClient(new WebViewClient());
+
+//        webView.loadUrl(loadurl);
+//        webView.getSettings().setJavaScriptEnabled(true);
+//        webview.getSettings().setUserAgentString(ua+"; 自定义标记");
+//        webView.setWebViewClient(new WebViewClient());
+//        Toast.makeText(NewsView.this,url,Toast.LENGTH_SHORT).show();
+        webView.loadUrl(url);
+        这样可以,不过有个选择的过程.
+
+android无法发http请求:manifest设置
+         android:usesCleartextTraffic="true"
+
+android changes todo
+    rename newsitem
+    change pics to one single pic and its getter to Regex
+    my search is a bit slow opening 600 news.
+    my showing a mark of "liked" outside.
+    图片太少,掩盖一下
+    离线存储网页
+    sql
+    改对方的
+
+    mainadapter现在是一样的.(listadapter)以及第一新闻布局.
+
+
+android 改项目api版本:
+    build.gradle 两个地方设置28 buildtoolsversion设置为"28.0.2" 然后
+    module settings(右键工程F4) 的左边栏sdks 那个no sdk改成D:\sdk即可
+
+android 在刚刚加载时就去改toolbar上的图标:
+    oncreate什么的用findviewbyid会报错.
+    @Override
+public boolean onPrepareOptionsMenu(Menu menu) {
+
+    MenuItem settingsItem = menu.findItem(R.id.menu_like);
+    // set your desired icon here based on a flag if you like
+    settingsItem.setIcon(getResources().getDrawable(R.drawable.ic_favorite_border_white_24dp));
+
+    return super.onPrepareOptionsMenu(menu);
+}
+即可.
+
+
+verilog和计组:
+    课本:跳到第四章,看到p481.这一页说附录A中有ALU的实例.
+    在附录A中翻到1167页,说第四章和第五章的 optional sections 有网上的代码实现?
+    并且第五章是system verilog的.
+    verilog等一会回去拿了书再看吧.先看结构.
+
+win10下git记住用户名和密码
+git config --global credential.helper store 一句就好.会明文存储密码.
+
+intellij有自己的代码恢复功能 可能是每次编译时保存一下
+右键文件->local history
+https://blog.csdn.net/qq_35246620/article/details/70185685
+
+verilog 关于case避免锁存器:
+case或者if(只能在always块里)如果不把所有情况写全,或者让某个东西在某条件保持原值在别的时候改变
+就会生成锁存器.并且要把所有输入写全.
+case+always写得好还是会综合成非常简单的组合电路的.
+并且 always敏感表如果没写全 没包含所有赋值语句右边的量
+那个量变的时候always就不会触发 为了实现这点也会生成锁存器
+几个例子:
+https://www.cnblogs.com/youngforever/archive/2013/06/14/3135874.html
+生成锁存器的危害不知道有多大...一会再google一下
+以及为什么不是生成一个寄存器register
+ise会对锁存器产生警告. 电路图上写的是ld.
+大概就是组合逻辑里出现这种东西会把事情闹得很复杂,毛刺敏感,
+    而且编译器做了一些你看不懂的东西
+verilog =和<=:
+    组和逻辑:always @(*) =
+    时序逻辑:always @(posedge clock) <=
+    每个always块尽量只有一种.
+    https://www.nandland.com/articles/blocking-nonblocking-verilog.html
+    如果在clocked always中使用了=, 
+ 
+git:
+    gitkraken的git flow提供了一种更易用的git分支模式.包括feature, release
+    和hotfix模式.
+    拖动tag之后,会有merge和rebase reset等选项.rebase是一种将分支删除的merge.
+
+git帮别的账号push: 似乎只有当时以该账号commit才可以.
+
+beyondcompare 默认是只比较meta信息, 修改日期新旧什么的. 
+(似乎刚更改了默认) 改成"比较内容": file - session settigs - compare选项卡
+- 下面有 比较内容还是比较meta信息. 比较时stop按钮会闪, 比较完毕才会变成灰色.
+
+节省空间: treesize free软件可以查看每个文件夹的大小和百分比.
+        vmware可以导入导出ova文件, 只需要一分钟左右.平时不用可以保存在ova里.
+
+卸载了githubdesktop, 并因为之前一直用的它的git,现在选择重装git.
+
+git push 设置关联
+ git push --set-upstream https://github.com/daibiaoxuwu/modelsim.git master
+
+gitignore 忽略全部除去...以及子目录的教程
+ https://jasonstitt.com/gitignore-whitelisting-patterns
+
+vim-git: gitgutter
+以后就是正常用vscode, 小东西和内存不够的东西用comemu好了.
+
+xilinx x7:将G盘下的virtualbox\x7文件夹拷到C:\Users\d\VirtualBox VMs即可.
+
+软工
+1 vue里用session信息:
+https://www.npmjs.com/package/vue-session 可能能存全局变量
+
+2 我们的项目叫Single file components结构.要用vue-loader装载.
+https://vuejsdevelopers.com/2017/06/18/vue-js-boost-your-app-with-webpack/
+不过这个不是boost它的build过程, 而是它的运行速度.
+
+3 v-for只支持一些bootstrap控件和div什么的. 用在<p>上会有很奇怪的问题.
+
+4 express render可以传递local variables的.
+
+q:home.vue里
+                  <tbody>
+                  <tr v-for="(item, index) in list" @click="onClick(item)" :key="item.text">
+                    <td>{{index}}</td>
+                    <td>{{item.text}}</td>
+                    <!-- <td @click="onClick(item)" style="color:#12bbad">{{item.status}}</td> -->
+                    <!-- <td><button @click="onClick(item)">项目1</button></td> -->
+
+                    <td>{{item.status}}</td>
+                  </tr>
+点击即闪退回主页,
+                <tbody>
+                  <tr v-for="(item, index) in list" :key="item.text">
+                    <td>{{index}}</td>
+                    <td>{{item.text}}</td>
+                    <!-- <td @click="onClick(item)" style="color:#12bbad">{{item.status}}</td> -->
+                    <!-- <td><button @click="onClick(item)">项目1</button></td> -->
+
+                    <td @click="onClick(item)">{{item.status}}</td>
+                  </tr>
+就没有这个问题...为什么呢?
+
+软工第二个双周
+第一周 配环境
+换了个测试框架 jest 因为mocha如果支持vue麻烦
+支持前端后端测试 测过bs_fake 70%-80%
+bs_1 还没部署到平台上 遇到了乱码 但是本质是一样的
+
+前端写了两个页面的测试 home和app
+
+7 demo 解释数据库
+1 分工 test
+2 流水线
+3 bs_fake
+4 看gitlab graph issue 贡献率 #issue以及泽海的工作commit颗粒度比较大
+5 下阶段 基础做完 邮件 test 80 前端测试先放一放因为逻辑少\
+6 code smell主要是bs_fake的hardcode问题
+
+计算机组成原理 11.2交
+单周期CPU: 每个指令串行 走五段走完 再走下一个指令 最慢的方法
+一条指令的时间是指令周期
+一个CPU时钟是CPU周期
+多周期CPU: 指令依然串行, 变长, 不需要访存之类的就可以省去一些环节不一定5节
+流水线CPU: 指令定长5节, 但是是并行流水
+
+verilog: 多条<=时, 最后一条在always block结束的时候执行.
+
+
+关于各个虚拟机:
+记住!虚拟机不只是存个磁盘映像就ok了, 还要存别的.
+x4 蓝屏了 大概是磁盘映像和其他东西没同步的问题.
+当时插硬盘, 盘符变成F了, 原来是G, 导致x4虚拟机找不到位置.
+于是删掉x4, 新建x5, 连到F盘上. x5一切正常, 只是烧不了程序了.
+去找助教调一小时无果.
+翻出x7, 是个前阵子用过的虚拟机, 还没验证是否能烧.
+v6是在x4出事后新装win7装xilinx的. 后来发现snapshot放在了c盘, 20G,
+移动到G,就不能用了.放弃了.
+
+x4 蓝屏
+x5 一切正常, 不能烧程序
+v6 无法启动
+x7 未验证
+singleTime编译时候要加上use new parser:
+use_new_parser.png
+
+软工 git checkout bugfix/multiple_tutorials回到最早的页面
+
+异常检测论文 
+https://cs.nju.edu.cn/zhouzh/zhouzh.files/publication/icdm08b.pdf?q=isolation-forest
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.92.2423&rep=rep1&type=pdf
+https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Bendale_Towards_Open_Set_CVPR_2016_paper.pdf
+
+产生式模型
+https://arxiv.org/pdf/1312.6114.pdf
+https://arxiv.org/pdf/1511.06434.pdf%C3%AF%C2%BC%E2%80%B0
+https://arxiv.org/pdf/1701.05517.pdf
+http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Unpaired_Image-To-Image_Translation_ICCV_2017_paper.pdf
+
+注意 textdetection的补偿向量方向?
+
+2块内存怎么安排 分开一个指令一个数据的话跑通监控程序就可以
+
+python遇到需要装vs14的vc++编译器的时候:
+https://stackoverflow.com/questions/29846087/microsoft-visual-c-14-0-is-required-unable-to-find-vcvarsall-bat
+直接pip install --upgrade setuptools 升到36.2.7以上(现在应该有40了)
+当时电脑里有vs2017(不清楚需要不需要).
+https://dimitri.janczak.net/2017/05/20/python-3-6-visual-studio-2017/
+这里说并不需要装vs2015.
+pip install --upgrade setuptools如果失败, Cannot remove entries from nonexistent file d:\anaconda32\envs\tst\lib\site-pack
+ages\easy-install.pth, 加入 --ignore-installed参数即可.
+https://github.com/ContinuumIO/anaconda-issues/issues/542
+
+intellij界面：安装Material Theme UI插件，选择material deep ocean，设置的appearance下material theme下icons下monochrome icons勾选可以改成暗色icon。
+
+vscode写c#:
+https://www.cnblogs.com/lxhbky/p/6673230.html
+
+office2016:
+网盘上有两个文件夹: office安装包和office破解工具. 好像不能用office安装包里边的破解工具, 而是用另一个文件夹的.
+KMSPico是这时候装的. 装到programfiles里了.
+实测可用.在office 破解工具里点清除什么什么,再安装kmspico即可.
+
+vscode重新配置:
+vscode自动检测编码:安装changeEncode,并去掉用户配置"files.encoding": "utf8"，(默认没有)即可.
+vscode-vim下ctrl+c改回复制等等:在settigns.json里加(前面2行不需要)
+{
+    "git.enableSmartCommit": true,
+    "files.autoSave": "afterDelay",
+    "vim.handleKeys":{
+        "<C-c>": false,
+        "<C-x>": false,
+        "<C-z>": false,
+        "<C-v>": false,
+        "<C-s>": false,
+        "<C-a>": false,
+        "<C-f>": false,
+    }
+}
+vscode设置里(file下拉菜单就有)可以打开autosave, 避免磁盘不同步的问题
+
+我的gmail邮箱:dujluo@gmail.com 密码HEI
+
+java绘图:
+import java.awt.Graphics;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class JFrmaeGraphics extends JPanel{
+
+    public void paint(Graphics g){
+
+        g.drawLine(10, 10, 200, 300);
+    }
+
+    public static void main(String[] args){
+        JFrame frame= new JFrame("Welecome to JavaTutorial.net");
+        frame.getContentPane().add(new JFrmaeGraphics());
+        frame.setSize(600, 400);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setResizable(false);
+    }
+}
+
+python import cv2是通过pip install opencv-python安装的.
+
+
+神经网络_产生式模型_VAE
+    
+无法用远程byobu: 用git bash打开, 选项里选窗口-界面语言zh-cn(好像没用)以及
+文本 本地local:zh-cn 字符集:utf-8
+参考https://www.v2ex.com/t/308882, cmder的问题
+同时,
+    取消勾选"按键"中上面那三个,可以正常用退格删除什么的.左右移动和tab还是永不了.
+
+使用tensorflow-gpu:
+. /home/xueshuxinxing/djl/tensorflow-gpu/lib/python3.6/venv/scripts/common/activate
+export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/home/xueshuxinxing/djl/tensorflow-gpu/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/home/xueshuxinxing/djl/tensorflow-gpu/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+python就可以了
+
+ scp -P 4714 xueshuxinxing@166.111.121.42 /data/zhijie/home_data/all/* data/
+
+android下载资源dl.google.com下不下来的解决方法:
+ctrlshifts 搜索proxy 去点test connection连http://dl.google.com 估计会timeout
+打开shadowsocks 在cortana找"更改代理设置", 现在是127.0.0.1:1080, 在设置里使用手动代理, http代理, 填上127.0.0.1:1080,test 就行了. 之后build它问你要不要写到gradle文件里, 你说写, 还http/https都写, https的勾打上就行了.
