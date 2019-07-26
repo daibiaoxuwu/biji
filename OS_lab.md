@@ -34,3 +34,13 @@ file bin/kernel
 target remote :1234
 set architecture i8086
 ```
+
+ec
+
+b0
+
+ec-b0=3c=60 3g
+
+300-ec=14
+
+c4-b0=14

@@ -2176,6 +2176,7 @@ python就可以了
 
  scp -P 4714 xueshuxinxing@166.111.121.42 /data/zhijie/home_data/all/* data/
 
+<<<<<<< ours
 java绘图:从190214workspace里翻出来的untitled工程(现在在
 workspace/srt/untitled)里边的drawshape_saveasimage.java里.
 
@@ -2186,6 +2187,7 @@ workspace/srt/untitled)里边的drawshape_saveasimage.java里.
 一定是到具体版本的 里边的目录结构有bin docs 还有个getting-started.html
 PATH=%GRADLE_HOME/bin 而且 关闭所有intellij窗口并重启 关一个它命令行不更新的
 关命令行它的path就不更新进去
+=======
 android下载资源dl.google.com下不下来的解决方法:
 ctrlshifts 搜索proxy 去点test connection连http://dl.google.com 估计会timeout
 打开shadowsocks 在cortana找"更改代理设置", 现在是127.0.0.1:1080, 在设置里使用手动代理, http代理, 填上127.0.0.1:1080,test 就行了. 之后build它问你要不要写到gradle文件里, 你说写, 还http/https都写, https的勾打上就行了.
@@ -2535,3 +2537,4 @@ Ruby和ERB
 rnb的定义在这里https://magazine.rubyist.net/articles/0017/0017-BundledLibraries.html.
 erb意思是: 是个eRuby文件. 
 eRuby是嵌入ruby代码的文本文件, 通过<% ...%>, <%= ...%>一类嵌入
+>>>>>>> theirs
