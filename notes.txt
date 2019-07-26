@@ -2456,3 +2456,72 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 vim编辑vimrc:
 :e $MYVIMRC
+
+编辑右键菜单:
+https://www.howtogeek.com/howto/windows-vista/how-to-clean-up-your-messy-windows-context-menu/
+反正它俩工具挺好使的
+几个内容都被bookmark了.我是没找到VS的注册项, 不过用工具找到了.shellex的好像没看出来啥用...百度网盘, winrar
+都禁用不了.
+
+cmder:在命令行运行 cmder /register自动帮你弄好注册表. /register /single是多开时开到一个窗口.
+cmder也支持内部环境变量和alias
+
+vim notes有点字符集问题, 自带的md不太存的下来
+
+vim-plug的使用方法:
+1 在_vimrc写
+2 vim里运行:PlugInstall
+即可.
+
+beyond compare4 秘钥
+w4G-in5u3SH75RoB3VZIX8htiZgw4ELilwvPcHAIQWfwfXv5n0IHDp5hv 1BM3+H1XygMtiE0-JBgacjE9tz33sIh542EmsGs1yg638UxVfmWqNLqu- Zw91XxNEiZF7DC7-iV1XbSfsgxI8Tvqr-ZMTxlGCJU+2YLveAc-YXs8ci RTtssts7leEbJ979H5v+G0sw-FwP9bjvE4GCJ8oj+jtlp7wFmpVdzovEh v5Vg3dMqhqTiQHKfmHjYbb0o5OUxq0jOWxg5NKim9dhCVF+avO6mDeRNc OYpl7BatIcd6tsiwdhHKRnyGshyVEjSgRCRY11IgyvdRPnbW8UOVULuTE
+永久使用需删除目录下所有： C:\Users\***\AppData\Roaming\Scooter Software\Beyond Compare 4
+用 下载 里的 Beyondcompare4破解版 然后不要更新
+
+禁止应用联网: https://www.simplehelp.net/2015/09/02/how-to-block-a-program-from-the-internet-in-windows-10/
+看起来比较高级
+
+cmder配置和配色问题
+1 现在gvim配色比vim好看是因为 codedark用了三套gui 一套是gui下的全彩 一套是256
+一套是16色 在gvim是全彩 在命令行是16色
+这个powershell和cmd都是16色的.
+并且它的1,4 3,6号配色是反的, 所以红蓝是反的.
+在配色表里选了monokai, 然后强行交换它的1,4 3,6才可以解决.尽量少用命令行写吧.
+
+cmder配置:
+1 修改配色表, 默认是monokai, 把他的1,4 3,6掉个个.
+注意!这个要单独点save设置个名字来存!
+2 general下: 
+勾选single instance mode. 把所有窗口整合一下.
+勾选support special hotkeys.(未知作用)
+inject dll好像在配色和字符流有关系, 也不太清楚, 但是很多地方都说最好保持勾选.
+很难配成256色. 大概手段有:
+
+另外关于vim配色表:
+配色表和组名可以通过:help group-name查看.我在_vimrc里加入了几行代码:
+nnoremap <f10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<cr>
+nnoremap <f2> :echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+<f2>就可以查看当前光标的命名组.
+命名组有层级结构的, 不过不太清楚那些好像在层级结构之外的东西比如 synIDattr...以及很诡异的是
+配色表没改的时候好像是全红,改了就有很多色彩, 不知道为什么
+
+
+size & pos里勾选maximized
+直接搜aggresive 上面四个框 可以代理powershell等.
+可以勾选force那个. 让ruby命令行交互啥的都能用这个.vscode里不受影响.
+confirm close那里默认是always.不过多个页面,只要没有交互页面,
+甚至有一个ruby命令行(大概也没交互只是路径变了), 也是很智能地直接关掉了.
+
+TSA还是有点问题, 关了就没了好像.
+ctrl+`可以开关. 关了好像只是最小化.
+
+save好像是存到注册表但是好像有时候settings会被重置...不知道为什么
+
+Ruby和ERB
+在ruby_vim_colors里有一个rnb.erb文件.
+来自https://gist.github.com/romainl/5cd2f4ec222805f49eca
+具体项目在https://github.com/romainl/vim-rnb
+
+rnb的定义在这里https://magazine.rubyist.net/articles/0017/0017-BundledLibraries.html.
+erb意思是: 是个eRuby文件. 
+eRuby是嵌入ruby代码的文本文件, 通过<% ...%>, <%= ...%>一类嵌入
